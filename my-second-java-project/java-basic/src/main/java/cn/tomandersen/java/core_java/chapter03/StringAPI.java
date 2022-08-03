@@ -80,7 +80,7 @@ public class StringAPI {
         }
     }
 
-    static void stringBuilderAndBuffer() {
+    static void stringBuilderDemo() {
         // StringBuilder, applied to single thread
         StringBuilder stringBuilder = new StringBuilder("");
         stringBuilder.append("Hello");
@@ -90,7 +90,11 @@ public class StringAPI {
         stringBuilder.delete(0, 4);
         System.out.println(stringBuilder.toString());
 
-        // StringBuilder, applied to multiple thread, a safe Object
+    }
+
+    static void StringBufferDemo() {
+        // StringBuffer, applied to multiple thread, a safe Object
+        // sample api as StringBuilder
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("Hello");
         stringBuffer.append(" ");
@@ -102,6 +106,7 @@ public class StringAPI {
 //        stingObj();
 //        stringAPI();
 //        stringCompare();
-        stringBuilderAndBuffer();
+        stringBuilderDemo();
+        StringBufferDemo();
     }
 }
