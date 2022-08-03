@@ -80,6 +80,16 @@ public class StringAPI {
         }
     }
 
+    static void stringFormatDemo() {
+        String name = "Tom Andersen";
+        int age = 25;
+        System.out.printf("Hello, %s. Next year, you'll be %d\n", name, age);
+
+        double x = 10000.0 / 3.0;
+        System.out.printf("%8.2f\n", x);
+        System.out.printf("%8.2e\n", x);
+    }
+
     static void stringBuilderDemo() {
         // StringBuilder, applied to single thread
         StringBuilder stringBuilder = new StringBuilder("");
