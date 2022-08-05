@@ -40,7 +40,7 @@ public class IO {
         System.out.println("username: " + username + "password: " + password);
     }
 
-    static void stringStdoutDemo() {
+    static void stdoutDemo() {
         String name = "Tom Andersen";
         int age = 25;
         System.out.printf("Hello, %s. Next year, you'll be %d\n", name, age);
@@ -52,10 +52,10 @@ public class IO {
         System.out.println("Hello world! I am back from the Hell!");
     }
 
-    static void consoleIODemo() {
+    static void commandLineIODemo() {
         ScannerInDemo();
         consoleInDemo();
-        stringStdoutDemo();
+        stdoutDemo();
     }
 
     static void fileIODemo() throws IOException {
@@ -101,7 +101,7 @@ public class IO {
     }
 
     public static void main(String[] args) throws IOException {
-        consoleIODemo();
+        commandLineIODemo();
         fileIODemo();
     }
 }
