@@ -47,6 +47,79 @@ public class ArraysAPI {
         System.out.println(Arrays.toString(nums));
     }
 
+    /**
+     * This program shows how to store tabular data in a 2D array
+     */
+    static void compoundInterest() {
+        final int N_RATES = 6;
+        final int N_YEARS = 10;
+        final double START_RATE = 10d;
+        final double DELTA_RATE = 1d;
+        final double START_BALANCE = 10000d;
+        double[] interestRates = new double[N_RATES];
+        double[][] balances = new double[N_YEARS][N_RATES];
+
+        // initiate interest array and balance array
+        for (int i = 0; i < interestRates.length; i++) {
+            interestRates[i] = (START_RATE + i * DELTA_RATE) / 100.0;
+            balances[0][i] = START_BALANCE;
+        }
+
+        // compute the balance for future years
+        for (int i = 1; i < balances.length; i++) {
+            for (int j = 0; j < balances[i].length && j < interestRates.length; j++) {
+                balances[i][j] = balances[i - 1][j] * interestRates[j] + balances[i - 1][j];
+            }
+        }
+
+        // print the row of interest rates
+        for (double rate : interestRates) {
+            System.out.printf("%9.0f%%", 100 * rate);
+        }
+        System.out.println();
+
+        // print the table of balance
+        for (double[] balanceRow : balances) {
+            for (double balance : balanceRow) {
+                System.out.printf("%10.2f", balance);
+            }
+            System.out.println();
+        }
+
+    }
+
+    /**
+     * This program demonstrates a triangular array
+     */
+    static void LotteryArray() {
+        final int N_MAX = 10;
+
+        // allocate triangular array
+        int[][] odds = new int[N_MAX + 1][];
+        for (int n = 0; n <= N_MAX; n++)
+            odds[n] = new int[n + 1];
+
+        // fill triangular array
+        for (int n = 0; n < odds.length; n++) {
+            for (int k = 0; k < odds[n].length; k++) {
+                // compute binomial coefficient n*(n-1)*(n-2)*(n-3)...*(n-k+1)/(1*2*3*...*k)
+                int lotteryOdds = 1;
+                for (int i = 1; i <= k; i++) {
+                    lotteryOdds = lotteryOdds * (n - i + 1) / i;
+                }
+                odds[n][k] = lotteryOdds;
+            }
+        }
+
+        // print triangular array
+        for (int[] row : odds) {
+            for (int odd : row) {
+                System.out.printf("%4d", odd);
+            }
+            System.out.println();
+        }
+    }
+
     static void ArrayAPIDemo() {
         // java.utils.Arrays API
         // toString
@@ -55,16 +128,10 @@ public class ArraysAPI {
         // Arrays.toString only support to concat one dimension array
 
         // deepToString
-        // Arrays.deepToString can support to concat multi-dimension array, but not one dimension
-        int[][] nums1 = new int[][]{
-                {1, 2, 3},
-                {4, 5, 6}
-        };
+        // Arrays.deepToString support to print multi-dimension array, but not single dimension array
+        int[][] nums1 = new int[][]{{1, 2, 3}, {4, 5, 6}};
         System.out.println(Arrays.deepToString(nums1));
-        int[][][] nums2 = new int[][][]{
-                {{1, 2, 3}, {4, 5, 6}},
-                {{7, 8, 9}}
-        };
+        int[][][] nums2 = new int[][][]{{{1, 2, 3}, {4, 5, 6}}, {{7, 8, 9}}};
         System.out.println(Arrays.deepToString(nums2));
 
 
@@ -95,7 +162,9 @@ public class ArraysAPI {
     }
 
     public static void main(String[] args) {
-        ArrayAPIDemo();
+//        ArrayAPIDemo();
 //        LotteryDrawing();
+//        compoundInterest();
+        LotteryArray();
     }
 }
