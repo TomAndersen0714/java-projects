@@ -10,6 +10,8 @@ public class MathAPI {
         System.out.println("round: " + Math.round(y)); // round
         System.out.println("floor: " + Math.floor(y)); // floor
         System.out.println("ceil: " + Math.ceil(y)); // ceil
+        System.out.println("random[0,1): " + Math.random()); // random, return a random number in [0,1)
+        System.out.println("random[0,5): " + Math.random() * 5); // random, return a random number in [0,5)
 
 
         long position = 5;
