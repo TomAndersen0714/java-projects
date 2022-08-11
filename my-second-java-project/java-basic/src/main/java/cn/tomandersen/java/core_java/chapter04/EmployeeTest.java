@@ -1,5 +1,6 @@
 package cn.tomandersen.java.core_java.chapter04;
 
+import java.util.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -32,7 +33,12 @@ class Employee {
     // instance fields
     private String name;
     private double salary;
-    private LocalDate hireDate;
+
+    // a final instance field must be initiated in constructor, and cannot be changed in future
+    // final实例字段, 必须在构造函数中进行赋值, 并且一旦赋值, 之后将再也不能更改
+    private final LocalDate hireDate;
+
+    private Date date;
 
     // constructor
     public Employee(String name, double salary, int year, int month, int day) {
@@ -40,6 +46,7 @@ class Employee {
         this.name = name;
         this.salary = salary;
         this.hireDate = LocalDate.of(year, month, day);
+        this.date = new Date();
     }
 
     public Employee(String name, double salary) {
@@ -65,13 +72,19 @@ class Employee {
         return this.hireDate;
     }
 
+    // 访问器方法(accessor method)在返回可变对象(mutable object)时, 应该返回的是其 clone() 结果, 而不应该返回其
+    // 原始可变对象, 使得对象的内部字段在对象的外部进行访问, 这样会破坏类的封装(encapsulation)
+    public Date getDate() {
+        return (Date) date.clone();
+    }
+
     // mutator method
     public void raiseSalary(double byPercent) {
         this.salary += this.salary * byPercent / 100;
     }
 
+    // 同一个类的方法(method), 可以访问基于该类创建的所有对象实例的私有字段(private field), 而非仅仅调用对象自身的私有字段
     public boolean equals(Employee other) {
-        // 同一个类的方法(method), 可以访问该类的任何对象实例的私有字段(private field)
         return this.name.equals(other.name);
     }
 }
