@@ -11,27 +11,20 @@ public class Employee {
 
     // a final instance field must be initiated in constructor, and cannot be changed in future
     // final实例字段, 必须在构造函数中进行赋值, 并且一旦赋值, 之后将再也不能更改
-    private final LocalDate hireDate;
+    private final Date date;
 
-    private Date date;
+    private LocalDate hireDate;
 
     private int id;
 
     // static field
     private static int nextId = 1;
+    private static final int idDelta = 1; // static final field
 
     // static final field
     public static final String department = "research and development department";
 
     // constructor
-    public Employee(String name, double salary, int year, int month, int day) {
-        // 'this' 是对象方法的固定隐式(implicit)参数, 而 name/salary 等则属于显式(explicit)参数
-        this.name = name;
-        this.salary = salary;
-        this.hireDate = LocalDate.of(year, month, day);
-        this.date = new Date();
-    }
-
     public Employee(String name, double salary) {
         // 为对象实例字段进行判空处理
         // requireNonNull 要求对应的对象引用一定不能为空
@@ -40,11 +33,23 @@ public class Employee {
         this.name = Objects.requireNonNullElse(name, "unknown");
         this.salary = salary;
         this.hireDate = LocalDate.now();
+        this.id = getNextId();
+        this.date = new Date();
+    }
+
+    public Employee(String name, double salary, int year, int month, int day) {
+        // 'this' 是对象方法的固定隐式(implicit)参数, 而 name/salary 等则属于显式(explicit)参数
+        this(name, salary);
+        this.hireDate = LocalDate.of(year, month, day);
     }
 
     // accessor method
     public String getName() {
         return this.name;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public double getSalary() {
@@ -73,6 +78,12 @@ public class Employee {
         return this.name.equals(other.name);
     }
 
+    public static int getNextId() {
+        int id = nextId;
+        nextId += idDelta;
+        return id;
+    }
+
     /**
      * This program tests the Employee class.
      */
@@ -80,7 +91,7 @@ public class Employee {
         // fill the staff array with three Employee objects
         Employee[] staffs = new Employee[3];
 
-        staffs[0] = new Employee("Carl Cracker", 20000.0d, 2021, 3, 10);
+        staffs[0] = new Employee("Carl Cracker", 20000.0d);
         staffs[1] = new Employee("Harry Hacker", 10000.0d, 2022, 1, 12);
         staffs[2] = new Employee("Tom Andersen", 30000.0d, 2022, 7, 1);
 
@@ -91,8 +102,10 @@ public class Employee {
 
         // print out information about all Employee objects
         for (Employee staff : staffs) {
-            System.out.println("name: " + staff.getName() + ", salary: " +
-                    staff.getSalary() + ", hire date: " + staff.getHireDate());
+            System.out.println("name: " + staff.getName() + ", id" + staff.getId() + ", salary: " + staff.getSalary() + ", hire date: " + staff.getHireDate());
         }
+
+        int n = Employee.getNextId();
+        System.out.println("Next available id=" + n);
     }
 }

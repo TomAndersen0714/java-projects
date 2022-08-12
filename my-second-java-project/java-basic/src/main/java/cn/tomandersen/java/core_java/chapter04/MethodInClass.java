@@ -9,23 +9,44 @@ public class MethodInClass {
 
     // instance field
     private int id;
-    private Date date;
+    // instance final field
+    private final Date date;
 
 
-    // static method
+    // 1.1 static method
     public static int getNextId() {
-        System.out.println("This is a static method!");
         int id = nextId;
         nextId += idDelta;
         return id;
     }
 
-    // instance method
-    public void setId(int id) { // mutator method
+    // 1.2 static final method
+    // static method cannot be overridden but can be hidden by the method of same name in subclass
+    public static final void setNextId(int id) {
+        nextId = id;
+    }
+
+    // 1.3 static factory method
+    public static MethodInClass getInstance() {
+        return new MethodInClass(123);
+    }
+
+    // 2. constructor method
+    public MethodInClass(int id) {
+        System.out.println("This is a constructor method!");
+        // 'this' is implicit argument, and 'id' is explicit argument
+        this.id = id;
+        this.date = new Date();
+    }
+
+    // 3.1 instance method
+    public void setId(int id) { // 3.1 mutator method
         this.id = id;
     }
 
-    public int getId() { // accessor method (field accessor)
+    // 3.2 instance final method
+    // instance final method cannot be overridden in subclass
+    public final int getId() { // 3.2 accessor method (field accessor)
         return this.id;
     }
 
@@ -39,23 +60,15 @@ public class MethodInClass {
         // 如果要实现深拷贝, 则需要覆盖 clone 方法, 实现域对象的深度遍历式拷贝
     }
 
-
-    // constructor method
-    public MethodInClass(int id) {
-        System.out.println("This is a constructor method!");
-        // 'this' is implicit argument, and 'id' is explicit argument
-        this.id = id;
-    }
-
     public boolean equals(MethodInClass other) {
         // instance method can access any instance field of same class, no matter if it's the same object
         // 实例方法不仅可以访问当前对象的所有实例字段, 也可以访问另一个同类对象的所有实例字段
         return this.id == other.id;
     }
 
+
     // static method (class method)
     public static void main(String[] args) {
-        System.out.println("This is static method main!");
-        System.out.println(getNextId());
+        System.out.println("This is a class method demo!");
     }
 }

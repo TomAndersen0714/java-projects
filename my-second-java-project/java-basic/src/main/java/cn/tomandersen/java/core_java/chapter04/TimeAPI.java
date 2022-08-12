@@ -5,17 +5,32 @@ import java.time.ZoneId;
 import java.util.Date;
 
 public class TimeAPI {
-    static void DateDemo() {
-        System.out.println("This is a Date Class Demo: ");
+    public static void main(String[] args) {
+        // Unix timestamp 仅仅是表示与 UTC 时间的时间距离, 本身并不具备时区的概念
+        // 只是在转换为对应时区的时间时, 需要进行时区的对齐, 即增加或减少一定的时间长度
+        DateAPI.demo();
+        LocalDateAPI.demo();
+        ZoneIdAPI.demo();
+        CalendarPrintTest.demo();
+    }
+
+}
+
+class DateAPI {
+    static void demo() {
+        System.out.println("This is a Date class api demo: ");
         // Date
         // this class only represent a Unix timestamp, not the time on calendar
         Date date = new Date();
         System.out.println(date);
         System.out.println(date.getTime()); // returns the number of milliseconds since the epoch
     }
+}
 
-    static void LocalDateDemo() {
-        System.out.println("This is a LocalDate Class Demo: ");
+class LocalDateAPI {
+    static void demo() {
+
+        System.out.println("This is a LocalDate class api demo: ");
         // LocalDate
         // this class is using to represent the time on calendar, which may be different in various region around the world
         // you can only create a LocalDate object using the built-in factory method
@@ -33,15 +48,20 @@ public class TimeAPI {
 
         System.out.println(newLocalDate.lengthOfMonth()); // get the number of days of current month
         System.out.println(newLocalDate.lengthOfYear()); // get the number of days of current year
-    }
 
-    static void ZoneIdDemo() {
-        System.out.println("This is a Clock Class Demo: ");
+    }
+}
+
+class ZoneIdAPI {
+    static void demo() {
+        System.out.println("This is a ZoneId class demo: ");
         // get the default timezone info
         System.out.println(ZoneId.systemDefault());
     }
+}
 
-    static void printCalendarTest() {
+class CalendarPrintTest {
+    static void demo() {
         LocalDate localDate = LocalDate.now();
         int daysOfMonth = localDate.lengthOfMonth();
         int currentDayOfMonth = localDate.getDayOfMonth();
@@ -68,15 +88,5 @@ public class TimeAPI {
             if (numOfDayOfWeek % 7 == 0) System.out.println();
             numOfDayOfWeek++;
         }
-    }
-
-    public static void main(String[] args) {
-        // Unix timestamp 仅仅是表示与 UTC 时间的时间距离, 本身并不具备时区的概念
-        // 只是在转换为对应时区的时间时, 需要进行时区的对齐, 即增加或减少一定的时间长度
-//        DateDemo();
-//        LocalDateDemo();
-//        ZoneIdDemo();
-        printCalendarTest();
-
     }
 }
