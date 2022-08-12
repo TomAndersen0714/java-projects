@@ -4,32 +4,7 @@ import java.util.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class EmployeeTest {
-    /**
-     * This program tests the Employee class.
-     */
-    public static void main(String[] args) {
-        // fill the staff array with three Employee objects
-        Employee[] staffs = new Employee[3];
-
-        staffs[0] = new Employee("Carl Cracker", 20000.0d, 2021, 3, 10);
-        staffs[1] = new Employee("Harry Hacker", 10000.0d, 2022, 1, 12);
-        staffs[2] = new Employee("Tom Andersen", 30000.0d, 2022, 7, 1);
-
-        // raise everyone's salary by 5%
-        for (Employee staff : staffs) {
-            staff.raiseSalary(5);
-        }
-
-        // print out information about all Employee objects
-        for (Employee staff : staffs) {
-            System.out.println("name: " + staff.getName() + ", salary: " +
-                    staff.getSalary() + ", hire date: " + staff.getHireDate());
-        }
-    }
-}
-
-class Employee {
+public class Employee {
     // instance fields
     private String name;
     private double salary;
@@ -80,11 +55,13 @@ class Employee {
         return this.hireDate;
     }
 
-    // 访问器方法(accessor method)在返回可变对象(mutable object)时, 应该返回的是其 clone() 结果, 而不应该返回其
-    // 原始可变对象, 使得对象的内部字段在对象的外部进行访问, 这样会破坏类的封装(encapsulation)
     public Date getDate() {
         return (Date) date.clone();
     }
+    // 访问器方法(accessor method)在返回可变对象(mutable object)时, 应该返回的是其拷贝, 而不应该返回其
+    // 原始可变对象, 使得对象的内部字段在对象的外部进行访问, 这样会破坏类的封装(encapsulation)
+    // 创建对象的拷贝一般使用clone方法, 但 Object 默认的 clone 方法是浅拷贝, 在使用时候需要谨慎,
+    // 如果要实现深拷贝, 则需要覆盖 clone 方法, 实现域对象的深度遍历式拷贝
 
     // mutator method
     public void raiseSalary(double byPercent) {
@@ -94,5 +71,28 @@ class Employee {
     // 同一个类的方法(method), 可以访问基于该类创建的所有对象实例的私有字段(private field), 而非仅仅调用对象自身的私有字段
     public boolean equals(Employee other) {
         return this.name.equals(other.name);
+    }
+
+    /**
+     * This program tests the Employee class.
+     */
+    public static void main(String[] args) {
+        // fill the staff array with three Employee objects
+        Employee[] staffs = new Employee[3];
+
+        staffs[0] = new Employee("Carl Cracker", 20000.0d, 2021, 3, 10);
+        staffs[1] = new Employee("Harry Hacker", 10000.0d, 2022, 1, 12);
+        staffs[2] = new Employee("Tom Andersen", 30000.0d, 2022, 7, 1);
+
+        // raise everyone's salary by 5%
+        for (Employee staff : staffs) {
+            staff.raiseSalary(5);
+        }
+
+        // print out information about all Employee objects
+        for (Employee staff : staffs) {
+            System.out.println("name: " + staff.getName() + ", salary: " +
+                    staff.getSalary() + ", hire date: " + staff.getHireDate());
+        }
     }
 }
