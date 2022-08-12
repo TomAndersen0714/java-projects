@@ -40,6 +40,14 @@ class Employee {
 
     private Date date;
 
+    private int id;
+
+    // static field
+    private static int nextId = 1;
+
+    // static final field
+    public static final String department = "research and development department";
+
     // constructor
     public Employee(String name, double salary, int year, int month, int day) {
         // 'this' 是对象方法的固定隐式(implicit)参数, 而 name/salary 等则属于显式(explicit)参数
