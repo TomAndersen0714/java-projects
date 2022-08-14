@@ -122,17 +122,18 @@ public class ArraysAPI {
 
     static void ArrayAPIDemo() {
         // java.utils.Arrays API
+
         // toString
         int[] nums = {1, 2, 3, 4};
         System.out.println(Arrays.toString(nums));
         // Arrays.toString only support to concat one dimension array
 
         // deepToString
-        // Arrays.deepToString support to print multi-dimension array, but not single dimension array
         int[][] nums1 = new int[][]{{1, 2, 3}, {4, 5, 6}};
         System.out.println(Arrays.deepToString(nums1));
         int[][][] nums2 = new int[][][]{{{1, 2, 3}, {4, 5, 6}}, {{7, 8, 9}}};
         System.out.println(Arrays.deepToString(nums2));
+        // Arrays.deepToString support to print multi-dimension array, but not single dimension array
 
 
         // sort
@@ -159,6 +160,14 @@ public class ArraysAPI {
         System.out.println(Arrays.equals(nums, new int[]{1, 2, 3, 4}));
         nums = new int[]{1, 2, 3, 4};
         System.out.println(Arrays.equals(nums, new int[]{1, 2, 3, 4}));
+
+        // equals
+        System.out.println(Arrays.equals(new int[]{1, 2, 3}, new int[]{1, 2, 3}));
+
+        // deepEquals
+        System.out.println(
+                Arrays.deepEquals(new int[][]{{1, 2, 3}, {4, 5, 6}}, new int[][]{{1, 2, 3}, {4, 5, 6}})
+        );
     }
 
     public static void main(String[] args) {
