@@ -1,5 +1,8 @@
 package cn.tomandersen.java.core_java.chapter03;
 
+/**
+ * {@link java.lang.Math}
+ */
 public class MathAPI {
     public static void main(String[] args) {
         // Math package

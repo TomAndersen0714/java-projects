@@ -3,6 +3,9 @@ package cn.tomandersen.java.core_java.chapter03;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * {@link java.util.Arrays}
+ */
 public class ArraysAPI {
 
     /**

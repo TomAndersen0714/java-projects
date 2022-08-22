@@ -3,6 +3,9 @@ package cn.tomandersen.java.core_java.chapter09;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * {@link java.util.Iterator}
+ */
 public class IteratorAPI {
     public static void main(String[] args) {
         ArrayList<String> names = new ArrayList<>();
@@ -11,39 +14,29 @@ public class IteratorAPI {
         names.add("Alise");
         names.add("John");
 
-        // 1. for statement without iterator
-        System.out.println("This is a for statement iteration demo: ");
-        for (int i = 0; i < names.size(); i++) {
-            System.out.print(names.get(i));
-            System.out.print(" ");
-        }
-        System.out.println();
+        // get iterator using Iterable interface API
+        Iterator<String> arrayListIterator = names.iterator();
 
-        // 2. using 'haxNext' and 'next' method of iterator explicitly
-        System.out.println("This is a iterator api iteration demo: ");
-        Iterator<String> it = names.iterator();
-        while (it.hasNext()) {
-            System.out.print(it.next());
-            System.out.print(" ");
-        }
-        System.out.println();
+        // 1. hasNext()
+        // returns true if the iteration has more elements
+        System.out.println("java.util.Iterator.hasNext: " + arrayListIterator.hasNext());
 
-        // 3. using for-each statement to call iterator implicitly
-        System.out.println("This is a for-each statement iteration demo: ");
+        // 2. next()
+        // returns the next element in the iteration
+        System.out.println("java.util.Iterator.next: " + arrayListIterator.next());
+
+        // 3. remove()
+        // removes the last element returned by iterator#next() from the underlying collection
+        System.out.println("java.util.Iterator.remove: ");
+        arrayListIterator.remove();
         for (String name : names) {
-            System.out.print(name);
-            System.out.print(" ");
+            System.out.println(name);
         }
-        System.out.println();
 
-
-        // 4. using 'forEachRemaining' method of iterator with lambda expression (i.e. anonymous method)
-        System.out.println("This is a 'forEachRemaining' iteration demo: ");
-        Iterator<String> iterator = names.iterator();
-        iterator.forEachRemaining(name -> {
-            System.out.print(name);
-            System.out.print(" ");
+        // 4. forEachRemaining()
+        System.out.println("java.util.Iterator.forEachRemaining: ");
+        arrayListIterator.forEachRemaining(name -> {
+            System.out.println(name);
         });
-        System.out.println();
     }
 }

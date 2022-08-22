@@ -2,6 +2,9 @@ package cn.tomandersen.java.core_java.chapter04;
 
 import java.text.NumberFormat;
 
+/**
+ * {@link java.text.NumberFormat}
+ */
 public class NumberFormatAPI {
     public static void main(String[] args) {
         NumberFormat currencyInstance = NumberFormat.getCurrencyInstance();

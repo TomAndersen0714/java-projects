@@ -2,6 +2,10 @@ package cn.tomandersen.java.core_java.chapter05;
 
 import java.util.Random;
 
+/**
+ * {@link java.lang.Class}
+ * {@link java.lang.reflect}
+ */
 public class ReflectAPI {
     public static void main(String[] args) throws ClassNotFoundException {
 

@@ -16,6 +16,9 @@ public class TimeAPI {
 
 }
 
+/**
+ * {@link java.util.Date}
+ */
 class DateAPI {
     static void demo() {
         System.out.println("This is a Date class api demo: ");
@@ -27,6 +30,9 @@ class DateAPI {
     }
 }
 
+/**
+ * {@link java.time.LocalDate}
+ */
 class LocalDateAPI {
     static void demo() {
 
@@ -52,6 +58,9 @@ class LocalDateAPI {
     }
 }
 
+/**
+ * {@link java.time.ZoneId}
+ */
 class ZoneIdAPI {
     static void demo() {
         System.out.println("This is a ZoneId class demo: ");
@@ -62,12 +71,12 @@ class ZoneIdAPI {
 
 class CalendarPrintTest {
     static void demo() {
-        LocalDate localDate = LocalDate.now();
-        int daysOfMonth = localDate.lengthOfMonth();
-        int currentDayOfMonth = localDate.getDayOfMonth();
+        LocalDate nowLocalDate = LocalDate.now();
+        int daysOfMonth = nowLocalDate.lengthOfMonth();
+        int currentDayOfMonth = nowLocalDate.getDayOfMonth();
 
         // get the start date of month
-        LocalDate startDayOfMonthLocalDate = localDate.minusDays(currentDayOfMonth - 1);
+        LocalDate startDayOfMonthLocalDate = nowLocalDate.minusDays(currentDayOfMonth - 1);
         // get the number of day of week, Mon=1, Tue=2...
         int numOfFirstDayOfWeek = startDayOfMonthLocalDate.getDayOfWeek().getValue();
         // print the empty placeholder first
@@ -76,7 +85,7 @@ class CalendarPrintTest {
             System.out.print("   ");
         }
 
-        // print the number of days in current month
+        // print the number of day in current month
         int numOfDayOfWeek = numOfFirstDayOfWeek;
         for (int i = 1; i <= daysOfMonth; i++) {
             System.out.printf("%3d", i);

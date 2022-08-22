@@ -39,7 +39,7 @@ public class Employee {
         this.date = new Date();
         // other instance filed will be set to default value
         // i.e. numeric type will be set to 0, boolean type will be set to false, and
-        // object type will be to null
+        // object type will be set to null
         // 构造函数中, 没有设置实例变量, 将会被赋值为其对应数据类型的默认值, 即数值类型会被设置为0, 布尔类型
         // 会被设置为 false, 对象类型会被设置为 null
         // 然后实例字段以及实例初始化代码块按照在类中声明的顺序, 为其赋值具体值

@@ -1,8 +1,10 @@
 package cn.tomandersen.java.core_java.chapter04;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
+/**
+ * {@link java.util.Objects}
+ */
 public class ObjectsAPI {
     public static void main(String[] args) {
         // equals

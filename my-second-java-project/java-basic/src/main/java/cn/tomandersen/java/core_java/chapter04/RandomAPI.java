@@ -2,6 +2,9 @@ package cn.tomandersen.java.core_java.chapter04;
 
 import java.util.Random;
 
+/**
+ * {@link java.util.Random}
+ */
 public class RandomAPI {
     public static void main(String[] args) {
         Random randomGenerator = new Random();

@@ -1,6 +1,8 @@
 package cn.tomandersen.java.core_java.chapter03;
 
-
+/**
+ * {@link java.lang.String}
+ */
 public class StringAPI {
     static void stingObj() {
         // String Object

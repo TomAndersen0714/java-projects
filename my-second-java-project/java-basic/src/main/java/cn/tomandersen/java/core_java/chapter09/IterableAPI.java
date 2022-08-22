@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Spliterator;
 
+/**
+ * {@link java.lang.Iterable}
+ */
 public class IterableAPI {
     public static void main(String[] args) {
         ArrayList<String> names = new ArrayList<>();
@@ -15,15 +18,15 @@ public class IterableAPI {
         // Iterator()
         Iterator<String> it = names.iterator();
 
-        // forEach()
-        names.forEach((name) -> {
+        // spliterator(), since JDK 1.8
+        Spliterator<String> spliterator = names.spliterator();
+        spliterator.forEachRemaining((name) -> {
             System.out.print(name);
             System.out.println(" ");
         });
 
-        // spliterator()
-        Spliterator<String> spliterator = names.spliterator();
-        spliterator.forEachRemaining((name) -> {
+        // forEach(), since JDK 1.8
+        names.forEach((name) -> {
             System.out.print(name);
             System.out.println(" ");
         });

@@ -97,7 +97,7 @@ public class PrimitiveType {
 //        }
     }
 
-    static void typeCastDemo() {
+    static void basicTypeCastDemo() {
         double x = 9.99;
         System.out.println((int) x); // 浮点型强制转换为整型时, 会截断10进制小数点后的数值
 
@@ -121,6 +121,6 @@ public class PrimitiveType {
 //        floatDemo();
 //        charDemo();
 //        booleanDemo();
-        typeCastDemo();
+        basicTypeCastDemo();
     }
 }

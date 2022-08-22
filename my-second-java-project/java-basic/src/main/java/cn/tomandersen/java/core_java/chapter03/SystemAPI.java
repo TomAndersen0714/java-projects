@@ -1,5 +1,8 @@
 package cn.tomandersen.java.core_java.chapter03;
 
+/**
+ * {@link java.lang.System}
+ */
 public class SystemAPI {
     static void getPropertyDemo() {
         // System.getProperty
@@ -41,9 +44,7 @@ public class SystemAPI {
         System.out.println("file separator: " + System.getProperty("file.separator"));
         System.out.println("path separator: " + System.getProperty("path.separator"));
 
-        System.out.println("line separator: " + System.getProperty("line.separator").
-                replace("\n", "\\n").replace("\r", "\\r")
-        );
+        System.out.println("line separator: " + System.getProperty("line.separator").replace("\n", "\\n").replace("\r", "\\r"));
         System.out.println();
 
         System.out.println("user name: " + System.getProperty("user.name"));
