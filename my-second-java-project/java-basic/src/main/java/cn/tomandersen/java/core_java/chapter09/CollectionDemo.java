@@ -8,6 +8,7 @@ public class CollectionDemo {
         LinkedHashMap<String, String> stringLinkedHashMap = new LinkedHashMap<>();
         stringLinkedHashMap.put("name", "Tom Andersen");
         stringLinkedHashMap.clear();
+
         System.out.println();
         System.out.println("Hello");
         StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();

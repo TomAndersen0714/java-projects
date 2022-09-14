@@ -3,7 +3,7 @@ package cn.tomandersen.java.core_java.chapter09;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class IterateMethodsForCollection {
+public class IterationDemo {
     public static void main(String[] args) {
         ArrayList<String> names = new ArrayList<>();
 
