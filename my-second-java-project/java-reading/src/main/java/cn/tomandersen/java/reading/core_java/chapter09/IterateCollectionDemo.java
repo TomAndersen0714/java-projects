@@ -3,7 +3,7 @@ package cn.tomandersen.java.reading.core_java.chapter09;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class IterationDemo {
+public class IterateCollectionDemo {
     public static void main(String[] args) {
         ArrayList<String> names = new ArrayList<>();
 
@@ -30,7 +30,7 @@ public class IterationDemo {
 
         // 3. using for-each statement to call iterator implicitly
         System.out.println("This is a for-each statement iteration demo: ");
-        for (String name : names) {
+        for (var name : names) {
             System.out.print(name);
             System.out.print(" ");
         }
