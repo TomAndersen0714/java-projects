@@ -38,6 +38,13 @@ public class ProxyDemo {
         } else {
             System.out.println("The key doesn't exist in the elements.");
         }
+
+        // ternary operator
+        System.out.println(
+                (result >= 0)
+                        ? ("The found result is: " + elements[result])
+                        : ("The key doesn't exist in the elements.")
+        );
     }
 }
 

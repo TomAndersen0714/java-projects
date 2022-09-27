@@ -66,8 +66,9 @@ public class ListIteratorAPI {
         }
         System.out.println();
 
-        // nextIndex(), previousIndex()
+        // nextIndex()
         System.out.println("nextIndex: " + listIterator.nextIndex());
+        // previousIndex()
         System.out.println("previousIndex: " + listIterator.previousIndex());
     }
 }

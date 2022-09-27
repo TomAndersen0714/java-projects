@@ -8,7 +8,7 @@ import java.nio.file.Path;
 import java.util.Scanner;
 
 public class IO {
-    static void ScannerInDemo() {
+    static void scannerInDemo() {
         Scanner in = new Scanner(System.in);
 
         // get first input
@@ -53,7 +53,7 @@ public class IO {
     }
 
     static void commandLineIODemo() {
-        ScannerInDemo();
+        scannerInDemo();
         consoleInDemo();
         stdoutDemo();
     }
@@ -68,7 +68,7 @@ public class IO {
         Path path = Path.of(userDir, fileName);
         String absFileName = path.toString();
 
-        // try-with-Resources, Java 7
+        // try-with-Resources, since Java 7
         try (
                 PrintWriter writer = new PrintWriter(absFileName, StandardCharsets.UTF_8);
         ) {
@@ -86,8 +86,9 @@ public class IO {
         // 而之前的 try-catch-finally 语句, 必须在 finally 中手动调用 resource 的 close 方法来
         // 释放资源, 如果 close 方法可能抛出检查型异常(checked exception), 则还需要嵌套一层 try-catch
 
+        // try-with-Resources
         try (
-                Scanner scanner = new Scanner(path, StandardCharsets.UTF_8);
+                Scanner scanner = new Scanner(path, StandardCharsets.UTF_8)
         ) {
             System.out.println("reading " + absFileName);
             String line = scanner.nextLine();
