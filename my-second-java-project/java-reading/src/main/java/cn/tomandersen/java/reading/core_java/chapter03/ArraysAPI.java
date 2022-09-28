@@ -55,6 +55,11 @@ public class ArraysAPI {
                 Arrays.deepEquals(new int[][]{{1, 2, 3}, {4, 5, 6}}, new int[][]{{1, 2, 3}, {4, 5, 6}})
         );
 
+        // convert variable from int[] type into Integer[]
+        Integer[] integers = new Integer[nums.length];
+        final int[] finalNums = nums;
+        Arrays.setAll(integers, (i) -> finalNums[i]);
+
         // hashCode
         System.out.println(Arrays.hashCode(new int[]{1, 2, 3}));
     }
