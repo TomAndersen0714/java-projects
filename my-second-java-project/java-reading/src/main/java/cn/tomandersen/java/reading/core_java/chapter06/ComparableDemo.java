@@ -19,40 +19,41 @@ public class ComparableDemo {
         }
     }
 
+    static class Employee implements Comparable<Employee> {
+
+        private String name;
+        private double salary;
+
+        public Employee(String name, double salary) {
+            this.name = name;
+            this.salary = salary;
+        }
+
+        public String getName() {
+            return this.name;
+        }
+
+        public double getSalary() {
+            return this.salary;
+        }
+
+        public void raiseSalaryByPercent(double percent) {
+            double raise = salary * percent / 100;
+            salary += raise;
+        }
+
+        /**
+         * Compares employees by salary
+         *
+         * @param o another Employee object
+         * @return a negative value if this employee has a lower salary than other Object, 0 if the salaries
+         * are same, a positive value otherwise
+         */
+        @Override
+        public int compareTo(Employee o) {
+            return Double.compare(this.salary, o.salary);
+        }
+    }
+
 }
 
-class Employee implements Comparable<Employee> {
-
-    private String name;
-    private double salary;
-
-    public Employee(String name, double salary) {
-        this.name = name;
-        this.salary = salary;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public double getSalary() {
-        return this.salary;
-    }
-
-    public void raiseSalaryByPercent(double percent) {
-        double raise = salary * percent / 100;
-        salary += raise;
-    }
-
-    /**
-     * Compares employees by salary
-     *
-     * @param o another Employee object
-     * @return a negative value if this employee has a lower salary than other Object, 0 if the salaries
-     * are same, a positive value otherwise
-     */
-    @Override
-    public int compareTo(Employee o) {
-        return Double.compare(this.salary, o.salary);
-    }
-}

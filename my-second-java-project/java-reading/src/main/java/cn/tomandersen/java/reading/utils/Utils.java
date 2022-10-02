@@ -9,8 +9,8 @@ public class Utils {
         // the first element is getStackTrace method, second one is the current method,
         // and the third one is the caller
         return Thread.currentThread().getStackTrace()[2].getClassName()
-                + ":" +
-                Thread.currentThread().getStackTrace()[2].getMethodName()
-                + "()";
+            + ":" +
+            Thread.currentThread().getStackTrace()[2].getMethodName()
+            + "()";
     }
 }

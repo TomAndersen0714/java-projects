@@ -1,6 +1,6 @@
 package cn.tomandersen.java.reading.core_java.chapter04;
 
-public class ConstructorTest {
+public class ClassConstructorDemo {
     /**
      * This program demonstrates object construction.
      */

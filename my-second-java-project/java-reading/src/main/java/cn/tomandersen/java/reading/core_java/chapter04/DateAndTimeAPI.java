@@ -4,14 +4,14 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 
-public class TimeAPI {
+public class DateAndTimeAPI {
     public static void main(String[] args) {
         // Unix timestamp 仅仅是表示与 UTC 时间的时间距离, 本身并不具备时区的概念
         // 只是在转换为对应时区的时间时, 需要进行时区的对齐, 即增加或减少一定的时间长度
         DateAPI.demo();
         LocalDateAPI.demo();
         ZoneIdAPI.demo();
-        CalendarPrintTest.demo();
+        CalendarPrintDemo.demo();
     }
 
 }
@@ -37,21 +37,24 @@ class LocalDateAPI {
     static void demo() {
 
         System.out.println("This is a LocalDate class api demo: ");
-        // LocalDate
         // this class is using to represent the time on calendar, which may be different in various region around the world
-        // you can only create a LocalDate object using the built-in factory method
-        LocalDate nowLocalDate = LocalDate.now();
-        // obtains the current date from the system clock in the default time-zone
 
-        // LocalDate object is not mutable, every operation would create a new object
-        LocalDate newLocalDate = nowLocalDate.plusDays(10);
-        newLocalDate = nowLocalDate.minusDays(10).plusWeeks(1);
-        System.out.println(newLocalDate.getYear()); // get* method is named 'accessor method'
+        // initiate LocalDate
+        // you can only create a LocalDate object using the built-in factory method
+        LocalDate nowLocalDate = LocalDate.now(); // // obtains the current date from the system clock in the default time-zone
+        System.out.println(nowLocalDate);
+
+        // LocalDate object is immutable, every operation would create a new object
+        LocalDate newLocalDate = nowLocalDate.minusDays(10).plusWeeks(1);
+
+        // get* method
+        System.out.println(newLocalDate.getYear()); // get the year value field
+        System.out.println(newLocalDate.getMonthValue()); // get the month value field
         System.out.println(newLocalDate.getMonth()); // get the name of month
-        System.out.println(newLocalDate.getMonthValue()); // get the number of month
         System.out.println(newLocalDate.getDayOfMonth());
         System.out.println(newLocalDate.getDayOfWeek());
 
+        // length* mothod
         System.out.println(newLocalDate.lengthOfMonth()); // get the number of days of current month
         System.out.println(newLocalDate.lengthOfYear()); // get the number of days of current year
 
@@ -69,7 +72,7 @@ class ZoneIdAPI {
     }
 }
 
-class CalendarPrintTest {
+class CalendarPrintDemo {
     static void demo() {
         LocalDate nowLocalDate = LocalDate.now();
         int daysOfMonth = nowLocalDate.lengthOfMonth();

@@ -1,6 +1,6 @@
 package cn.tomandersen.java.reading.core_java.chapter04;
 
-public class MethodParamTest {
+public class MethodCallDemo {
     /**
      * This program demonstrates parameter passing in Java
      */

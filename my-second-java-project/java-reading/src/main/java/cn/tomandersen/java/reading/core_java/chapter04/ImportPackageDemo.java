@@ -2,10 +2,8 @@ package cn.tomandersen.java.reading.core_java.chapter04;
 
 import static java.lang.Math.*; // static import
 
-import java.util.*;
-import java.sql.*;
 
-public class ImportPackage {
+public class ImportPackageDemo {
     public static void main(String[] args) {
 
         double x = 4.0, y = 4.1;

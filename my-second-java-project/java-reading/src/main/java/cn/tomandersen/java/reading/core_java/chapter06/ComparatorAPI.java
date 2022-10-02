@@ -20,15 +20,35 @@ public class ComparatorAPI {
         Arrays.setAll(integers, (i) -> numbers[i]);
 
         System.out.println("Arrays.sort(Integer[], Comparator): ");
-        Arrays.sort(integers, new reverseOrder());
+        Arrays.sort(integers, new IntReverseOrderComparator());
         System.out.println(Arrays.toString(integers));
+
+
+        System.out.println("Arrays.sort(String[], Comparator): ");
+        String[] strs = new String[3];
+        strs[0] = "Tom";
+        strs[1] = "Jim";
+        strs[2] = "Alise";
+        Arrays.sort(strs);
+        System.out.println(Arrays.toString(strs));
+        Arrays.sort(strs, new StrLengthComparator());
+        System.out.println(Arrays.toString(strs));
 
     }
 }
 
-class reverseOrder implements Comparator<Integer> {
+class IntReverseOrderComparator implements Comparator<Integer> {
     @Override
     public int compare(Integer o1, Integer o2) {
-        return Integer.compare(o2, o1);
+//        return Integer.compare(o2, o1);
+        return o2.compareTo(o1);
+    }
+}
+
+class StrLengthComparator implements Comparator<String> {
+
+    @Override
+    public int compare(String o1, String o2) {
+        return Integer.compare(o1.length(), o2.length());
     }
 }

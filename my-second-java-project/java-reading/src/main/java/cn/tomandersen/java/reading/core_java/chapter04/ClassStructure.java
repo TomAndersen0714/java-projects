@@ -2,7 +2,11 @@ package cn.tomandersen.java.reading.core_java.chapter04;
 
 import java.util.Date;
 
-public class MethodInClass {
+public class ClassStructure {
+
+}
+
+class Methods {
     // static field
     private static int nextId = 1; // static variable(field)
     private static final int idDelta = 1; // static final variable(field)
@@ -27,12 +31,12 @@ public class MethodInClass {
     }
 
     // 1.3 static factory method
-    public static MethodInClass getInstance() {
-        return new MethodInClass(123);
+    public static Methods getInstance() {
+        return new Methods(123);
     }
 
     // 2. constructor method
-    public MethodInClass(int id) {
+    public Methods(int id) {
         System.out.println("This is a constructor method!");
         // 'this' is implicit argument, and 'id' is explicit argument
         this.id = id;
@@ -60,7 +64,7 @@ public class MethodInClass {
         // 如果要实现深拷贝, 则需要覆盖 clone 方法, 实现域对象的深度遍历式拷贝
     }
 
-    public boolean equals(MethodInClass other) {
+    public boolean equals(Methods other) {
         // instance method can access any instance field of same class, no matter if it's the same object
         // 实例方法不仅可以访问当前对象的所有实例字段, 也可以访问另一个同类对象的所有实例字段
         return this.id == other.id;
@@ -70,5 +74,36 @@ public class MethodInClass {
     // static method (class method)
     public static void main(String[] args) {
         System.out.println("This is a class method demo!");
+    }
+}
+
+class Fields {
+    // 1.1 static field
+    private static int nextId = 1; // static field (variable)
+    // 1.2 static final field (variable)
+    // final field cannot be changed after initialization
+    private static final int idDelta = 1;
+    // static final filed must be initialized
+
+    // 2.1 instance field
+    private int id = 1;
+
+    // 2.2 instance final field
+    private final String name;
+    private final String home = "The Queens"; // instance final field
+    // instance final filed must be initialized in declaration or the constructor, and cannot be
+    // changed after initialization
+
+    // constructor method
+    public Fields(int id, String name) { // parameter list
+        System.out.println("This is a constructor method!");
+        // 'this' is implicit argument, and 'id' is explicit argument
+        this.id = id;
+        this.name = name;
+    }
+
+    // static method
+    public static void main(String[] args) {
+        System.out.println("This is a class field demo!");
     }
 }

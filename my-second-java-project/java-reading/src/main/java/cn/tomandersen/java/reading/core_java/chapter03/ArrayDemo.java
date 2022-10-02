@@ -3,7 +3,7 @@ package cn.tomandersen.java.reading.core_java.chapter03;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArraysDemo {
+public class ArrayDemo {
     public static void main(String[] args) {
         LotteryDrawing();
         compoundInterest();
