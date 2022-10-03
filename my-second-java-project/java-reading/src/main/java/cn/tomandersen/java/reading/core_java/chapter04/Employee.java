@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Random;
 
-public class Employee {
+public class Employee implements Cloneable {
     // instance fields
     private String name;
     private double salary;
@@ -140,5 +140,15 @@ public class Employee {
 
         int n = Employee.getNextId();
         System.out.println("Next available id=" + n);
+    }
+
+    @Override
+    public Employee clone() {
+        try {
+            // TODO: copy mutable state here, so the clone can't change the internals of the original
+            return (Employee) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
     }
 }

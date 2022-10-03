@@ -13,19 +13,7 @@ public class CloneableDemo {
 
     }
 
-    void test() {
-        var tmp = this.new Employee() {
-            public int a = 2;
-
-            public int getA() {
-                return a;
-            }
-        };
-        tmp.getA();
-
-    }
-
-    class Employee implements Cloneable {
+    static class Employee implements Cloneable {
         Employee() {
 
         }

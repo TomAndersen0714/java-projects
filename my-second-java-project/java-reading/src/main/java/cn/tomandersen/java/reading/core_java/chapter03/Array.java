@@ -126,8 +126,9 @@ public class Array {
         Arrays.setAll(integers1, (i) -> (nums[i]));
         System.out.println(Arrays.toString(integers1));
 
-        // 3. using functional interface
+        // 3. using streaming programming and functional interface
         System.out.println("3. using functional interface: ");
+        // the method reference 'Integer[]::new' is equivalent to the lambda expression 'x->new Integer(x)'
         Integer[] integers2 = Arrays.stream(nums).boxed().toArray(Integer[]::new);
         System.out.println(Arrays.toString(integers2));
 

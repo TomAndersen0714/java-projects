@@ -6,9 +6,7 @@ import java.util.ListIterator;
 
 public class ListIteratorAPI {
     /**
-     * {@link java.util.ListIterator}
-     *
-     * @param args
+     * @see java.util.ListIterator
      */
     public static void main(String[] args) {
         List<String> staffs = new LinkedList<>();

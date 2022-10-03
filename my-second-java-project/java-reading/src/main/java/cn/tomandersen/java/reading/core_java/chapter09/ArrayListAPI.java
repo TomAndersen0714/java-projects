@@ -47,6 +47,5 @@ public class ArrayListAPI {
         System.out.print("After trimToSize(): ");
         staffs.trimToSize();
         System.out.println("Capacity: " + getArrayListCapacity(staffs) + ", size: " + staffs.size());
-
     }
 }

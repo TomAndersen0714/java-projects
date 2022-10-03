@@ -3,10 +3,13 @@ package cn.tomandersen.java.reading.core_java.chapter09;
 import java.util.Iterator;
 import java.util.List;
 import java.util.LinkedList;
-import java.util.ListIterator;
 
 public class LinkedListAPI {
 
+    /**
+     * @see java.util.ListIterator
+     * @see ListIteratorAPI
+     */
     public static void main(String[] args) {
 
         LinkedList<String> staffs = new LinkedList<>();
