@@ -47,9 +47,14 @@ public class LinkedListAPI {
         staffs.addAll(tmp);
         System.out.println(staffs);
 
-        // set
+        // set()
         System.out.print("set(): ");
         staffs.set(0, "Tom");
+        System.out.println(staffs);
+
+        // removeIf()
+        System.out.print("removeIf(): ");
+        staffs.removeIf((x) -> x.equals("Tom"));
         System.out.println(staffs);
 
         // addFirst(), getFirst()

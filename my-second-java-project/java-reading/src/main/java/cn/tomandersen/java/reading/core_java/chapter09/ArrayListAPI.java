@@ -5,6 +5,7 @@ import cn.tomandersen.java.reading.core_java.chapter03.Array;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import static cn.tomandersen.java.reading.utils.Utils.getCurrentMethodName;
 
@@ -39,6 +40,16 @@ public class ArrayListAPI {
         // set()
         System.out.print("set(): ");
         staffs.set(0, "Jim");
+        System.out.println(staffs);
+
+        // removeIf
+        System.out.println("removeIf(): ");
+        staffs.removeIf(new Predicate<String>() {
+            @Override
+            public boolean test(String s) {
+                return s.equals("Tom");
+            }
+        });
         System.out.println(staffs);
 
         // trimToSize()

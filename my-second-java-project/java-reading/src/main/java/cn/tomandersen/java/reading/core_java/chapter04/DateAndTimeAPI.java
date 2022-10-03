@@ -41,10 +41,14 @@ class LocalDateAPI {
 
         // initiate LocalDate
         // you can only create a LocalDate object using the built-in factory method
-        LocalDate nowLocalDate = LocalDate.now(); // // obtains the current date from the system clock in the default time-zone
+        // 1. obtains the current date from the system clock in the default time-zone
+        LocalDate nowLocalDate = LocalDate.now();
         System.out.println(nowLocalDate);
+        // 2. initialize LocalDate using LocalDate.of()
+        LocalDate localDate = LocalDate.of(2020, 10, 3);
+        System.out.println(localDate);
 
-        // LocalDate object is immutable, every operation would create a new object
+        // LocalDate object is immutable, and every operation would create a new object
         LocalDate newLocalDate = nowLocalDate.minusDays(10).plusWeeks(1);
 
         // get* method
