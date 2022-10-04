@@ -1,10 +1,18 @@
 package cn.tomandersen.java.reading.core_java.chapter06;
 
 
-import javax.swing.*;
+import javax.swing.Timer;
+import javax.swing.JOptionPane;
 import java.util.Arrays;
 import java.util.Date;
 
+/**
+ * Lambda expression is a kind of syntactic sugar to declare anonymous class
+ * that implements a functional interface.
+ * <p>
+ * You can use 'javap -p LambdaExpressionDemo.class' to print all classes and members
+ * in the LambdaExpressionDemo class.
+ */
 public class LambdaExpressionDemo {
     public static void main(String[] args) {
         String[] planets = new String[]{"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
