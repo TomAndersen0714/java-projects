@@ -1,4 +1,4 @@
-package cn.tomandersen.java.reading.core_java.chapter03;
+package api.java.util;
 
 import java.util.Arrays;
 import java.util.LinkedList;

@@ -1,13 +1,9 @@
-package cn.tomandersen.java.reading.core_java.chapter09;
+package api.java.util;
 
-import cn.tomandersen.java.reading.core_java.chapter03.Array;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.function.Predicate;
-
-import static cn.tomandersen.java.reading.utils.Utils.getCurrentMethodName;
 
 public class ArrayListAPI {
     static int getArrayListCapacity(ArrayList<?> arrayList) throws NoSuchFieldException, IllegalAccessException {

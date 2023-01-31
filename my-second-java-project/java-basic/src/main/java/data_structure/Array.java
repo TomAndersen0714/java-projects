@@ -1,4 +1,4 @@
-package cn.tomandersen.java.reading.core_java.chapter03;
+package data_structure;
 
 import java.util.Arrays;
 

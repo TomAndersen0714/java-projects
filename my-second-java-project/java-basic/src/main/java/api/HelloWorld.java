@@ -1,4 +1,4 @@
-package cn.tomandersen.java.basic;
+package api;
 
 public class HelloWorld {
     public static void main(String[] args) {
