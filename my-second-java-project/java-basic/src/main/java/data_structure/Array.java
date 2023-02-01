@@ -6,8 +6,8 @@ public class Array {
     static void initiateArray() {
         System.out.println("initiateArray(): ");
         // array declaration
-        int[] a; // Java style
-        int b[]; // C style
+        int[] a; // Java-style
+        int b[]; // C-style
 
         // empty array
         a = new int[]{};
@@ -18,11 +18,14 @@ public class Array {
         System.out.println(a.toString());
 
         // initiate array using numeric literal
-        int[] x = new int[20]; // initialize with length
-        int[] y = {1, 2, 3, 4, 5}; // initialize with assignment
-        int[] z = new int[]{1, 2, 3, 4, 5}; // initialize with assignment
+        // 1. initialize with specific length
+        int[] x = new int[20];
+        int[] y = {1, 2, 3, 4, 5};
+        // 2. initialize with assignment
+        int[] z = new int[]{1, 2, 3, 4, 5};
         int[][] xy = { // double dimension array
-            {1, 2, 3}, {4, 5}, {6, 7}};
+            {1, 2, 3}, {4, 5}, {6, 7}
+        };
         System.out.println("y: " + y.toString()); // toString can not return the real value of element
         System.out.println("z: " + Arrays.toString(z));
         System.out.println("y == z: " + (y == z));// y != z
