@@ -1,4 +1,4 @@
-package cn.tomandersen.java.reading.core_java.chapter04;
+package api.java.util;
 
 import java.util.Random;
 
@@ -11,6 +11,7 @@ public class RandomAPI {
 
         // nextInt
         System.out.println(randomGenerator.nextInt());
+        // nextInt(int bound), range from 1 to bound
         System.out.println(randomGenerator.nextInt(100));
 
         // nextDouble
