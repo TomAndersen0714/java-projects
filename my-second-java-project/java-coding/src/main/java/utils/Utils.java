@@ -32,6 +32,7 @@ public class Utils {
         return a;
     }
 
+
     public static void main(String[] args) {
         // randomArrayInt
         int[] arrayInt = randomArrayInt(10, 50);
