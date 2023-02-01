@@ -1,5 +1,7 @@
 package algorithm.basic.sort;
 
+import utils.Utils;
+
 import java.util.Arrays;
 
 
@@ -46,7 +48,8 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] a = new int[]{5, 6, 6, 7, 12, 11, 22, 14, 2, 3};
+        int[] a = Utils.randomArrayInt(10, 50);
+        System.out.println(Arrays.toString(a));
         sort(a);
         System.out.println(Arrays.toString(a));
     }
