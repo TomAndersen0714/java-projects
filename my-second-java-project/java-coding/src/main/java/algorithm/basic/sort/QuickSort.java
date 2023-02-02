@@ -13,7 +13,7 @@ public class QuickSort {
             System.out.println(Arrays.toString(a));
 
             // test
-            QuickSort2_1.sort(a);
+            QuickSort3.sort(a);
             Arrays.sort(b);
             System.out.println(Arrays.toString(b));
 
@@ -27,7 +27,8 @@ public class QuickSort {
 }
 
 
-// 1. 左右搜索交换法: 递归, 哨兵, 左右搜索, 交换, 切分
+// 1. 左右指针交换法
+// Tips: 递归, 哨兵, 左右搜索, 交换, 切分, 适合顺序表
 class QuickSort1 {
     public static void sort(int[] a) {
         if (a == null || a.length == 0) return;
@@ -71,7 +72,7 @@ class QuickSort1 {
 }
 
 
-// 1.1 左右搜索交换法的变式写法
+// 1.1 左右指针交换法-变式写法
 class QuickSort1_1 {
     public static void sort(int[] a) {
         if (a == null || a.length == 0) return;
@@ -103,7 +104,8 @@ class QuickSort1_1 {
     }
 }
 
-// 2. 左右搜索覆盖法: 递归, 哨兵, 左右搜索, 覆盖, 切分
+// 2. 左右指针交替覆盖法
+// Tips: 递归, 哨兵, 相向左右指针, 覆盖, 切分, 适合顺序表
 class QuickSort2 {
     public static void sort(int[] a) {
         if (a == null || a.length == 0) return;
@@ -135,7 +137,7 @@ class QuickSort2 {
 
 }
 
-
+// 2.1 左右指针交替覆盖法-变式写法
 class QuickSort2_1 {
     public static void sort(int[] a) {
         if (a == null || a.length == 0) return;
@@ -160,5 +162,47 @@ class QuickSort2_1 {
 
         sort(a, start, i - 1);
         sort(a, i + 1, end);
+    }
+}
+
+
+// 3. 快慢指针交换法
+// Tips: 递归, 哨兵, 同向快慢指针, 适合链表
+class QuickSort3 {
+    public static void sort(int[] a) {
+        if (a == null || a.length == 0) return;
+        sort(a, 0, a.length - 1);
+    }
+
+    public static void sort(int[] a, int start, int end) {
+        if (a == null || a.length == 0) return;
+        if (start >= end || start < 0) return;
+
+        int p = partition(a, start, end);
+        sort(a, start, p - 1);
+        sort(a, p + 1, end);
+    }
+
+    private static int partition(int[] a, int start, int end) {
+        int s = end, sentry = a[s];
+        int i = start, j = i, tmp;
+
+        while (j < end) {
+            while (a[i] <= sentry && i < end) {
+                i++;
+            }
+            while (a[j] <= sentry && j < end) {
+                j++;
+            }
+            while (a[j] >= sentry && j < end) {
+                j++;
+            }
+
+            // swap
+            tmp = a[j];
+            a[j] = a[i];
+            a[i] = tmp;
+        }
+        return i;
     }
 }
