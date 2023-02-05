@@ -1,4 +1,4 @@
-package cn.tomandersen.java.reading.core_java.chapter04;
+package api.java.util;
 
 import java.util.Objects;
 
@@ -10,7 +10,7 @@ public class ObjectsAPI {
         // equals
         String a = "To";
         String b = "T" + "o";
-        System.out.println(Objects.equals(a, b));
+        System.out.println(Objects.equals(a, "To"));
 
         // requireNonNull()
         System.out.println(Objects.requireNonNull(a));
