@@ -1,8 +1,13 @@
 package algorithm.basic.sort;
 
-// https://blog.csdn.net/weixin_43207025/article/details/114902065
 
-// TC: O(n*log(n)) , SC: O(log(n)), stable
+// 快速排序(Quick Sort):
+// 快速排序是一种分治(Divide and Conquer)的排序算法, 与归并排序(Merge Sort)
+// 形成互补, 其中归并排序的递归发生在数组处理之前, 而快速排序的递归发生在数组处理之后;
+// 归并排序的数组被等分后处理, 而快速排序中, 切分的位置无法事先确定, 取决于数组的内容.
+// -- 算法(第4版)
+
+// TC: O(n*log(n)) , SC: O(log(n)), unstable
 public class QuickSort {
 }
 
@@ -11,12 +16,12 @@ public class QuickSort {
 // Tips: 递归, 左右搜索, 交换, 切分, 适合线性表和双向链表
 class QuickSort1 {
     public static void sort(int[] a) {
-        if (a == null || a.length == 0) return;
+        if (a == null || a.length <= 1) return;
         sort(a, 0, a.length - 1);
     }
 
     public static void sort(int[] a, int start, int end) {
-        if (a == null || a.length == 0) return;
+        if (a == null || a.length <= 1) return;
         if (start >= end || start < 0) return;
 
         int p = partition(a, start, end);
@@ -52,12 +57,12 @@ class QuickSort1 {
 // 1.1. 左右指针-交换法-合并写法
 class QuickSort1_1 {
     public static void sort(int[] a) {
-        if (a == null || a.length == 0) return;
+        if (a == null || a.length <= 1) return;
         sort(a, 0, a.length - 1);
     }
 
     public static void sort(int[] a, int start, int end) {
-        if (a == null || a.length == 0) return;
+        if (a == null || a.length <= 1) return;
         if (start >= end || start < 0) return;
 
         int s = start, pivot = a[s];
@@ -86,12 +91,12 @@ class QuickSort1_1 {
 // 此方法的基准值, 同时也是哨兵值, 即初始位置固定
 class QuickSort2 {
     public static void sort(int[] a) {
-        if (a == null || a.length == 0) return;
+        if (a == null || a.length <= 1) return;
         sort(a, 0, a.length - 1);
     }
 
     public static void sort(int[] a, int start, int end) {
-        if (a == null || a.length == 0) return;
+        if (a == null || a.length <= 1) return;
         if (start >= end || start < 0) return;
 
         int p = partition(a, start, end);
@@ -119,12 +124,12 @@ class QuickSort2 {
 // 此方法的基准值, 同时也是哨兵值, 即初始位置固定
 class QuickSort2_1 {
     public static void sort(int[] a) {
-        if (a == null || a.length == 0) return;
+        if (a == null || a.length <= 1) return;
         sort(a, 0, a.length - 1);
     }
 
     public static void sort(int[] a, int start, int end) {
-        if (a == null || a.length == 0) return;
+        if (a == null || a.length <= 1) return;
         if (start >= end || start < 0) return;
 
         int pivot = a[start];
@@ -149,12 +154,12 @@ class QuickSort2_1 {
 // Tips: 递归, 哨兵, 同向快慢指针, 适合链表
 class QuickSort3 {
     public static void sort(int[] a) {
-        if (a == null || a.length == 0) return;
+        if (a == null || a.length <= 1) return;
         sort(a, 0, a.length - 1);
     }
 
     public static void sort(int[] a, int start, int end) {
-        if (a == null || a.length == 0) return;
+        if (a == null || a.length <= 1) return;
         if (start >= end || start < 0) return;
 
         int p = partition(a, start, end);
@@ -187,12 +192,12 @@ class QuickSort3 {
 // 3.1. 快慢指针-交换法-合并写法
 class QuickSort3_1 {
     public static void sort(int[] a) {
-        if (a == null || a.length == 0) return;
+        if (a == null || a.length <= 1) return;
         sort(a, 0, a.length - 1);
     }
 
     public static void sort(int[] a, int start, int end) {
-        if (a == null || a.length == 0) return;
+        if (a == null || a.length <= 1) return;
         if (start >= end || start < 0) return;
 
         final int pivot = a[end];
