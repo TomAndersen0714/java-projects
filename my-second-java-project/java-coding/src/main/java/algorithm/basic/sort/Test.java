@@ -15,7 +15,7 @@ public class Test {
             System.out.println(Arrays.toString(a));
 
             // test
-            ShellSort1.sort(a);
+            MergeSort1_1.sort(a);
             Arrays.sort(b);
             System.out.println(Arrays.toString(b));
 

@@ -1,10 +1,12 @@
 package api.java.lang;
 
+import java.util.Arrays;
+
 /**
  * {@link java.lang.System}
  */
 public class SystemAPI {
-    static void getPropertyDemo() {
+    static void demo() {
         // System.getProperty
         System.out.println("os name: " + System.getProperty("os.name"));
         System.out.println("os version: " + System.getProperty("os.version"));
@@ -51,9 +53,16 @@ public class SystemAPI {
         System.out.println("user home: " + System.getProperty("user.home"));
         System.out.println("user dir(work dir): " + System.getProperty("user.dir"));
         System.out.println();
+
+        // System.arraycopy
+        int[] a = new int[]{3, 1, 2, 5};
+        int[] b = new int[a.length];
+        System.arraycopy(a, 0, b, 0, a.length);
+        System.out.println("Array a: " + Arrays.toString(a));
+        System.out.println("Array b: " + Arrays.toString(b));
     }
 
     public static void main(String[] args) {
-        getPropertyDemo();
+        demo();
     }
 }
