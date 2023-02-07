@@ -5,6 +5,8 @@ import utils.Utils;
 import java.util.Arrays;
 import java.util.Objects;
 
+// https://blog.csdn.net/weixin_43207025/article/details/114902065
+
 public class Test {
     public static void main(String[] args) {
         for (int i = 0; i <= 20; i++) {
@@ -13,7 +15,7 @@ public class Test {
             System.out.println(Arrays.toString(a));
 
             // test
-            SelectionSort1.sort(a);
+            ShellSort1.sort(a);
             Arrays.sort(b);
             System.out.println(Arrays.toString(b));
 
