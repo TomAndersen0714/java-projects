@@ -13,6 +13,7 @@ public class MergeSort {
 
 
 // 1. 自顶向下归并排序: for 循环写法
+// Tips: 自顶向下, 中间向两边, 递归遍历
 class MergeSort1 {
     public static void sort(int[] a) {
         if (a == null || a.length <= 1) return;
@@ -31,6 +32,14 @@ class MergeSort1 {
         merge(a, start, mid, end, help);
     }
 
+    /**
+     * Merge array a[start..mid-1] and a[mid...end]
+     * @param a     the original array
+     * @param start the start index left array
+     * @param mid   the end index of left array
+     * @param end   the end index of right array
+     * @param help  assistant array
+     */
     private static void merge(int[] a, int start, int mid, int end, int[] help) {
         int i = start, j = mid + 1;
         for (int p = start; p <= end; p++) {
@@ -90,6 +99,7 @@ class MergeSort1_1 {
 
 
 // 2. 自底向上的归并排序
+// Tips: 自底向上, 从左往右, 循环遍历
 class MergeSort2 {
     public static void sort(int[] a) {
         if (a == null || a.length <= 1) return;
@@ -101,8 +111,16 @@ class MergeSort2 {
         if (a == null || a.length <= 1) return;
         if (start >= end || start < 0) return;
 
-        // todo
+        int len = end - start + 1;
+        // 将原始数组以固定步长划分为偶数个子数组进行合并, 步长从1开始, 每次翻倍
+        for (int s = 1; s < len; s = s * 2) {
+            // 划分并合并子数组, PS: 需要注意边界条件, 当剩余元素无法组成一个完整子数组时, 不再合并(i.e. i>end-s)
+            for (int i = start; i <= end - s; i += s * 2) {
+                merge(a, i, i + s - 1, Math.min(i + s * 2 - 1, end), help);
+            }
+        }
     }
+
 
     private static void merge(int[] a, int start, int mid, int end, int[] help) {
         for (int p = start; p <= end; p++) {
@@ -118,6 +136,7 @@ class MergeSort2 {
         while (i <= mid) a[p++] = help[i++];
         while (j <= end) a[p++] = help[j++];
     }
+
 }
 
 

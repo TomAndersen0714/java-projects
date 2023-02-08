@@ -15,7 +15,7 @@ public class Test {
             System.out.println(Arrays.toString(a));
 
             // test
-            MergeSort1_1.sort(a);
+            MergeSort2.sort(a);
             Arrays.sort(b);
             System.out.println(Arrays.toString(b));
 
