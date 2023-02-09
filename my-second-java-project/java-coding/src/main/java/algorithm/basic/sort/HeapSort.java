@@ -23,7 +23,7 @@ public class HeapSort {
         // build the heap
 
 
-        // 
+        // pop and re-build the heap
     }
 
     private void swim(int[] a, int start, int k) {
