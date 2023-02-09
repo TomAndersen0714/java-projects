@@ -1,4 +1,4 @@
-package data_structure.ADT;
+package data_structure;
 
 public class MaxPriorityQueue {
 }
