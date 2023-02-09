@@ -1,19 +1,22 @@
 package algorithm.basic.sort;
 
-import java.util.Arrays;
-
-// 归并排序(Merge Sort):
-// 归并排序是分治(Divide and Conquer, DC)思想的一个典型例子之一, 其主要思路是
-// 将一个数组递归地分成两半分别排序, 然后将结果归并起来.
-// 特点是最好, 最坏和平均的时间开销都相同, 且与nlog(n)成正比, 缺陷在于额外空间占用与n成正比.
-
-// TC: O(nlog(n)), SC: O(n), stable
+/**
+ * 归并排序(Merge Sort):
+ * 归并排序是分治(Divide and Conquer, DC)思想的一个典型例子之一, 其主要思路是
+ * 将一个数组递归地分成两半分别排序, 然后将结果归并起来.
+ * 特点是最好, 最坏和平均的时间开销都相同, 且与nlog(n)成正比, 缺陷在于额外空间占用与n成正比.
+ * TC: O(nlog(n)), SC: O(n), stable
+ *
+ * @author TomAndersen
+ */
 public class MergeSort {
 }
 
 
-// 1. 自顶向下归并排序: for 循环写法
-// Tips: 自顶向下, 中间向两边, 递归遍历
+/**
+ * 1. 自顶向下归并排序: for 循环写法
+ * Tips: 自顶向下, 中间向两边, 递归遍历
+ */
 class MergeSort1 {
     public static void sort(int[] a) {
         if (a == null || a.length <= 1) return;
@@ -34,6 +37,7 @@ class MergeSort1 {
 
     /**
      * Merge array a[start..mid-1] and a[mid...end]
+     *
      * @param a     the original array
      * @param start the start index left array
      * @param mid   the end index of left array
@@ -55,7 +59,9 @@ class MergeSort1 {
     }
 }
 
-// 1.1 自顶向下归并排序: while 循环写法
+/**
+ * 1.1 自顶向下归并排序: while 循环写法
+ */
 class MergeSort1_1 {
 
     public static void sort(int[] a) {
