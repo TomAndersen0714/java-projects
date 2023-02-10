@@ -10,17 +10,17 @@ import java.util.Objects;
 public class Test {
     public static void main(String[] args) {
         for (int i = 0; i <= 20; i++) {
-            int[] a = Utils.randomArrayInt(5, 50);
+            int[] a = Utils.randomArrayInt(10, 50);
             int[] b = Arrays.copyOf(Objects.requireNonNull(a), a.length);
             System.out.println(Arrays.toString(a));
 
             // test
-            MergeSort2.sort(a);
-            Arrays.sort(b);
-            System.out.println(Arrays.toString(b));
+            Arrays.sort(a);
+            System.out.println(Arrays.toString(a));
 
+            HeapSort.sort(b);
             if (!Arrays.equals(a, b)) {
-                System.out.println(Arrays.toString(a));
+                System.out.println(Arrays.toString(b));
                 System.out.println("Error");
                 break;
             }

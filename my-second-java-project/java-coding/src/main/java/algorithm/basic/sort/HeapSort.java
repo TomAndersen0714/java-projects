@@ -1,17 +1,72 @@
 package algorithm.basic.sort;
 
 /**
- * 堆排序(Heap Sort):
- * 一般情况下, 最常见的堆是二叉堆, 同时也是一种完全二叉树, 通常会用于实现优先队列.
+ * 堆(Heap):
+ * 一般情况下, 我们常说的"堆"都特指"二叉堆", 二叉堆也是一种完全二叉树, 当然也有多叉堆.
  * 堆中的元素的主要操作是下沉(sink)和上浮(swim), 基于这两种操作能够实现对数级别
- * 的删除最大(最小)元素, 以及插入元素的操作.
- * 堆排序(Heap Sort)则是通过不断交换堆顶和堆尾元素, 删除堆尾元素,然后下沉(sink)
- * 堆顶元素, 即可针对输入序列进行排序, 这是堆排序的核心思想.
+ * 的删除最大(最小)元素, 以及插入元素的操作, 实现局部有序, 因此堆的一个经典应用
+ * 就是用于实现优先队列.
+ * <p>
+ * 堆排序(Heap Sort):
+ * 一种基于堆的下沉(sink)操作实现的排序算法.
+ * 堆排序主要分为两个步骤, 第一步是构建一个初始的有序堆, 即从中间节点
+ * 开始, 每层自右向左, 多层自底向上, 不断下沉(sink)元素, 直到堆顶;
+ * 第二步则是通过不断输出堆顶元素, 即交换堆顶和堆尾元素, 然后将堆大小减一,
+ * 然后下沉(sink)堆顶元素, 即可针对原始序列进一步排序, 随着堆越来越小,
+ * 最后便会生成一个整体有序的序列.
  * TC: O(nlog(n)), SC: O(1), unstable
  *
  * @author TomAndersen
  */
 public class HeapSort {
+    public static void sort(int[] a) {
+        if (a == null || a.length <= 1) return;
+
+        int len = a.length, tmp;
+        // build the heap first
+        for (int k = len / 2 - 1; k >= 0; k--) {
+            sink(a, len, k);
+        }
+
+        while (len > 1) {
+            // pop the first element, i.e. swap the first and last element
+            tmp = a[0];
+            a[0] = a[len - 1];
+            a[len - 1] = tmp;
+
+            // delete the last element and re-build the heap
+            len--;
+            sink(a, len, 0);
+        }
+    }
+
+    private static void sink(int[] a, int len, int k) {
+        int p = k, child, tmp;
+        while (p < len) {
+            child = p * 2 + 1;
+            // try to get the max child
+            if (child + 1 < len && a[child + 1] > a[child]) {
+                child = child + 1;
+            }
+
+            // compare parent and child
+            if (child < len && a[child] > a[p]) {
+                // swap parent and child
+                tmp = a[p];
+                a[p] = a[child];
+                a[child] = tmp;
+
+                // continue
+                p = child;
+            }
+            // break loop
+            else break;
+        }
+    }
+}
+
+
+class HeapSort1_1 {
     public static void sort(int[] a) {
         if (a == null || a.length <= 1) return;
         sort(a, 0, a.length - 1);
@@ -22,7 +77,7 @@ public class HeapSort {
         if (start >= end || start < 0) return;
 
         // build the heap
-
+        int len = end - start + 1;
 
         // pop and re-build the heap
     }
@@ -60,29 +115,6 @@ public class HeapSort {
                 left = (cursor - start) * 2 + start + 1;
             }
             else break;
-        }
-    }
-}
-
-
-class HeapSort1 {
-    public static void sort(int[] a) {
-        if (a == null || a.length <= 1) return;
-
-    }
-
-    private static void sink(int[] a, int k) {
-        int p = k, N = a.length, child, tmp;
-        while (p < N) {
-            child = p * 2 + 1;
-            if (child + 1 < N && a[child + 1] > a[child]) child = child + 1;
-            if (child < N && a[child] > a[p]) {
-                tmp = a[p];
-                a[p] = a[child];
-                a[child] = tmp;
-
-                p = child;
-            }
         }
     }
 }
