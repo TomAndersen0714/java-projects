@@ -7,11 +7,15 @@ package algorithm.basic.sort;
 // 插入排序类似于扑克牌抓牌和理牌, 当大部分有序时可以跳过理牌, 故适合处理局部有序的短序列.
 // -- 算法(第4版)
 
-// TC: O(n*n), SC: O(1), stable
+/**
+ * TC: O(n*n), SC: O(1), stable
+ */
 public class InsertionSort {
 }
 
-// 1. 简单插入排序
+/**
+ * 1. 简单插入排序
+ */
 class InsertionSort1 {
     public static void sort(int[] a) {
         if (a == null || a.length <= 1) return;

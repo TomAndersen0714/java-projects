@@ -11,7 +11,9 @@ package algorithm.basic.sort;
 public class BubbleSort {
 }
 
-// 1. 双指针, 嵌套遍历, 边找边交换
+/**
+ * 1. 双指针, 嵌套遍历, 边找边交换
+ */
 class BubbleSort1 {
     public static void sort(int[] a) {
         if (a == null || a.length <= 1) return;
