@@ -8,6 +8,9 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.Scanner;
 
+/**
+ * @author TomAndersen
+ */
 public class TryWithResources {
     public static void main(String[] args) throws IOException {
         // 打印用户路径, 默认是 Java MyClass 命令的执行路径
@@ -20,6 +23,7 @@ public class TryWithResources {
         String absFileName = path.toString();
 
         // try-with-Resources, since Java 7
+        // the variables in try block must implements the Closeable or AutoCloseable interface
         try (
             PrintWriter writer = new PrintWriter(absFileName, StandardCharsets.UTF_8);
         ) {
