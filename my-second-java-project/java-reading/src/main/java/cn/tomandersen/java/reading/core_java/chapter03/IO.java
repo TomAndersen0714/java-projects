@@ -9,26 +9,30 @@ import java.util.Scanner;
 
 public class IO {
     static void scannerInDemo() {
-        Scanner in = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         // get first input
         System.out.println("What is your name? ");
-        String name = in.nextLine();
+        String name = input.nextLine();
 
         // get second input
         System.out.println("How old are you? ");
-        int age = in.nextInt(); // 将输入的下一个单词(以空白符作为分隔)字符串, 转换为 int 类型
+        // 将输入的下一个单词(以空白符作为分隔)字符串, 转换为 int 类型
+        int age = input.nextInt();
 
         // print the input on console
         System.out.println("Hello " + name + ". Next year, you'll be " + (age + 1) + ". ");
 
         // 判断后续是否还有内容
-        System.out.println(in.hasNext()); // 此方法会阻塞, 直到 Scanner 中出现新的内容, 然后此方法会返回 true
-        // 此方法的执行过程, 并非 hasNext 的字面含义, 且不能用于判断 Scanner 是否为空, 建议永远不要使用此方法
+        // 此方法会阻塞, 直到 Scanner 中出现新的内容, 然后此方法会返回 true
+        System.out.println(input.hasNext());
 
-        System.out.println(in.hasNext("#")); // 建议用 hasNext(String str), 依靠特殊字符, 来标识 Scanner 停止输入
-        while (!in.hasNext("#")) {
-            System.out.println(in.next());
+        // 此方法的执行过程, 并非 hasNext 的字面含义, 且不能用于判断 Scanner 是否为空, 建议永远不要使用此方法
+        // 建议用 hasNext(String str), 依靠特殊字符, 来标识 Scanner 停止输入
+        String sign = "#";
+        System.out.println(input.hasNext(sign));
+        while (!input.hasNext(sign)) {
+            System.out.println(input.next());
         }
     }
 
@@ -70,7 +74,7 @@ public class IO {
 
         // try-with-Resources, since Java 7
         try (
-                PrintWriter writer = new PrintWriter(absFileName, StandardCharsets.UTF_8);
+            PrintWriter writer = new PrintWriter(absFileName, StandardCharsets.UTF_8);
         ) {
             System.out.println("writing " + absFileName);
             writer.println("This is a warning!");
@@ -88,7 +92,7 @@ public class IO {
 
         // try-with-Resources
         try (
-                Scanner scanner = new Scanner(path, StandardCharsets.UTF_8)
+            Scanner scanner = new Scanner(path, StandardCharsets.UTF_8)
         ) {
             System.out.println("reading " + absFileName);
             String line = scanner.nextLine();
