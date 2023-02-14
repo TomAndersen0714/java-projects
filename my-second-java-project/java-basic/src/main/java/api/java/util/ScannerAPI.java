@@ -3,6 +3,7 @@ package api.java.util;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -15,9 +16,13 @@ public class ScannerAPI {
         // constructor
         // Scanner(InputStream source)
         Scanner sc = new Scanner(System.in);
+
         // Scanner(Path source, Charset charset)
+        String fileAbsPath = Objects.requireNonNull(ScannerAPI.class.getClassLoader()
+            .getResource("test.txt")).getPath();
+        System.out.println(fileAbsPath);
         Scanner fileScanner = new Scanner(
-            Path.of("resources/test.txt"), StandardCharsets.UTF_8
+            Path.of(fileAbsPath), StandardCharsets.UTF_8
         );
 
 
