@@ -1,10 +1,13 @@
 package api.java.io;
 
+import java.io.PrintStream;
+
 /**
  * Core Java, 12E, P59.
  *
- * @see
  * @author TomAndersen
+ * @see java.io.PrintStream
+ * @see java.lang.System.out
  */
 public class PrintStreamAPI {
     public static void main(String[] args) {
