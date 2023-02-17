@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
- * 此方法的优化点在于, 通过缓存区进行批量IO, 大幅度减少IO次数, 以及IO带来的性能开销.
+ * 此方法的关键点在于, 通过缓存区进行批量IO, 大幅度减少IO次数, 以及IO带来的性能开销.
  *
  * @author TomAndersen
  */

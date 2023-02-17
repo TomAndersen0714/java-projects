@@ -1,6 +1,7 @@
-package cn.tomandersen.java.reading.core_java.chapter03;
+package lesson1.data_types;
 
-import cn.tomandersen.java.reading.utils.Utils;
+
+import libraries.Utils;
 
 public class PrimitiveType {
 
@@ -124,3 +125,5 @@ public class PrimitiveType {
         basicTypeCastDemo();
     }
 }
+
+
