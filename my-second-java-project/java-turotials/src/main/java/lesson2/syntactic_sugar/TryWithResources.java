@@ -1,6 +1,5 @@
 package lesson2.syntactic_sugar;
 
-// https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,6 +9,7 @@ import java.util.Scanner;
 
 /**
  * @author TomAndersen
+ * @link <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">The Java™ Tutorials</a>
  */
 public class TryWithResources {
     public static void main(String[] args) throws IOException {
@@ -29,10 +29,12 @@ public class TryWithResources {
         ) {
             System.out.println("writing " + absFileName);
             writer.println("This is a warning!");
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             System.out.println("catch block");
             throw e;
-        } finally {
+        }
+        finally {
             System.out.println("finally block");
         }
         System.out.println();
@@ -48,10 +50,12 @@ public class TryWithResources {
             System.out.println("reading " + absFileName);
             String line = scanner.nextLine();
             System.out.println(line);
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             System.out.println("catch block");
             throw e;
-        } finally {
+        }
+        finally {
             System.out.println("finally block");
         }
     }

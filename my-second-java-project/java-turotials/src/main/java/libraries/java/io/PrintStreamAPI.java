@@ -12,7 +12,7 @@ public class PrintStreamAPI {
         // printf
         // 以百分号 % 开头的字符串被称为格式说明符(format specifiers)
         // 格式说明符的末尾字符, 即转换字符(conversion character), 用于指示要格式成为的数值类型
-        String name = "Tom Andersen";
+        String name = "TomAndersen";
         int age = 25;
         System.out.printf("Hello, %s. Next year, you'll be %d\n", name, age);
 

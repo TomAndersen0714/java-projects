@@ -1,3 +1,7 @@
+/**
+ * @author TomAndersen
+ * @link <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html">The Java™ Tutorials</a>
+ */
 public class HelloWorld {
     public static void main(String[] args) {
         String greeting = "Hello world! I am back!";

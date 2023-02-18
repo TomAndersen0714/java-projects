@@ -10,7 +10,7 @@ import java.util.Iterator;
 /**
  * This program use a set to print all unique words in System.in.
  *
- * @author Tom Andersen
+ * @author TomAndersen
  * @version 1.0 2022-09-27
  */
 public class HashSetDemo {

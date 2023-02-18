@@ -50,7 +50,7 @@ public class IO {
     }
 
     static void stdoutDemo() {
-        String name = "Tom Andersen";
+        String name = "TomAndersen";
         int age = 25;
         System.out.printf("Hello, %s. Next year, you'll be %d\n", name, age);
 

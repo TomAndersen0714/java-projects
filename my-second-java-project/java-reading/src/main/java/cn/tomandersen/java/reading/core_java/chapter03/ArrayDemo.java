@@ -13,7 +13,7 @@ public class ArrayDemo {
     /**
      * This program demonstrates array manipulation
      *
-     * @author Tom Andersen
+     * @author TomAndersen
      */
     static void LotteryDrawing() {
         Scanner in = new Scanner(System.in);

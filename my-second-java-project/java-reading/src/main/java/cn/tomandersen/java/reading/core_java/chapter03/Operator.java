@@ -53,7 +53,8 @@ public class Operator {
         System.out.println(1 == 1 && 2 == 1); // false
         System.out.println(1 == 1 || 2 == 1); // true
         System.out.println(!false); // true
-        // && 和 || 采用的是“短路”的方式进行运算, 即当此二元运算符的前一个表达式已经能够确定此运算结果时, 则不会计算第二个表达式的值
+        // && 和 || 采用的是“短路”的方式进行运算, 即当此二元运算符的前一个表达式已经能够确定此运算结果时,
+        // 则不会计算第二个表达式的值
 
     }
 

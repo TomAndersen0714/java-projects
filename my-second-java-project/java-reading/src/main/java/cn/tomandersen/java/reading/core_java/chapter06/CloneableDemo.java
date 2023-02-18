@@ -7,14 +7,14 @@ import java.util.Objects;
 /**
  * This program demonstrates cloning.
  *
- * @author Tom Andersen
+ * @author TomAndersen
  * @version 1.0.0
  * @see java.lang.Cloneable
  * @see java.lang.CloneNotSupportedException
  */
 public class CloneableDemo {
     public static void main(String[] args) throws CloneNotSupportedException {
-        Employee original = new Employee("Tom Andersen", 16000);
+        Employee original = new Employee("TomAndersen", 16000);
         original.setHireDay(2020, 7, 1);
 
         Employee cloned = original.clone();

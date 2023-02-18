@@ -6,7 +6,7 @@ package cn.tomandersen.java.reading.core_java.chapter04;
 public class ObjectAPI {
     public static void main(String[] args) throws CloneNotSupportedException {
         // anonymous class based on extends
-        var employee = new Employee("Tom Andersen", 16000) {
+        var employee = new Employee("TomAndersen", 16000) {
             @Override
             public String toString() {
                 return "name: " + this.getName() + ", "

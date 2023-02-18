@@ -4,7 +4,7 @@ public class ClassAPI {
     public static void main(String[] args) {
         // anonymous class based on extends
         Employee employee = new Employee(
-            "Tom Andersen", 17000, 2022, 7, 1
+            "TomAndersen", 17000, 2022, 7, 1
         ) {
             @Override
             public String toString() {

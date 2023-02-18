@@ -10,7 +10,7 @@ public class ClassConstructorDemo {
 
         staffs[0] = new Employee("Carl Cracker", 20000.0d);
         staffs[1] = new Employee("Harry Hacker", 10000.0d, 2022, 1, 12);
-        staffs[2] = new Employee("Tom Andersen", 30000.0d, 2022, 7, 1);
+        staffs[2] = new Employee("TomAndersen", 30000.0d, 2022, 7, 1);
 
         // raise everyone's salary by 5%
         for (Employee staff : staffs) {
