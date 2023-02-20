@@ -1,6 +1,7 @@
 package libraries.java.lang;
 
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * {@link java.lang.String}
@@ -14,7 +15,7 @@ public class StringAPI {
         String a = "Java\u2122";
         System.out.println(a);
 
-        // String API
+        // String Object API
         // new
         String greeting = new String("\uD83D\uDE00Hello world!");
         System.out.println(greeting);
@@ -78,14 +79,11 @@ public class StringAPI {
         // stripTrailing
         System.out.println(greeting.stripTrailing());
 
-        // join
-        // 使用指定字符, 拼接多个字符串
-        System.out.println(String.join(", ", "Hello", "world!"));
         // repeat
         // 字符串重复指定次数
         System.out.println(greeting.repeat(3));
 
-        // valueOf, 基础数据类型转换为字符串
+        // String.valueOf, 基础数据类型转换为字符串
         System.out.println(String.valueOf(123L));
         System.out.println(String.valueOf(1.2D));
         System.out.println(String.valueOf(1.2F));
@@ -93,7 +91,23 @@ public class StringAPI {
         System.out.println(String.valueOf(0x1F));
 
         System.out.println(Arrays.toString("Hello, world".split(" ")));
-    }
 
+        // String Class API
+        // String.format, 和 printf 功能类似
+        // 格式化生成字符串
+        double f = 0.9 + 0.1;
+        System.out.println(String.format("%.2f", f)); // 格式化数值
+        Date date = new Date();
+        System.out.println(String.format("%tF", date)); // 格式化日期
+
+        // String.join
+        // 使用指定字符串, 拼接多个字符串
+        System.out.println(String.join(", ", "Hello", "world!"));
+
+        // String.copyValueOf
+        // 复制字符数组, 生成对应字符串
+        System.out.println(String.copyValueOf("Hello world".toCharArray(), 0, 5));
+
+    }
 
 }

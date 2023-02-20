@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author TomAndersen
  */
 public class IO {
-    static void scannerInputDemo() {
+    static void stdInputDemo() {
         Scanner input = new Scanner(System.in);
 
         // get first input
@@ -67,57 +67,55 @@ public class IO {
         System.out.println("Hello world! I am back from the Hell!");
     }
 
-    static void commandLineIODemo() {
-        scannerInputDemo();
+    static void stdIODemo() {
         consoleInputDemo();
+        stdInputDemo();
         stdoutOutputDemo();
     }
 
     static void fileIODemo() throws IOException {
-        // 打印用户路径, 默认是 Java MyClass 交换命令的执行路径, 但在IDE中时由IDE自行控制
+        // 打印用户路径, 默认是 Java MyClass 命令的执行路径
         String userDir = System.getProperty("user.dir");
-        System.out.println(userDir);
+        System.out.println("user.dir = " + userDir);
 
         // 写文件
-        String fileName = "java-basic/src/main/resources/test.txt";
+        String fileName = "test.txt";
         Path path = Path.of(userDir, fileName);
         String absFileName = path.toString();
 
-        // try-with-Resources, since Java 7
         try (
             PrintWriter writer = new PrintWriter(absFileName, StandardCharsets.UTF_8);
         ) {
             System.out.println("writing " + absFileName);
             writer.println("This is a warning!");
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             System.out.println("catch block");
             throw e;
-        } finally {
+        }
+        finally {
             System.out.println("finally block");
         }
         System.out.println();
-        // 在 try-with-Resources 语句中, try 代码块执行完成之后, 便会执行 resources 的 close 方法
-        // 即 resources 类必须实现 AutoCloseable 或 Closeable 接口, 以及对应的 close 方法
-        // 而之前的 try-catch-finally 语句, 必须在 finally 中手动调用 resource 的 close 方法来
-        // 释放资源, 如果 close 方法可能抛出检查型异常(checked exception), 则还需要嵌套一层 try-catch
 
-        // try-with-Resources
+        // 读文件
         try (
             Scanner scanner = new Scanner(path, StandardCharsets.UTF_8)
         ) {
-            System.out.println("reading " + absFileName);
-            String line = scanner.nextLine();
-            System.out.println(line);
-        } catch (IOException e) {
+            System.out.println("reading file: " + absFileName);
+            System.out.println("scanner.nextLine() = " + scanner.nextLine());
+        }
+        catch (IOException e) {
             System.out.println("catch block");
             throw e;
-        } finally {
+        }
+        finally {
             System.out.println("finally block");
         }
     }
 
     public static void main(String[] args) throws IOException {
-        commandLineIODemo();
+        stdIODemo();
         fileIODemo();
     }
 }

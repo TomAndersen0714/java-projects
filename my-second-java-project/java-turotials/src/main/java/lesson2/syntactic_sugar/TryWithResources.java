@@ -12,18 +12,25 @@ import java.util.Scanner;
  * @link <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">The Java™ Tutorials</a>
  */
 public class TryWithResources {
+    /**
+     * try-with-Resources, since Java 7
+     * the variables in try block must implements the Closeable or AutoCloseable interface.
+     * <p>
+     * 在 try-with-Resources 语法中, try 代码块执行完成之后, 便会执行 resources 的 close 方法
+     * 即 resources 类必须实现 AutoCloseable 或 Closeable 接口, 即支持 close 方法
+     * 此语句可以避免在 try-catch-finally 语句的 finally block 中手动调用 resource 的 close 方法来
+     * 释放资源, 如果 close 方法可能抛出检查型异常(checked exception), 则还需要嵌套一层 try-catch.
+     */
     public static void main(String[] args) throws IOException {
         // 打印用户路径, 默认是 Java MyClass 命令的执行路径
         String userDir = System.getProperty("user.dir");
-        System.out.println(userDir);
+        System.out.println("user.dir = " + userDir);
 
         // 写文件
-        String fileName = "java-basic/src/main/resources/test.txt";
+        String fileName = "test.txt";
         Path path = Path.of(userDir, fileName);
         String absFileName = path.toString();
 
-        // try-with-Resources, since Java 7
-        // the variables in try block must implements the Closeable or AutoCloseable interface
         try (
             PrintWriter writer = new PrintWriter(absFileName, StandardCharsets.UTF_8);
         ) {
@@ -38,18 +45,13 @@ public class TryWithResources {
             System.out.println("finally block");
         }
         System.out.println();
-        // 在 try-with-Resources 语法中, try 代码块执行完成之后, 便会执行 resources 的 close 方法
-        // 即 resources 类必须实现 AutoCloseable 或 Closeable 接口, 以及对应的 close 方法
-        // 而之前的 try-catch-finally 语句, 必须在 finally 中手动调用 resource 的 close 方法来
-        // 释放资源, 如果 close 方法可能抛出检查型异常(checked exception), 则还需要嵌套一层 try-catch
 
-        // try-with-Resources
+        // 读文件
         try (
             Scanner scanner = new Scanner(path, StandardCharsets.UTF_8)
         ) {
-            System.out.println("reading " + absFileName);
-            String line = scanner.nextLine();
-            System.out.println(line);
+            System.out.println("reading file: " + absFileName);
+            System.out.println("scanner.nextLine() = " + scanner.nextLine());
         }
         catch (IOException e) {
             System.out.println("catch block");

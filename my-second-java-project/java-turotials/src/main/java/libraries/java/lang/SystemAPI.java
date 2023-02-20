@@ -23,6 +23,8 @@ public class SystemAPI {
         System.out.println("java vendor url: " + System.getProperty("java.vendor.url"));
         System.out.println("java version: " + System.getProperty("java.version"));
         System.out.println("java home(JRE): " + System.getProperty("java.home"));
+
+        System.out.println("file.encoding: " + System.getProperty("file.encoding"));
         System.out.println();
 
         // Java虚拟机规范提供商
