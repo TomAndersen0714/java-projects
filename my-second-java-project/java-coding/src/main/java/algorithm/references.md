@@ -1,3 +1,7 @@
 [华为牛客网机试题](https://www.nowcoder.com/exam/oj/ta?tpId=37)
 
 [PAT牛客网练习场](https://www.nowcoder.com/pat)
+
+
+
+素数: 质数又称素数。一个大于1的自然数，除了1和它自身外，不能被其他自然数整除的数叫做质数；否则称为合数（规定1既不是质数也不是合数）

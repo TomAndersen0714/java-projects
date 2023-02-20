@@ -1,5 +1,9 @@
 package libraries.java.io;
 
+import libraries.Utils;
+
+import java.io.PrintStream;
+
 /**
  * Core Java, 12E, P59.
  *
@@ -9,6 +13,11 @@ package libraries.java.io;
  */
 public class PrintStreamAPI {
     public static void main(String[] args) {
+        System.out.println("Utils.getClassName(System.in) = " + Utils.getClassName(System.in));
+        System.out.println("Utils.getClassName(System.out) = " + Utils.getClassName(System.out));
+
+        System.out.println("(System.out instanceof PrintStream) = " + (System.out instanceof PrintStream));
+
         // printf
         // 以百分号 % 开头的字符串被称为格式说明符(format specifiers)
         // 格式说明符的末尾字符, 即转换字符(conversion character), 用于指示要格式成为的数值类型

@@ -3,10 +3,11 @@ package algorithm.pat.level1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
-// https://www.nowcoder.com/pat/6/problem/4078
-public class _1002_1 {
+/**
+ * @author TomAndersen
+ */
+public class _1002_2 {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String[] nums = bufferedReader.readLine().split(" ");

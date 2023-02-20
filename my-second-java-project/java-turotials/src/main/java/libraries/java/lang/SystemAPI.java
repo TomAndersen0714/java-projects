@@ -1,6 +1,13 @@
 package libraries.java.lang;
 
+import libraries.Utils;
+
+import java.io.BufferedInputStream;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * {@link java.lang.System}
@@ -75,6 +82,21 @@ public class SystemAPI {
         System.arraycopy(a, 0, b, 0, a.length);
         System.out.println("Array a: " + Arrays.toString(a));
         System.out.println("Array b: " + Arrays.toString(b));
+
+
+        // System.setIn
+        // reassigns the "standard" input stream
+        System.out.println("Utils.getClassName(System.in) = " + Utils.getClassName(System.in));
+        System.setIn(new BufferedInputStream(
+            new ByteArrayInputStream("Hello world".getBytes(StandardCharsets.UTF_8)))
+        );
+        System.out.println("Utils.getClassName(System.in) = " + Utils.getClassName(System.in));
+
+        System.out.println("new Scanner(System.in).nextLine() = " + new Scanner(System.in).nextLine());
+
+        // System.setOut
+        System.out.println("Utils.getClassName(System.out) = " + Utils.getClassName(System.out));
+
     }
 
     public static void main(String[] args) {
