@@ -8,3 +8,19 @@
 
 素数的判断方式: 如果一个数, 从2到其平方根都无法被整除, 则此数为素数.
 
+输入: Java统一使用BufferedReader+InputStreamReader封装System.in来实现输入, 并使用readLine().split(" ")方法来获取一行中的数据. 
+如果输入的是数字, 则统一使用对应的封装类的parse*方法转换字符串为数值, 如: Integer.parseInt(str).
+
+输出: Java统一使用StringBuilder拼接字符串批量输出
+
+
+常用API:
+String.charAt
+String.valueOf
+Character.isAlphabetic
+
+
+Note:
+1. 注意边界条件, 多使用注释来标明循环跳出时的变量值
+2. 注意ASCII表, 需要记住数字类字符, 和大小写字母类字符的相对位置
+3. 注意多写注释, 避免逻辑死循环

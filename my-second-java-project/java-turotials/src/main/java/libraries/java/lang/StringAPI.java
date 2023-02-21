@@ -52,6 +52,9 @@ public class StringAPI {
         // charAt
         // return the code unit at index 0, 2 bytes
         System.out.println(greeting.charAt(0));
+        // toCharArray
+        // 复制并返回字符串对应的字符数组
+        System.out.println("greeting.toCharArray() = " + Arrays.toString(greeting.toCharArray()));
 
         // length
         // 返回代码单元(code unit)的个数, 即char数组的长度
@@ -108,6 +111,9 @@ public class StringAPI {
         // 复制字符数组, 生成对应字符串
         System.out.println(String.copyValueOf("Hello world".toCharArray(), 0, 5));
 
+
+        String[] week = new String[]{"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"};
+        System.out.println("Arrays.toString(week) = " + Arrays.toString(week));
     }
 
 }
