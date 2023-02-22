@@ -18,7 +18,9 @@
 String.charAt
 String.valueOf
 Character.isAlphabetic
-
+Arrays.sort()
+Arrays.sort(Comparator)
+Arrays.sort(fromIndex, toIndex, Comparator)
 
 Note:
 1. 注意边界条件, 多使用注释来标明循环跳出时的变量值

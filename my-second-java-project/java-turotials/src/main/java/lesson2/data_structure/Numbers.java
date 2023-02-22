@@ -7,4 +7,8 @@ package lesson2.data_structure;
  */
 public class Numbers {
     // todo, how to convert int array to Integer array?
+
+    public static void main(String[] args) {
+
+    }
 }

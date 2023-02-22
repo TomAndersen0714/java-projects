@@ -120,7 +120,7 @@ class MergeSort2 {
         int len = end - start + 1;
         // 将原始数组以固定步长划分为偶数个子数组进行合并, 步长从1开始, 每次翻倍
         for (int s = 1; s < len; s = s * 2) {
-            // 划分并合并子数组, PS: 需要注意边界条件, 当剩余元素无法组成一个完整子数组时, 不再合并(i.e. i>end-s)
+            // 划分并合并子数组, NOTE: 需要注意边界条件, 当剩余元素无法组成一个完整子数组时, 不再合并(i.e. i>end-s)
             for (int i = start; i <= end - s; i += s * 2) {
                 merge(a, i, i + s - 1, Math.min(i + s * 2 - 1, end), help);
             }

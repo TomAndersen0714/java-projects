@@ -27,7 +27,7 @@ public class BitOperator {
         System.out.println("(-0b1 >> 3) = " + (-0b1 >> 3));
 
         // >>>, 移位运算符, 会用0填充其最高bit位
-        // PS: Java 不存在 <<< 运算符
+        // NOTE: Java 不存在 <<< 运算符
         System.out.println("(0b1001 >>> 3) = " + (0b1001 >>> 3));
         System.out.println("(-0b1001 >>> 3) = " + (-0b1001 >>> 3));
     }

@@ -30,7 +30,7 @@ public class PrimitiveType {
         System.out.println(byte_a);
 
         // 自 Java10 开始, 对于局部变量, 支持从其初始值来判断其数据类型, 而不需要声明
-        // PS: 还是强烈建议, 通过显示声明的方式, 定义变量的类型, 以增强可读性
+        // NOTE: 还是强烈建议, 通过显示声明的方式, 定义变量的类型, 以增强可读性
         var a = 1;
         var b = 1L;
         var c = 1f;

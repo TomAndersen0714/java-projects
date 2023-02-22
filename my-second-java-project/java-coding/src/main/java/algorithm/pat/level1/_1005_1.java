@@ -1,9 +1,8 @@
 package algorithm.pat.level1;
 
-import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.lang.reflect.Array;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 
 // https://www.nowcoder.com/pat/6/problem/4041
@@ -30,7 +29,7 @@ public class _1005_1 {
         String[] inputs = bf.readLine().split(" ");
         short N = Short.parseShort(inputs[0]);
         short L = Short.parseShort(inputs[1]);
-        short H = Short.parseShort(inputs[1]);
+        short H = Short.parseShort(inputs[2]);
 
         int[][] members = new int[N][];
         int count = 0;
@@ -47,24 +46,24 @@ public class _1005_1 {
         }
 
         // sort
-        Arrays.sort(members, 0, count - 1,
-            (x, y) -> {
-                int levelX = level(x, L, H);
-                int levelY = level(y, L, H);
-                if (levelX != levelY) return levelY - levelX;
-
-                int sumX = x[1] + x[2], sumY = y[1] + y[2];
-                if (sumX != sumY) {
-                    return sumY - sumX;
-                }
-                else if (x[1] != y[1]) {
-                    return y[1] - x[1];
-                }
-                else {
-                    return x[0] - y[0];
-                }
+        Arrays.sort(members, 0, count, (x, y) -> {
+            int levelX = level(x, H);
+            int levelY = level(y, H);
+            if (levelX != levelY) {
+                return levelY - levelX;
             }
-        );
+
+            int sumX = x[1] + x[2], sumY = y[1] + y[2];
+            if (sumX != sumY) {
+                return sumY - sumX;
+            }
+            else if (x[1] != y[1]) {
+                return y[1] - x[1];
+            }
+            else {
+                return x[0] - y[0];
+            }
+        });
 
         // print
         System.out.println(count);
@@ -73,7 +72,7 @@ public class _1005_1 {
         }
     }
 
-    private static int level(int[] a, int l, int h) {
+    private static int level(int[] a, int h) {
         if (a[1] >= h && a[2] >= h) return 4;
         else if (a[1] >= h) return 3;
         else if (a[1] >= a[2]) return 2;

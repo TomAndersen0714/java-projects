@@ -157,7 +157,7 @@ public class FlowControl {
                 break;
         }
 
-//        // switch expression, since Java 14 (PS: not the 'switch statement')
+//        // switch expression, since Java 14 (NOTE: not the 'switch statement')
 //        int num = switch (choice) {
 //            case 1 -> 2;
 //            default -> 3;

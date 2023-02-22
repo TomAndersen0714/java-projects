@@ -59,7 +59,7 @@ public class StringAPI {
         // length
         // 返回代码单元(code unit)的个数, 即char数组的长度
         System.out.println(greeting.length());
-        // PS: 并不等价于Unicode字符的个数, 因为很多Unicode字符需要使用多个代码单元(code unit)来表示, 如 😀
+        // NOTE: 并不等价于Unicode字符的个数, 因为很多Unicode字符需要使用多个代码单元(code unit)来表示, 如 😀
 
         // replace
         // 返回一个新字符串, 并进行字符串替换

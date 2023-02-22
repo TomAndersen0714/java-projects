@@ -153,7 +153,7 @@ class HeapSort1_1 {
 
 /**
  * 2. 自顶向下+上浮(swim)构建堆
- * PS: 此方法效率和复杂度都不如方法1, 于此仅作练习
+ * NOTE: 此方法效率和复杂度都不如方法1, 于此仅作练习
  */
 class HeapSort2 {
     public static void sort(int[] a) {

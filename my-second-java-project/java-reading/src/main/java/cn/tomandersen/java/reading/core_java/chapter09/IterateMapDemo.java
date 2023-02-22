@@ -31,7 +31,7 @@ public class IterateMapDemo {
         });
 
         // 2. keySet()
-        // PS: do not recommend, because it would access twice for every element
+        // NOTE: do not recommend, because it would access twice for every element
         System.out.println("2. keySet(): ");
         Set<String> keySet = id_names.keySet();
         // 2.1. using iterator

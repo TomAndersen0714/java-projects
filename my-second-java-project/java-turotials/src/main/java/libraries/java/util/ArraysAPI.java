@@ -25,7 +25,7 @@ public class ArraysAPI {
 
 
         // sort()
-        // PS: Arrays.sort can only sort primitive type element in ascending order
+        // NOTE: Arrays.sort can only sort primitive type element in ascending order
         // if you want need to support different order, you can call the
         // sort(T[] a, Comparator<? super T> c) by passing a user-defined comparator.
         System.out.println("Arrays.sort(): ");
@@ -43,6 +43,7 @@ public class ArraysAPI {
         System.out.println("Arrays.sort(nums1) = " + Arrays.deepToString(nums1));
 
         // sort(T[] a, int fromIndex, int toIndex, Comparator<? super T> c)
+        // NOTE: Arrays.sort(fromIndex, toIndex, Comparator) do not include the element of the toIndex
         nums1 = new int[][]{
             {1, 3}, {1, 2}, {3, 4}, {4, 5}
         };
