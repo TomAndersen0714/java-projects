@@ -1,4 +1,4 @@
-package lesson1.variables;
+package lesson2.object_oriented;
 
 import libraries.Utils;
 

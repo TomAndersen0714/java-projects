@@ -3,11 +3,13 @@ package lesson1.control_flow;
 /**
  * @author TomAndersen
  */
-public class CodeBlock {
+public class Block {
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
-        // code block
+        // Block
+        // A block is a group of zero or more statements between balanced braces and
+        // can be used anywhere a single statement is allowed.
         {
             int x = 0;
             System.out.println("This is a block!");

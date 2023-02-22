@@ -1,19 +1,29 @@
 package lesson3.io;
 
+import java.io.BufferedReader;
 import java.io.Console;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Path;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
- * Core Java, 12E, P56.
- *
  * @author TomAndersen
  */
-public class IO {
-    static void stdInputDemo() {
+public class StdIODemo {
+
+    static void stdInputReaderDemo() {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        // read a line from stdin
+        try {
+            System.out.println("bufferedReader.readLine() = " + bufferedReader.readLine());
+        }
+        catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    static void stdInputScannerDemo() {
         Scanner input = new Scanner(System.in);
 
         // get first input
@@ -49,6 +59,12 @@ public class IO {
         System.out.println("username: " + username + "password: " + password);
     }
 
+    static void stdinInputDemo() {
+        stdInputReaderDemo();
+        stdInputScannerDemo();
+        consoleInputDemo();
+    }
+
     static void stdoutOutputDemo() {
         String name = "TomAndersen";
         int age = 25;
@@ -67,55 +83,10 @@ public class IO {
         System.out.println("Hello world! I am back from the Hell!");
     }
 
-    static void stdIODemo() {
-        consoleInputDemo();
-        stdInputDemo();
+
+    public static void main(String[] args) {
+        stdinInputDemo();
         stdoutOutputDemo();
     }
-
-    static void fileIODemo() throws IOException {
-        // 打印用户路径, 默认是 Java MyClass 命令的执行路径
-        String userDir = System.getProperty("user.dir");
-        System.out.println("user.dir = " + userDir);
-
-        // 写文件
-        String fileName = "test.txt";
-        Path path = Path.of(userDir, fileName);
-        String absFileName = path.toString();
-
-        try (
-            PrintWriter writer = new PrintWriter(absFileName, StandardCharsets.UTF_8);
-        ) {
-            System.out.println("writing " + absFileName);
-            writer.println("This is a warning!");
-        }
-        catch (IOException e) {
-            System.out.println("catch block");
-            throw e;
-        }
-        finally {
-            System.out.println("finally block");
-        }
-        System.out.println();
-
-        // 读文件
-        try (
-            Scanner scanner = new Scanner(path, StandardCharsets.UTF_8)
-        ) {
-            System.out.println("reading file: " + absFileName);
-            System.out.println("scanner.nextLine() = " + scanner.nextLine());
-        }
-        catch (IOException e) {
-            System.out.println("catch block");
-            throw e;
-        }
-        finally {
-            System.out.println("finally block");
-        }
-    }
-
-    public static void main(String[] args) throws IOException {
-        stdIODemo();
-        fileIODemo();
-    }
 }
+

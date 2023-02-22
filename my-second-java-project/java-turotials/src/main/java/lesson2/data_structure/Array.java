@@ -7,15 +7,20 @@ public class Array {
         System.out.println("initiateArray(): ");
         // array declaration
         int[] a; // Java-style
+        int[][] aa;
         int b[]; // C-style
 
         // empty array
         a = new int[]{};
         System.out.println(a);
         System.out.println(a.toString()); // 数组无法直接打印, 必须遍历每个元素才能打印
-        a = new int[0];
+
+        a = new int[4]; // 构造数组时必须声明其空间大小
         System.out.println(a);
-        System.out.println(a.toString());
+        System.out.println("a =" + a.toString());
+        aa = new int[8][]; // 构造数组时必须声明其空间大小
+        System.out.println(aa);
+        System.out.println("aa =" + Arrays.deepToString(aa));
 
         // initiate array using numeric literal
         // 1. initialize with specific length
@@ -23,19 +28,23 @@ public class Array {
         int[] y = {1, 2, 3, 4, 5};
         // 2. initialize with assignment
         int[] z = new int[]{1, 2, 3, 4, 5};
-        int[][] xy = { // double dimension array
+        int[][] xx = { // double dimension array
             {1, 2, 3}, {4, 5}, {6, 7}
         };
         System.out.println("y: " + y.toString()); // toString can not return the real value of element
         System.out.println("z: " + Arrays.toString(z));
         System.out.println("y == z: " + (y == z));// y != z
-        System.out.println(Arrays.toString(xy)); // Arrays.toString only support one dimension array
+        System.out.println(Arrays.toString(xx)); // Arrays.toString only support one dimension array
         System.out.println();
 
         int[] q = {1, 2, 3, 4, 5};
         int[] w = new int[]{1, 2, 3, 4, 5};
         System.out.println("q == y: " + (q == y));// q != y, i.e. 数组没有常量传播, 每次赋值都是创建一个新对象
         System.out.println("w != z: " + (w != z));// w != z
+
+        int m = 0, n = 1;
+        x = new int[]{m, n};
+        System.out.println("Arrays.toString(x) = " + Arrays.toString(x));
 
         // initiate array using for statement
         a = new int[20];
@@ -138,10 +147,10 @@ public class Array {
     }
 
     public static void main(String[] args) {
-//        initiateArray();
+        initiateArray();
 //        printArray(args);
 //        accessArray();
-        cloneArray();
+//         cloneArray();
 //        convertArray();
     }
 }

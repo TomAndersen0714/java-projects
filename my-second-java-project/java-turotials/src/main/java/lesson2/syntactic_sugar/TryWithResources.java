@@ -37,13 +37,13 @@ public class TryWithResources {
             System.out.println("writing " + absFileName);
             writer.println("This is a warning!");
         }
-        catch (IOException e) {
-            System.out.println("catch block");
-            throw e;
-        }
-        finally {
-            System.out.println("finally block");
-        }
+        // catch (IOException e) {
+        //     System.out.println("catch block");
+        //     throw e;
+        // }
+        // finally {
+        //     System.out.println("finally block");
+        // }
         System.out.println();
 
         // 读文件
@@ -53,12 +53,12 @@ public class TryWithResources {
             System.out.println("reading file: " + absFileName);
             System.out.println("scanner.nextLine() = " + scanner.nextLine());
         }
-        catch (IOException e) {
-            System.out.println("catch block");
-            throw e;
-        }
-        finally {
-            System.out.println("finally block");
-        }
+        // catch (IOException e) {
+        //     System.out.println("catch block");
+        //     throw e;
+        // }
+        // finally {
+        //     System.out.println("finally block");
+        // }
     }
 }

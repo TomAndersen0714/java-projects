@@ -1,4 +1,4 @@
-package lesson1.data_types;
+package lesson1.variables;
 
 
 import libraries.Utils;

@@ -44,5 +44,6 @@ public class ScannerAPI {
         // hasNext*: 检测下一个字符序列是否能够转换为对应的值
         System.out.println("sc.hasNextInt() = " + sc.hasNextInt());
         System.out.println("sc.hasNextDouble() = " + sc.hasNextDouble());
+
     }
 }
