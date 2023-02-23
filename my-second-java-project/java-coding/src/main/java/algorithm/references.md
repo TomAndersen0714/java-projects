@@ -16,6 +16,7 @@
 
 常用API:
 String.charAt
+String.format()
 String.valueOf
 String.valueOf(char data[])
 String.valueOf(char data[], int offset, int count)
@@ -29,4 +30,4 @@ Note:
 2. 注意ASCII表, 需要记住数字类字符, 和大小写字母类字符的相对位置
 3. 注意多写注释, 避免逻辑死循环, 或者遗忘
 4. 读题时, 要用符号做笔记, 避免后续反复读题, 如排序条件 sort (a+b DESC, a DESC, num ASC)等
-5. 
+5. 大道至简, 编程竞赛就是仅解决当前问题, 不要求程序的扩展性和鲁棒性
