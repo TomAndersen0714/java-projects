@@ -17,6 +17,8 @@
 常用API:
 String.charAt
 String.valueOf
+String.valueOf(char data[])
+String.valueOf(char data[], int offset, int count)
 Character.isAlphabetic
 Arrays.sort()
 Arrays.sort(Comparator)

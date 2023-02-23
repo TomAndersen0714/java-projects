@@ -92,6 +92,10 @@ public class StringAPI {
         System.out.println(String.valueOf(1.2F));
         System.out.println(String.valueOf(0x1.0p-3));
         System.out.println(String.valueOf(0x1F));
+        // String.valueOf(char data[])
+        System.out.println("String.valueOf(new char[]{'a','b','c'}) = " + String.valueOf(new char[]{'a', 'b', 'c'}));
+        // String.valueOf(char data[], int offset, int count)
+        System.out.println("String.valueOf(new char[]{'a', 'b', 'c'}, 1, 2) = " + String.valueOf(new char[]{'a', 'b', 'c'}, 1, 2));
 
         System.out.println(Arrays.toString("Hello, world".split(" ")));
 
