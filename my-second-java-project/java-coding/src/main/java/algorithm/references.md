@@ -21,6 +21,7 @@ String.valueOf
 String.valueOf(char data[])
 String.valueOf(char data[], int offset, int count)
 Character.isAlphabetic
+Double.compare()
 Arrays.sort()
 Arrays.sort(Comparator)
 Arrays.sort(fromIndex, toIndex, Comparator)
