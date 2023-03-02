@@ -1,4 +1,4 @@
-package algorithm.pat;
+package algorithm.pat.level1;
 
 import algorithm.pat.level1.*;
 
@@ -12,14 +12,14 @@ import java.nio.charset.StandardCharsets;
  */
 public class Test {
     public static void main(String[] args) {
-        String inputStr = "flaenglebhe4lbrlhbrlrkbhbhrbhrlkbhr\n" +
-            "fng4kkn";
+        String inputStr = "6 3\n" +
+            "1 7 8 9 20 1000";
         System.setIn(new BufferedInputStream(
             new ByteArrayInputStream(inputStr.getBytes(StandardCharsets.UTF_8)))
         );
 
         try {
-            _1019_1.main(args);
+            _1020_1.main(args);
         }
         catch (IOException e) {
             throw new RuntimeException(e);
