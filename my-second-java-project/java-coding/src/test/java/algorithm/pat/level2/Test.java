@@ -1,6 +1,6 @@
 package algorithm.pat.level2;
 
-import algorithm.pat.level2.*;
+import algorithm.practice.pat.level2._1001_1;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
