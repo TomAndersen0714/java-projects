@@ -8,12 +8,13 @@ import java.nio.file.Path;
 import java.util.Scanner;
 
 /**
+ * https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
+ *
  * @author TomAndersen
- * @link <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">The Java™ Tutorials</a>
  */
 public class TryWithResources {
     /**
-     * try-with-Resources, since Java 7
+     * Note: try-with-resources statement, since JDK 7
      * the variables in try block must implements the Closeable or AutoCloseable interface.
      * <p>
      * 在 try-with-Resources 语法中, try 代码块执行完成之后, 便会执行 resources 的 close 方法

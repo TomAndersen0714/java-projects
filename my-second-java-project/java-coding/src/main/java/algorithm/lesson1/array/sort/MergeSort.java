@@ -1,4 +1,4 @@
-package algorithm.lesson1.sort;
+package algorithm.lesson1.array.sort;
 
 /**
  * 归并排序(Merge Sort):

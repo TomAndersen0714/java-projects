@@ -1,4 +1,4 @@
-package algorithm.lesson1.sort;
+package algorithm.lesson1.array.sort;
 
 
 // 冒泡排序(Bubble Sort):

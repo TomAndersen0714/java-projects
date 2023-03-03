@@ -1,4 +1,4 @@
-package algorithm.lesson1.sort;
+package algorithm.lesson1.array.sort;
 
 
 // 希尔排序(Shell Sort):

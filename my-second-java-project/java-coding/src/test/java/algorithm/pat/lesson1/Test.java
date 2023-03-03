@@ -1,4 +1,4 @@
-package algorithm.pat.level1;
+package algorithm.pat.lesson1;
 
 import algorithm.practice.pat.level1._1020_1;
 

@@ -1,4 +1,4 @@
-package algorithm.lesson1.sort;
+package algorithm.lesson1.array.sort;
 
 
 // 快速排序(Quick Sort):

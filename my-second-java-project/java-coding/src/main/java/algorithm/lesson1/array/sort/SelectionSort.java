@@ -1,4 +1,4 @@
-package algorithm.lesson1.sort;
+package algorithm.lesson1.array.sort;
 
 
 // 选择排序(Selection Sort):

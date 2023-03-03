@@ -3,5 +3,5 @@ package algorithm.lesson1.tree;
 /**
  * @author TomAndersen
  */
-public class Heap {
+public class BTree {
 }

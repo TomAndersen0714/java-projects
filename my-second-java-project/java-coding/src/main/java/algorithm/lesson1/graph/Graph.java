@@ -5,33 +5,27 @@ import java.util.Iterator;
 /**
  * @author TomAndersen
  */
-public class Graph {
+interface Graph {
 
     /**
      * return the number of vertexes
      *
      * @return
      */
-    public int vertex() {
-        return 0;
-    }
+    int vertex();
 
     /**
      * return the number of edges
      *
      * @return
      */
-    public int edge() {
-        return 0;
-    }
+    int edge();
 
 
     /**
      * add an edge into graph
      */
-    public void addEdge() {
-
-    }
+    void addEdge();
 
 
     /**
@@ -40,9 +34,7 @@ public class Graph {
      * @param v
      * @return
      */
-    public Iterator<Integer> adjacent(int v) {
-        return null;
-    }
+    Iterator<Integer> adjacent(int v);
 
     /**
      * iterate the vertexes in graph and print the path
@@ -50,7 +42,5 @@ public class Graph {
      * @return
      */
     @Override
-    public String toString() {
-        return null;
-    }
+    public String toString();
 }
