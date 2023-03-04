@@ -5,7 +5,7 @@ import java.util.Iterator;
 /**
  * @author TomAndersen
  */
-public class AjacentListGraph implements Graph{
+public class AjacentListGraph<E> implements Graph<E> {
     @Override
     public int vertex() {
         return 0;
@@ -22,7 +22,7 @@ public class AjacentListGraph implements Graph{
     }
 
     @Override
-    public Iterator<Integer> adjacent(int v) {
+    public Iterator<E> adjacent(int v) {
         return null;
     }
 }

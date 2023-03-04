@@ -2,6 +2,7 @@
 
 [PAT牛客网练习场](https://www.nowcoder.com/pat)
 
+[浙江大学-PTA程序设计类实验辅助教学平台-实战环境模拟](https://pintia.cn/problem-sets/dashboard)
 
 
 素数: 质数又称素数。一个大于1的自然数，除了1和它自身外，不能被其他自然数整除的数叫做质数；否则称为合数（规定1既不是质数也不是合数）
@@ -16,7 +17,10 @@
 
 常用API:
 String.charAt
-String.format()
+String.format(): 
+    "%,d"表示使用逗号分隔符分组小数点左侧数字
+    "%.2f"表示四舍五入保留小数点后两位
+    "%,.2f"表示四舍五入保留小数点后两位, 同时使用逗号分隔符分组小数点左侧数字
 String.valueOf
 String.valueOf(char data[])
 String.valueOf(char data[], int offset, int count)

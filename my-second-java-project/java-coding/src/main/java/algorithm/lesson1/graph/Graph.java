@@ -5,7 +5,7 @@ import java.util.Iterator;
 /**
  * @author TomAndersen
  */
-interface Graph {
+interface Graph<E> {
 
     /**
      * return the number of vertexes
@@ -34,7 +34,7 @@ interface Graph {
      * @param v
      * @return
      */
-    Iterator<Integer> adjacent(int v);
+    Iterator<E> adjacent(int v);
 
     /**
      * iterate the vertexes in graph and print the path

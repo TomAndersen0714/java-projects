@@ -5,5 +5,5 @@ package lesson2.object_oriented.generics;
  *
  * @author TomAndersen
  */
-public class Generic {
+public class Generics {
 }

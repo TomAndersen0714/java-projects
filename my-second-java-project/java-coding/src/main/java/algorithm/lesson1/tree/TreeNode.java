@@ -3,16 +3,19 @@ package algorithm.lesson1.tree;
 /**
  * @author TomAndersen
  */
-public class TreeNode<K, V> {
-    public static class BinaryTreeNode {
-
+public class TreeNode<E> {
+    public class BinaryTreeNode {
+        E val;
+        BinaryTreeNode left, right;
     }
 
-    public static class ThreeTreeNode {
-
+    public class ThreeTreeNode {
+        E val;
+        ThreeTreeNode left, mid, right;
     }
 
-    public static class FourTreeNode {
-
+    public class FourTreeNode {
+        E val;
+        FourTreeNode one, two, three, four;
     }
 }
