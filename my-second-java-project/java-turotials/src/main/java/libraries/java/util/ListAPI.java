@@ -22,19 +22,19 @@ public interface ListAPI {
 
         // note: instance method
         List<String> staffs = new ArrayList<>(List.of("Sun"));
-        // List.toString()
-        System.out.println("List.toString(): ");
+        // toString()
+        System.out.println("toString(): ");
         System.out.println(staffs);
 
         // add()
-        System.out.println("List.add(): ");
+        System.out.println("add(): ");
         staffs.add("Jim");
         staffs.add("Jim");
         staffs.add("Tom");
         staffs.add("Tom");
         System.out.println(staffs);
         // addAll()
-        System.out.println("List.addAll(): ");
+        System.out.println("addAll(): ");
         staffs.addAll(List.of("Tom", "Andersen"));
         System.out.println(staffs);
 
@@ -62,5 +62,7 @@ public interface ListAPI {
         System.out.println("removeIf(): ");
         staffs.removeIf((x) -> x.startsWith("A"));
         System.out.println(staffs);
+
+
     }
 }

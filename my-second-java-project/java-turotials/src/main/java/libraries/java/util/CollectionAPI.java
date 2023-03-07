@@ -27,28 +27,28 @@ public interface CollectionAPI {
 
         Collection<String> collection = names;
 
-        // Collection.size
+        // size
         System.out.println("Collection#size(): " + collection.size());
-        // Collection.isEmpty
+        // isEmpty
         System.out.println("Collection#isEmpty(): " + collection.isEmpty());
-        // Collection.contains
+        // contains
         System.out.println("Collection#contains(): " + collection.contains("Tom"));
-        // Collection.containsAll
+        // containsAll
         System.out.println("Collection#containsAll(): " + collection.containsAll(names));
 
-        // Collection.add
+        // add
         System.out.println("Collection#add(): " + collection.add("Tom"));
-        // Collection.addAll
+        // addAll
         System.out.println("Collection#addAll(): " + collection.addAll(names));
         System.out.println(names);
 
-        // Collection.remove
+        // remove
         System.out.println("Collection#remove(): " + collection.remove("Tom"));
         System.out.println(names);
-        // Collection.removeAll
+        // removeAll
         System.out.println("Collection#removeAll(): " + collection.removeAll(otherNames));
         System.out.println(names);
-        // Collection.removeIf, since Java 8
+        // removeIf, since Java 8
         // this method will return true, when it changed collection
         System.out.println(collection.removeIf((x) -> x.equals("John")));
         System.out.println(names);
