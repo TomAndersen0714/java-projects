@@ -9,7 +9,7 @@ import static java.lang.Thread.sleep;
 /**
  * {@link java.util.Collection}
  */
-public class CollectionAPI {
+public interface CollectionAPI {
     public static void main(String[] args) throws InterruptedException {
 /*        while (true) {
            System.out.println("This is a collection API demo: ");

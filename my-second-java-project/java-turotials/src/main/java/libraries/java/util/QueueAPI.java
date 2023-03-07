@@ -4,9 +4,11 @@ import java.util.Queue;
 import java.util.LinkedList;
 
 /**
+ * @see libraries.java.util.LinkedListAPI
+ *
  * @author TomAndersen
  */
-public class QueueAPI {
+public interface QueueAPI {
     public static void main(String[] args) {
         LinkedList<String> linkedList = new LinkedList<>();
         Queue<String> queue = linkedList;
