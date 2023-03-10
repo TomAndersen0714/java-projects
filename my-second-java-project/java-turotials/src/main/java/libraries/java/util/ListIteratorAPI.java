@@ -13,6 +13,6 @@ public interface ListIteratorAPI {
         List<String> staffs = new LinkedList<>(List.of("Tom", "Alise", "John"));
         ListIterator<String> listIterator = staffs.listIterator();
 
-        
+
     }
 }
