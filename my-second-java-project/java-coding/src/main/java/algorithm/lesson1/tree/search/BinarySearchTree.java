@@ -1,6 +1,7 @@
 package algorithm.lesson1.tree.search;
 
-import algorithm.lesson1.tree.TreeNode.BinaryTreeNode;
+
+import algorithm.lesson1.tree.BinaryTreeNode;
 
 /**
  * Binary Search Tree(BST).
