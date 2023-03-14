@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface IteratorAPI {
     public static void main(String[] args) {
-        // construct
+        // Iterator()
         List<String> names = new LinkedList<>(List.of("Tom", "John", "Alise"));
         Iterator<String> iterator = names.iterator();
         System.out.println("names = " + names);
@@ -21,6 +21,13 @@ public interface IteratorAPI {
         // 2. next()
         // returns the next element in the iteration
         System.out.println("java.util.Iterator.next: " + iterator.next());
+
+        // hasNext+next, traverse elements forward
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+        // initialize a new iterator
+        iterator = names.iterator();
 
         // 3. remove()
         // removes the last element returned by iterator#next() from the underlying collection

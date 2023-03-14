@@ -1,7 +1,7 @@
 package algorithm.lesson1.tree.search;
 
 
-import algorithm.lesson1.tree.BinaryTreeNode;
+import algorithm.lesson1.tree.TreeNode;
 
 /**
  * Binary Search Tree(BST).
@@ -14,7 +14,7 @@ import algorithm.lesson1.tree.BinaryTreeNode;
  */
 public class BinarySearchTree<E> {
 
-    BinaryTreeNode root;
+    TreeNode root;
 
     public BinarySearchTree(E[] inOrder, E[] preOrder) {
 
