@@ -1,7 +1,10 @@
 package libraries.java.util;
 
+import lesson2.data_structure.Array;
+
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * {@link java.util.Arrays}
@@ -60,6 +63,12 @@ public class ArraysAPI {
         System.out.println(Arrays.toString(a));
         a = Arrays.copyOfRange(nums, 1, 2);
         System.out.println(Arrays.toString(a));
+
+        // Arrays.copyOf(U[] original, int newLength, Class<? extends T[]> newType)
+        String[] names = new String[]{"Tom", "Alise", "John"};
+        Class<Object[]> newArrayType = Object[].class;
+        Object[] newNames = Arrays.copyOf(names, 2, newArrayType);
+        System.out.println("Arrays.copyOf(names, 2, Object[].class) = " + Arrays.toString(newNames));
 
         // Arrays.search()
         System.out.println("Arrays.search(): ");
