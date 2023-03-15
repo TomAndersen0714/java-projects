@@ -27,6 +27,7 @@ public interface CollectionAPI {
 
         Collection<String> collection = names;
 
+        // note: instance method
         // size
         System.out.println("Collection#size(): " + collection.size());
         // isEmpty
@@ -50,11 +51,11 @@ public interface CollectionAPI {
         System.out.println(names);
         // removeIf, since Java 8
         // this method will return true, when it changed collection
-        System.out.println(collection.removeIf((x) -> x.equals("John")));
+        System.out.println(collection.removeIf((x) -> "John".equals(x)));
         System.out.println(names);
 
-        // 无法直接进行强制类型转换(type cast), 因为强制类型转换必须保证两个变量类型之间存在直系血缘关系,
-        // 而 toArray 返回的是 Object[] 类型的变量, 与 String[] 类型
+        // 无法直接针对数组类型的对象进行强制类型转换(type cast), 因为强制类型转换
+        // 必须保证两个变量类型之间存在直系血缘关系, 而 toArray 返回的是 Object[] 类型的变量, 与 String[] 类型
         // 并无直系血缘关系, 无法进行强制类型转换. 虽然编译时通过了, 但实际执行时会抛出异常 ClassCastException
         // String[] nameArr = (String[]) names.toArray();
         System.out.println(Arrays.toString(names.toArray()));
