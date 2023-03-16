@@ -3,7 +3,6 @@ package libraries.java.util;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.BiFunction;
 
 /**
  * @author TomAndersen
@@ -17,8 +16,7 @@ public interface MapAPI {
         // Construct a immutable map
         System.out.println("Map.of(\"Tom\", 1, \"Alise\", 2) = " + Map.of("Tom", 1, "Alise", 2));
         // ofEntries()
-        System.out.println("Map.ofEntries(Map.of(\"Tom\", 1, \"Alise\", 2).entrySet().toArray(new Map.Entry[0])) = " +
-            Map.ofEntries(Map.of("Tom", 1, "Alise", 2).entrySet().toArray(new Map.Entry[0])));
+        System.out.println("Map.ofEntries(Map.of(\"Tom\", 1, \"Alise\", 2).entrySet().toArray(new Map.Entry[0])) = " + Map.ofEntries(Map.of("Tom", 1, "Alise", 2).entrySet().toArray(new Map.Entry[0])));
         // copyOf()
         System.out.println("Map.copyOf(Map.of(\"Tom\",1,\"Alise\",3)) = " + Map.copyOf(Map.of("Tom", 1, "Alise", 3)));
         System.out.println();
@@ -76,7 +74,6 @@ public interface MapAPI {
         System.out.println("wordCount.size() = " + wordCount.size());
         System.out.println();
 
-
         // keySet()
         // Returns a Set view of the keys contained in this map
         System.out.println("wordCount.keySet() = " + wordCount.keySet());
@@ -85,5 +82,39 @@ public interface MapAPI {
         System.out.println("wordCount.values() = " + wordCount.values());
         System.out.println();
 
+        // containsKey()
+        System.out.println("wordCount.containsKey(\"Tom\") = " + wordCount.containsKey("Tom"));
+        // containsValue()
+        System.out.println(wordCount.containsValue(1));
+
+
+        // compute()
+        wordCount.compute("Tom", (x, y) -> {
+            if (y.equals(1)) {
+                return y + 1;
+            }
+            else return y;
+        });
+        // computeIfAbsent()
+        wordCount.computeIfAbsent("JoJo", (x) -> {
+            return x.length();
+        });
+        // computeIfPresent()
+        wordCount.computeIfPresent("JoJo", (x, y) -> {
+            if (y.equals(1)) {
+                return y + 1;
+            }
+            else return y;
+        });
+
+        // merge()
+        // If the specified key is not already associated with a value or
+        // is associated with null, associates it with the given non-null value
+        wordCount.merge("Andersen", 2, (x, y) -> {
+            return y;
+        });
+
+        // clear()
+        wordCount.clear();
     }
 }

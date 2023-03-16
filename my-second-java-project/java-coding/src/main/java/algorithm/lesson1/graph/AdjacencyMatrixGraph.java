@@ -5,7 +5,7 @@ import java.util.Iterator;
 /**
  * @author TomAndersen
  */
-public class AjacentArrayGraph<E> implements Graph<E> {
+public class AdjacencyMatrixGraph<E> implements Graph<E> {
     @Override
     public int vertex() {
         return 0;

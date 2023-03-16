@@ -13,7 +13,8 @@ import java.util.Set;
 public interface SetAPI {
     /**
      * @param args
-     * @see libraries.java.util.CollectionsAPI
+     * @see libraries.java.util.CollectionAPI
+     * @see libraries.java.util.SortedSetAPI
      */
     public static void main(String[] args) {
 
