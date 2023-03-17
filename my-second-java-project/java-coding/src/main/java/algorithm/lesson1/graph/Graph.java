@@ -1,11 +1,9 @@
 package algorithm.lesson1.graph;
 
-import java.util.Iterator;
-
 /**
  * @author TomAndersen
  */
-interface Graph<E> {
+public interface Graph<E> {
 
     /**
      * return the number of vertexes
@@ -21,7 +19,6 @@ interface Graph<E> {
      */
     int edge();
 
-
     /**
      * add an edge into graph
      */
@@ -34,7 +31,7 @@ interface Graph<E> {
      * @param v
      * @return
      */
-    Iterator<E> adjacent(int v);
+    Iterable<E> adjacent(int v);
 
     /**
      * iterate the vertexes in graph and print the path

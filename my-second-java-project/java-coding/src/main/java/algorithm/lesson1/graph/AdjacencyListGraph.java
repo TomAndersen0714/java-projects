@@ -1,7 +1,5 @@
 package algorithm.lesson1.graph;
 
-import java.util.Iterator;
-
 /**
  * @author TomAndersen
  */
@@ -22,7 +20,7 @@ public class AdjacencyListGraph<E> implements Graph<E> {
     }
 
     @Override
-    public Iterator<E> adjacent(int v) {
+    public Iterable<E> adjacent(int v) {
         return null;
     }
 }
