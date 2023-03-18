@@ -3,7 +3,8 @@ package algorithm.lesson1.graph;
 /**
  * @author TomAndersen
  */
-public class AdjacencyMatrixGraph<E> implements Graph<E> {
+public class AdjacencyMatrixGraph implements Graph {
+
     @Override
     public int vertex() {
         return 0;
@@ -15,12 +16,12 @@ public class AdjacencyMatrixGraph<E> implements Graph<E> {
     }
 
     @Override
-    public void addEdge() {
-
+    public boolean connect(int v, int w) {
+        return false;
     }
 
     @Override
-    public Iterable<E> adjacent(int v) {
+    public Iterable<Integer> adjacent(int v) {
         return null;
     }
 }

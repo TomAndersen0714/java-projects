@@ -31,6 +31,9 @@ public class Array {
         int[][] xx = { // double dimension array
             {1, 2, 3}, {4, 5}, {6, 7}
         };
+        xx = new int[][]{
+            {0, 1}, {0, -1}, {1, 0}, {-1, 0}
+        };
         System.out.println("y: " + y.toString()); // toString can not return the real value of element
         System.out.println("z: " + Arrays.toString(z));
         System.out.println("y == z: " + (y == z));// y != z

@@ -3,7 +3,7 @@ package algorithm.lesson1.graph;
 /**
  * @author TomAndersen
  */
-public interface Graph<E> {
+public interface Graph {
 
     /**
      * return the number of vertexes
@@ -21,8 +21,12 @@ public interface Graph<E> {
 
     /**
      * add an edge into graph
+     *
+     * @param v
+     * @param w
+     * @return
      */
-    void addEdge();
+    boolean connect(int v, int w);
 
 
     /**
@@ -31,7 +35,7 @@ public interface Graph<E> {
      * @param v
      * @return
      */
-    Iterable<E> adjacent(int v);
+    Iterable<Integer> adjacent(int v);
 
     /**
      * iterate the vertexes in graph and print the path
