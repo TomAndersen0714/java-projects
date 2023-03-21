@@ -19,34 +19,7 @@ public class _20210402_1 {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        // input
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String[] inputs = bf.readLine().split(" ");
-        int n = Integer.parseInt(inputs[0]);
-        int l = Integer.parseInt(inputs[1]);
-        int r = Integer.parseInt(inputs[2]);
-        int t = Integer.parseInt(inputs[3]);
 
-        int[][] grayArray = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            inputs = bf.readLine().split(" ");
-            for (int j = 0; j < inputs.length; j++) {
-                grayArray[i][j] = Integer.parseInt(inputs[j]);
-            }
-        }
-
-        // traverse
-        int count = 0;
-        for (int i = 0; i < grayArray.length; i++) {
-            for (int j = 0; j < grayArray[i].length; j++) {
-                // if (adjacentGrayAvg(grayArray, i, j, r) <= t) {
-                //     count += 1;
-                // }
-            }
-        }
-
-        // output
-        System.out.println(count);
     }
 
 }

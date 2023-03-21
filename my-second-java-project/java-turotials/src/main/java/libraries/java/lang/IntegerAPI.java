@@ -6,6 +6,6 @@ package libraries.java.lang;
  */
 public class IntegerAPI {
     public static void main(String[] args) {
-
+        
     }
 }

@@ -7,7 +7,7 @@ import algorithm.lesson1.graph.Graph;
  */
 public class DFS {
     /**
-     * depth-first-search in graph g from vertex v
+     * depth-first-search from vertex v
      *
      * @param g
      * @param v
@@ -35,11 +35,11 @@ public class DFS {
     }
 
     /**
-     * depth-first-search in weighted graph
+     * depth-first-search from specific vertex
      *
-     * @param matrix
+     * @param edges
      */
-    public static void depthFirstSearch(int[][] matrix) {
+    public static void depthFirstSearch(int[][] edges, int vertex) {
 
     }
 

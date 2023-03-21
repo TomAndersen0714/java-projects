@@ -46,7 +46,7 @@ public class _695 {
         // access
         access[x][y] = 0;
 
-        // depth-first-search
+        // traverse adjacent element by depth-first-search
         return 1 + dfs(access, x + 1, y) + dfs(access, x - 1, y) + dfs(access, x, y + 1) + dfs(access, x, y - 1);
     }
 
