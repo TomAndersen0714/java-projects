@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Array {
     static void initiateArray() {
         System.out.println("initiateArray(): ");
-        // array declaration
+        // declare
         int[] a; // Java-style
         int[][] aa;
         int b[]; // C-style
@@ -70,8 +70,8 @@ public class Array {
         System.out.println(Arrays.toString(a));
     }
 
-    static void accessArray() {
-        System.out.println("accessArray(): ");
+    static void traverseArray() {
+        System.out.println("traverseArray(): ");
         int[] a = new int[100];
         // 对于数值类型的数组(integer/float), 其元素默认值都是0, 或0.0
         // 对于布尔类型的数组(boolean), 其元素默认值都是false
@@ -82,9 +82,6 @@ public class Array {
             System.out.print(num + " ");
         }
         System.out.println();
-
-        // print the array using Arrays.toString()
-        System.out.println(Arrays.toString(a));
     }
 
     static void cloneArray() {
@@ -119,8 +116,8 @@ public class Array {
         System.out.println(Arrays.toString(args));
     }
 
-    static void convertArray() {
-        System.out.println("convertArray(): ");
+    static void arrayFromIntToInteger() {
+        System.out.println("arrayFromIntToInteger(): ");
         // initiate array using Arrays.setAll
         int[] nums = new int[20];
         Arrays.setAll(nums, (i) -> (i + 1));
@@ -149,11 +146,23 @@ public class Array {
 
     }
 
+    // todo, how to convert int array to Integer array?
+    // todo, how to convert string array to Integer array?
+    static void arrayFromStringToInteger() {
+        // 1. convert string array to Integer array by stream
+        String[] strings = new String[]{"111", "222"};
+        System.out.println(
+            Arrays.toString(
+                Arrays.stream(strings).mapToInt(Integer::parseInt).toArray()
+            )
+        );
+    }
+
     public static void main(String[] args) {
         initiateArray();
-//        printArray(args);
-//        accessArray();
-//         cloneArray();
-//        convertArray();
+        // printArray(args);
+        // traverseArray();
+        // cloneArray();
+        // arrayFromIntToInteger();
     }
 }

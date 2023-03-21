@@ -6,12 +6,19 @@ import java.util.Arrays;
 
 /**
  * @author TomAndersen
+ * @see java.lang.Number
+ * @see java.lang.Byte
+ * @see java.lang.Integer
+ * @see java.lang.Double
+ * @see java.lang.Short
+ * @see java.lang.Float
+ * @see java.lang.Long
+ * @see java.util.concurrent.atomic.AtomicInteger
+ * @see java.util.concurrent.atomic.AtomicInteger
  */
 public class Numbers {
-    // todo, how to convert int array to Integer array?
-    // todo, how to convert string array to Integer array?
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(Arrays.stream(new String[]{"111", "222"}).mapToInt(Integer::parseInt).toArray()));
+
     }
 }

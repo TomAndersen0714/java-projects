@@ -6,4 +6,7 @@ package lesson2.data_structure;
  * @author TomAndersen
  */
 public class Strings {
+    public static void main(String[] args) {
+
+    }
 }
