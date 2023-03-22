@@ -31,7 +31,6 @@ public class DFS {
         // traverse current vertex
         visited[v] = true;
         sb.append(v);
-
     }
 
     /**
