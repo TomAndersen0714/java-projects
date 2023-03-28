@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Date;
 
 /**
- * {@link java.lang.String}
+ * @see java.lang.String
  */
 public class StringAPI {
 

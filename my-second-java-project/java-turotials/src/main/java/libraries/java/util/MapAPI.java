@@ -12,14 +12,17 @@ public interface MapAPI {
         Map<String, Integer> wordCount = new HashMap<>(4);
 
         // note: class method
-        // of()
+        // Map.of()
         // Construct a immutable map
         System.out.println("Map.of(\"Tom\", 1, \"Alise\", 2) = " + Map.of("Tom", 1, "Alise", 2));
-        // ofEntries()
+        // Map.ofEntries()
         System.out.println("Map.ofEntries(Map.of(\"Tom\", 1, \"Alise\", 2).entrySet().toArray(new Map.Entry[0])) = " + Map.ofEntries(Map.of("Tom", 1, "Alise", 2).entrySet().toArray(new Map.Entry[0])));
-        // copyOf()
+        // Map.copyOf()
         System.out.println("Map.copyOf(Map.of(\"Tom\",1,\"Alise\",3)) = " + Map.copyOf(Map.of("Tom", 1, "Alise", 3)));
         System.out.println();
+        // Map.entry()
+        System.out.println("Map.entry(\"Andersen\", \"Tom\") = " + Map.entry("Andersen", "Tom"));
+
 
         // note: instance method
         // put()
@@ -89,6 +92,8 @@ public interface MapAPI {
 
 
         // compute()
+        // Attempts to compute a mapping for the specified key and its current mapped value
+        // (or null if there is no current mapping)
         wordCount.compute("Tom", (x, y) -> {
             if (y.equals(1)) {
                 return y + 1;
@@ -113,6 +118,19 @@ public interface MapAPI {
         wordCount.merge("Andersen", 2, (x, y) -> {
             return y;
         });
+
+        // forEach()
+        System.out.println("wordCount.forEach(): ");
+        wordCount.forEach((x, y) -> {
+            System.out.println("x:" + x + ", y:" + y);
+        });
+
+        // entrySet()
+        // Returns a Set view of the mappings contained in this map.
+        System.out.println("wordCount.entrySet() = " + wordCount.entrySet());
+        for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
+            System.out.println(entry);
+        }
 
         // clear()
         wordCount.clear();
