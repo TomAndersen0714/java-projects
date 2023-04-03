@@ -3,8 +3,8 @@ package libraries.java.util;
 import java.util.Objects;
 
 /**
- * {@link java.util.Objects}
  * @author TomAndersen
+ * @see java.util.Objects
  */
 public class ObjectsAPI {
     public static void main(String[] args) {

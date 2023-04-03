@@ -6,6 +6,7 @@ import java.util.Map;
 
 /**
  * @author TomAndersen
+ * @see java.util.Map
  */
 public interface MapAPI {
     public static void main(String[] args) {
