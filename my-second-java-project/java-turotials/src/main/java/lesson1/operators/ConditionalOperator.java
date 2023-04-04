@@ -15,7 +15,7 @@ public class ConditionalOperator {
         System.out.println("(!false) = " + (!false));
 
 
-        // ?: conditional operator, or named triple conditional operator
+        // ?: conditional operator, or named Ternary conditional operator
         System.out.println("(1 == 2 ? 1 : 2) = " + (1 == 2 ? 1 : 2));
     }
 }

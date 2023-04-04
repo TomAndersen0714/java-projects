@@ -15,5 +15,9 @@ public class UnaryOperator {
 
         // 2. 逻辑补运算符(logical complement operator)
         System.out.println("(!false) = " + (!false));
+
+        // 3. 正负运算符
+        System.out.println("-x = " + -x);
+        System.out.println("-x = " + +x);
     }
 }

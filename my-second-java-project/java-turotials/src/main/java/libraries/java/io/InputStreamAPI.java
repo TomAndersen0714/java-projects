@@ -10,7 +10,7 @@ import java.io.InputStream;
  * @author TomAndersen
  * @see java.io.InputStream
  * @see java.io.BufferedInputStream
- * @see java.lang.System.in
+ * @see java.lang.System
  */
 public class InputStreamAPI {
     public static void main(String[] args) {
