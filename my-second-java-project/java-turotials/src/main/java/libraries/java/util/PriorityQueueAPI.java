@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
  */
 public class PriorityQueueAPI {
     public static void main(String[] args) {
-        // note: PriorityQueue的API完全继承自其父类, 使用方式全部参考Queue接口的API即可
+        // NOTE: PriorityQueue的API完全继承自其父类, 使用方式全部参考Queue接口的API即可
         // construct a priority queue using a reverse order comparator
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collections.reverseOrder());
 

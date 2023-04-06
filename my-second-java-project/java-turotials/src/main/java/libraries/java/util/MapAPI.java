@@ -12,7 +12,7 @@ public interface MapAPI {
     public static void main(String[] args) {
         Map<String, Integer> wordCount = new HashMap<>(4);
 
-        // note: class method
+        // NOTE: class method
         // Map.of()
         // Construct a immutable map
         System.out.println("Map.of(\"Tom\", 1, \"Alise\", 2) = " + Map.of("Tom", 1, "Alise", 2));
@@ -25,7 +25,7 @@ public interface MapAPI {
         System.out.println("Map.entry(\"Andersen\", \"Tom\") = " + Map.entry("Andersen", "Tom"));
 
 
-        // note: instance method
+        // NOTE: instance method
         // put()
         // Return the previous value associated with key, or null if there was no mapping for key.
         System.out.println("wordCount.put(\"Hello\", 12) = " + wordCount.put("Hello", 12));

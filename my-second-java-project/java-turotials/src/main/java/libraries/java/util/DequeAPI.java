@@ -17,7 +17,7 @@ public interface DequeAPI {
         // construct a deque using a collection
         Deque<String> deque = new LinkedList<>(List.of("1", "2"));
 
-        // note: Deque接口直接继承自Queue, Queue接口相关API可以参考javadoc中的QueueAPI
+        // NOTE: Deque接口直接继承自Queue, Queue接口相关API可以参考javadoc中的QueueAPI
         //  当前demo仅演示Deque非继承方法
 
         // toString()

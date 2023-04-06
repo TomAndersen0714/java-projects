@@ -16,7 +16,7 @@ public class FileIODemo {
         System.out.println("user.dir = " + userDir);
 
         // 写文件
-        String fileName = "test.txt";
+        String fileName = "text/test.txt";
         Path path = Path.of(userDir, fileName);
         String absFileName = path.toString();
 
@@ -40,7 +40,7 @@ public class FileIODemo {
         String userDir = System.getProperty("user.dir");
         System.out.println("user.dir = " + userDir);
 
-        String fileName = "test.txt";
+        String fileName = "text/test.txt";
         Path path = Path.of(userDir, fileName);
         String absFileName = path.toString();
 

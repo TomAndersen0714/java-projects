@@ -19,7 +19,7 @@ public class ScannerAPI {
 
         // Scanner(Path source, Charset charset)
         String fileAbsPath = Objects.requireNonNull(ScannerAPI.class.getClassLoader()
-            .getResource("test.txt")).getPath();
+            .getResource("text/test.txt")).getPath();
         System.out.println(fileAbsPath);
         Scanner fileScanner = new Scanner(
             Path.of(fileAbsPath), StandardCharsets.UTF_8

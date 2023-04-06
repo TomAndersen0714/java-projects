@@ -15,7 +15,7 @@ public class HashMapAPI {
      * @see libraries.java.util.MapAPI
      */
     public static void main(String[] args) {
-        // note: class method
+        // NOTE: class method
         // HashMap()
         HashMap<String, Integer> map1 = new HashMap<>();
 

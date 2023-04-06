@@ -15,7 +15,7 @@ public class LinkedHashMapAPI {
         // construct
         // 1. Constructs an empty insertion-ordered LinkedHashMap instance with the
         // default initial capacity (16) and load factor (0.75)
-        // Note: 默认情况下, 元素依据insertion order排列, 后续的插入也不会影响其元素的排列顺序
+        // NOTE: 默认情况下, 元素依据insertion order排列, 后续的插入也不会影响其元素的排列顺序
         Map<String, Integer> map = new LinkedHashMap<>();
 
         map.put("Tom", 1);
@@ -38,7 +38,7 @@ public class LinkedHashMapAPI {
 
         // 4. Constructs an empty LinkedHashMap instance with the specified initial
         // capacity, load factor and ordering mode.
-        // Note: 通过在构造时设置accessOrder为true, LinkedHashMap可以被用作LRU Cache结构
+        // NOTE: 通过在构造时设置accessOrder为true, LinkedHashMap可以被用作LRU Cache结构
         //  即每次访问后, 将被访问的元素置于队尾
         Map<String, Integer> map3 = new LinkedHashMap<>(16, 0.75f, true);
         map3.put("Tom", 1);

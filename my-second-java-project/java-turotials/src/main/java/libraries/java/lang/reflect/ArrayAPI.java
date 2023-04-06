@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class ArrayAPI {
     public static void main(String[] args) {
-        // note: class method
+        // NOTE: class method
         // Array.newInstance()
         int[] nums = (int[]) Array.newInstance(int[].class.getComponentType(), 4);
         Arrays.fill(nums, 12);

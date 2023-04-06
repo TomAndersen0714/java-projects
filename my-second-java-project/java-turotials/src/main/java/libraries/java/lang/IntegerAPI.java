@@ -10,7 +10,7 @@ public class IntegerAPI {
      * @see libraries.java.lang.NumberAPI
      */
     public static void main(String[] args) {
-        // note: instance method
+        // NOTE: instance method
 
         // constructor(deprecated since jdk9)
         Integer num1 = new Integer(12);
@@ -18,12 +18,12 @@ public class IntegerAPI {
         Integer num2 = 12;
 
 
-        // note: class constant
+        // NOTE: class constant
         System.out.println("Integer.MAX_VALUE = " + Integer.MAX_VALUE);
         System.out.println("Integer.MIN_VALUE = " + Integer.MIN_VALUE);
 
 
-        // note: class method
+        // NOTE: class method
         // Integer.toString(int i, int radix)
         // Returns a string representation of the first argument in the radix specified by the second argument
         System.out.println("Integer.toString(12, 8) = " + Integer.toString(12, 8));

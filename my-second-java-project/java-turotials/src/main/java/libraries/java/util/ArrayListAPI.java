@@ -15,7 +15,7 @@ public class ArrayListAPI {
      * @see libraries.java.util.CollectionsAPI
      */
     public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
-        // note: ArrayList的API大多数都是覆盖的父类或接口, 具体使用方式参考javadoc中相关的接口和父类即可
+        // NOTE: ArrayList的API大多数都是覆盖的父类或接口, 具体使用方式参考javadoc中相关的接口和父类即可
         // ArrayList()
         ArrayList<String> staffs = new ArrayList<>();
 

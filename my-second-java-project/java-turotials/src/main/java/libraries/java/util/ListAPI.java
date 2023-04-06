@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface ListAPI {
     public static void main(String[] args) {
-        // note: class method
+        // NOTE: class method
         // List.of()
         // create and return an unmodifiable list containing specific elements
         System.out.println("List.of(1,2,3) = " + List.of(1, 2, 3));
@@ -20,7 +20,7 @@ public interface ListAPI {
         System.out.println("List.copyOf(List.of(1, 2, 3)) = " + List.copyOf(List.of(1, 2, 3)));
 
 
-        // note: instance method
+        // NOTE: instance method
         List<String> staffs = new ArrayList<>(List.of("Sun"));
         // toString()
         System.out.println("toString(): ");

@@ -27,7 +27,7 @@ public interface CollectionAPI {
 
         Collection<String> collection = names;
 
-        // note: instance method
+        // NOTE: instance method
         // size
         System.out.println("Collection#size(): " + collection.size());
         // isEmpty

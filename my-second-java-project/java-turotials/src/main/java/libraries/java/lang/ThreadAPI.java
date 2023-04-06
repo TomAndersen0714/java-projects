@@ -12,13 +12,13 @@ public class ThreadAPI {
      * @see libraries.java.lang.StackTraceElementAPI
      */
     public static void main(String[] args) {
-        // note: class method
+        // NOTE: class method
 
         // Thread.currentThread()
         Thread currentThread = Thread.currentThread();
         System.out.println("Thread.currentThread() = " + currentThread);
 
-        // note: instance method
+        // NOTE: instance method
 
         // getStackTrace()
         // Returns an array of stack trace elements representing the stack dump of this thread.

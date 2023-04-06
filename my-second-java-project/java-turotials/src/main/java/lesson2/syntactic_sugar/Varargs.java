@@ -13,7 +13,7 @@ import java.util.Date;
  */
 public class Varargs {
     public static void main(String[] args) {
-        // Note: varargs is a kind of syntactic sugar, that pass multiple arguments into an array.
+        // NOTE: varargs is a kind of syntactic sugar, that pass multiple arguments into an array.
         //  Since JDK 5.
         Object[] arguments = {7, new Date(), "a disturbance in the Force"};
 

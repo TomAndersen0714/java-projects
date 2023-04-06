@@ -21,7 +21,7 @@ public class StackTraceElementAPI {
         StackTraceElement currentTraceElement = Thread.currentThread().getStackTrace()[1];
         System.out.println("currentTraceElement = " + currentTraceElement);
 
-        // note: instance method
+        // NOTE: instance method
         // getModuleName()
         System.out.println("currentTraceElement.getModuleName() = " + currentTraceElement.getModuleName());
         // getModuleVersion()

@@ -10,15 +10,15 @@ import java.util.List;
  */
 public class Generics {
     public static void main(String[] args) {
-        // ! note: you can not create generic array directly in Java, or you will get a compiler error.
+        // ! NOTE: you can not create generic array directly in Java, or you will get a compiler error.
         // List<Integer>[] lists = new List<Integer>[12];
 
-        // note: Type Erasure in Java
+        // NOTE: Type Erasure in Java
         // https://docs.oracle.com/javase/tutorial/java/generics/erasure.html
 
-        // note: array are covariant
+        // NOTE: array are covariant
 
-        // note: generics are invariant
+        // NOTE: generics are invariant
 
     }
 }

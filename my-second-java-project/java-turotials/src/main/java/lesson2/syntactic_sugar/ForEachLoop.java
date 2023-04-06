@@ -8,7 +8,7 @@ package lesson2.syntactic_sugar;
 public class ForEachLoop {
 
     public static void main(String[] args) {
-        // Note: for-each statement, since JDK 5
+        // NOTE: for-each statement, since JDK 5
         // i.e. for (variable : collection)
         System.out.println("This is a for-each demo: ");
         int[] nums = {1, 2, 3, 4};

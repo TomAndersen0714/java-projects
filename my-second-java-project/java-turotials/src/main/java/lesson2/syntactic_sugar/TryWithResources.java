@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class TryWithResources {
     /**
-     * Note: try-with-resources statement, since JDK 7
+     * NOTE: try-with-resources statement, since JDK 7
      * the variables in try block must implements the Closeable or AutoCloseable interface.
      * <p>
      * 在 try-with-Resources 语法中, try 代码块执行完成之后, 便会执行 resources 的 close 方法
@@ -28,7 +28,7 @@ public class TryWithResources {
         System.out.println("user.dir = " + userDir);
 
         // 写文件
-        String fileName = "test.txt";
+        String fileName = "text/test.txt";
         Path path = Path.of(userDir, fileName);
         String absFileName = path.toString();
 

@@ -8,13 +8,26 @@ import java.util.Objects;
  */
 public class ClassLoaderAPI {
     public static void main(String[] args) {
-        // note: instance method
+        // NOTE: instance method
         ClassLoader classLoader = ClassLoaderAPI.class.getClassLoader();
 
+        String userDir = System.getProperty("user.dir");
+        System.out.println("user dir: " + userDir);
+
+        String classPath = System.getProperty("java.class.path");
+        System.out.println("java class path: " + classPath);
+        System.out.println();
+
         // getResource()
-        System.out.println("classLoader.getResource(\"test.txt\") = " + classLoader.getResource("test.txt"));
-        System.out.println("classLoader.getResource(\"test.txt\").getPath() = " +
-            Objects.requireNonNull(classLoader.getResource("test.txt")).getPath());
+        // NOTE: The ClassLoader getResource method only searches for resource files that are represented
+        //  using a relative path relative to the root of the classpath.
+        String pathString = "text/test.txt";
+        System.out.println("classLoader.getResource(\"\") = " + classLoader.getResource(""));
+        System.out.println("classLoader.getResource(pathString) = " + classLoader.getResource(pathString));
+        System.out.println("classLoader.getResource(pathString).getPath() = " + Objects.requireNonNull(classLoader.getResource(pathString)).getPath());
+
+        // getResourceAsStream()
+        System.out.println("classLoader.getResourceAsStream(pathString) = " + classLoader.getResourceAsStream(pathString));
 
     }
 }
