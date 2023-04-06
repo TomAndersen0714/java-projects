@@ -13,6 +13,8 @@ public class ThreadAPI {
      */
     public static void main(String[] args) {
         // note: class method
+
+        // Thread.currentThread()
         Thread currentThread = Thread.currentThread();
         System.out.println("Thread.currentThread() = " + currentThread);
 
