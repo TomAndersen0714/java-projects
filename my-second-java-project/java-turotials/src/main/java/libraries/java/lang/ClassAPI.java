@@ -34,5 +34,14 @@ public class ClassAPI {
         // getComponentType()
         System.out.println("numsClass.getComponentType() = " + numsClass.getComponentType());
 
+        // getResource()
+        // !!!
+        String filePath = "/test.txt";
+        Class<ClassAPI> classAPIClass = ClassAPI.class;
+        System.out.println("classAPIClass.getResource(\"/\").getPath() = " + classAPIClass.getResource(filePath).getPath());
+        System.out.println("classAPIClass.getResource(filePath) = " + classAPIClass.getResource(filePath));
+        // getResourceAsStream()
+        System.out.println("classAPIClass.getResourceAsStream(filePath) = " + classAPIClass.getResourceAsStream(filePath));
+
     }
 }
