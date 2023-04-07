@@ -18,9 +18,11 @@ public class ClassLoaderAPI {
         System.out.println("java class path: " + classPath);
         System.out.println();
 
+
         // getResource()
         // NOTE: The ClassLoader getResource method only searches for resource files that are represented
-        //  using a relative path relative to the root of the classpath.
+        //  using a relative path relative to the classpath, i.e. only search the path string
+        //  that not start with '/'.
         String pathString = "text/test.txt";
         System.out.println("classLoader.getResource(\"\") = " + classLoader.getResource(""));
         System.out.println("classLoader.getResource(pathString) = " + classLoader.getResource(pathString));

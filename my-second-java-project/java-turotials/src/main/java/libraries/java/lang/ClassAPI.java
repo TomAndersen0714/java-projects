@@ -61,16 +61,28 @@ public class ClassAPI {
         //  "/path/to/resource_file" or "resource_file". If the string starts with "/", it will be trimmed.
         //  Otherwise, the package name of the corresponding class will be added to the beginning of the
         //  path string.
+        //  And then the method will invoke getResource of ClassLoader to get the URL of resource file.
         Class<ClassAPI> classApiClass = ClassAPI.class;
         System.out.println("classApiClass.getResource(\"\") = " + classApiClass.getResource(""));
         System.out.println("classApiClass.getResource(\"/\") = " + classApiClass.getResource("/"));
+        System.out.println();
 
+        // search the file in classpath
         String filePath = "/text/test.txt";
+        System.out.println("filePath = " + filePath);
+        System.out.println("classAPIClass.getResource(filePath) = " + classApiClass.getResource(filePath));
+        System.out.println("classAPIClass.getResource(filePath).getPath() = " + Objects.requireNonNull(classApiClass.getResource(filePath)).getPath());
+        System.out.println();
+
+        // search the file in classpath+package path
+        filePath = "ClassAPI.class";
+        System.out.println("filePath = " + filePath);
         System.out.println("classAPIClass.getResource(filePath) = " + classApiClass.getResource(filePath));
         System.out.println("classAPIClass.getResource(filePath).getPath() = " + Objects.requireNonNull(classApiClass.getResource(filePath)).getPath());
         System.out.println();
 
         // getResourceAsStream()
+        // NOTE: same as getResource()
         System.out.println("classApiClass.getResourceAsStream(\"/\") = " + classApiClass.getResourceAsStream("/"));
         System.out.println("classApiClass.getResourceAsStream(\"\") = " + classApiClass.getResourceAsStream(""));
         System.out.println("classAPIClass.getResourceAsStream(filePath) = " + classApiClass.getResourceAsStream(filePath));
