@@ -5,7 +5,7 @@ package libraries;
  */
 public class Utils {
     public static String getClassName(Object o) {
-        return o.getClass().toString();
+        return o.getClass().getName();
     }
 
     public static String getCurrentClassName() {

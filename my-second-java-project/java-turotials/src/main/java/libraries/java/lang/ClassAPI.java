@@ -57,11 +57,12 @@ public class ClassAPI {
 
 
         // getResource()
-        // NOTE: The getResource method of the Class object only accepts a file path string like
-        //  "/path/to/resource_file" or "resource_file". If the string starts with "/", it will be trimmed.
-        //  Otherwise, the package name of the corresponding class will be added to the beginning of the
-        //  path string.
-        //  And then the method will invoke getResource of ClassLoader to get the URL of resource file.
+        // NOTE:
+        //  If the name is absolute path, i.e. starts with "/", such as "/path/to/resource_file",
+        //      the leading '/' will be removed.
+        //  If the name is relative path, i.e. not starts with "/", such as "resource_file",
+        //      name will be prefixed with package name.
+        //  And then will invoke getResource of ClassLoader to get the URL of resource file.
         Class<ClassAPI> classApiClass = ClassAPI.class;
         System.out.println("classApiClass.getResource(\"\") = " + classApiClass.getResource(""));
         System.out.println("classApiClass.getResource(\"/\") = " + classApiClass.getResource("/"));

@@ -53,8 +53,12 @@ public class SystemAPI {
 
         // Java类版本号
         System.out.println("java class version: " + System.getProperty("java.class.version"));
-        // Java类路径
+        // Java classpath
         System.out.println("java class path: " + System.getProperty("java.class.path"));
+        // Java boot classpath
+        System.out.println("sun.boot.class.path: " + System.getProperty("sun.boot.class.path"));
+        // Java 扩展路径
+        System.out.println("java ext dirs" + System.getProperty("java.ext.dirs"));
         // Java lib路径
         System.out.println("java library path: " + System.getProperty("java.library.path"));
         System.out.println();
@@ -63,8 +67,6 @@ public class SystemAPI {
         System.out.println("java io tmpdir: " + System.getProperty("java.io.tmpdir"));
         // Java编译器
         System.out.println("java compiler" + System.getProperty("java.compiler"));
-        // Java执行路径
-        System.out.println("java ext dirs" + System.getProperty("java.ext.dirs"));
         System.out.println();
 
         System.out.println("file separator: " + System.getProperty("file.separator"));
