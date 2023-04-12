@@ -1,9 +1,12 @@
-package lesson1.variables;
+package lesson1.data_types;
 
 
 import libraries.Utils;
 
-public class PrimitiveType {
+/**
+ * https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+ */
+public class PrimitiveDataType {
 
     static void integerDemo() {
         // integer type
