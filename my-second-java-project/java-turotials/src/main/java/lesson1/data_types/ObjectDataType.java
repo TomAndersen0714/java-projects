@@ -13,7 +13,10 @@ public class ObjectDataType {
         int[] intArray = new int[]{1, 2, 3};
         System.out.println("Utils.getClassName(intArray) = " + Utils.getClassName(intArray));
 
+
         long[] longArray = new long[]{1, 2, 3};
         System.out.println("Utils.getClassName(longArray) = " + Utils.getClassName(longArray));
+
+
     }
 }
