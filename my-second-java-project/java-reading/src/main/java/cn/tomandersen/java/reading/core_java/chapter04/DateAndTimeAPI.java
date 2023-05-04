@@ -4,6 +4,10 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 
+/**
+ * https://docs.oracle.com/javase/tutorial/datetime/index.html
+ * https://docs.oracle.com/javase/tutorial/datetime/TOC.html
+ */
 public class DateAndTimeAPI {
     public static void main(String[] args) {
         // Unix timestamp 仅仅是表示与 UTC 时间的时间距离, 本身并不具备时区的概念
@@ -13,7 +17,6 @@ public class DateAndTimeAPI {
         ZoneIdAPI.demo();
         CalendarPrintDemo.demo();
     }
-
 }
 
 /**
@@ -98,7 +101,8 @@ class CalendarPrintDemo {
             System.out.printf("%3d", i);
             if (i == currentDayOfMonth) {
                 System.out.print("*");
-            } else {
+            }
+            else {
                 System.out.print(" ");
             }
             if (numOfDayOfWeek % 7 == 0) System.out.println();
