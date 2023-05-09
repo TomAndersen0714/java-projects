@@ -12,6 +12,15 @@ import java.io.IOException;
  */
 public class HJ_4 {
     public static void main(String[] args) throws IOException {
+        // input
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+
+
+        // handle
+
+
+
+        // output
 
     }
 }
