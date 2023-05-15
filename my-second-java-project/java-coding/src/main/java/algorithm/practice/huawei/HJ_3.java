@@ -16,13 +16,13 @@ import java.util.TreeSet;
 public class HJ_3 {
     public static void main(String[] args) throws IOException {
         // input
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(bf.readLine());
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
 
         // handle
         Set<Integer> nums = new TreeSet<>();
         for (int i = 0; i < n; i++) {
-            nums.add(Integer.valueOf(bf.readLine()));
+            nums.add(Integer.valueOf(br.readLine()));
         }
 
         // output

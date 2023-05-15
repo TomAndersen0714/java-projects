@@ -14,9 +14,9 @@ import java.io.IOException;
 public class HJ_2 {
     public static void main(String[] args) throws IOException {
         // input
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        char[] charArray = bf.readLine().toCharArray();
-        char ch = bf.readLine().charAt(0);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        char[] charArray = br.readLine().toCharArray();
+        char ch = br.readLine().charAt(0);
 
         // handle
         int count = 0;

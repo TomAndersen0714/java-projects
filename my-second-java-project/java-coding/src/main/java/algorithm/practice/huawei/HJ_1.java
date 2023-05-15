@@ -14,9 +14,9 @@ import java.io.IOException;
  */
 public class HJ_1 {
     public static void main(String[] args) throws IOException {
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        String[] words = bf.readLine().split(" ");
+        String[] words = br.readLine().split(" ");
         System.out.println(words[words.length - 1].length());
     }
 }

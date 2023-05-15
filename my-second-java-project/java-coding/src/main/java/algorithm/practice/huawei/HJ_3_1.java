@@ -14,13 +14,13 @@ import java.io.InputStreamReader;
 public class HJ_3_1 {
     public static void main(String[] args) throws IOException {
         // input
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(bf.readLine());
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
 
         // handle
         boolean[] exists = new boolean[501];
         for (int i = 0; i < n; i++) {
-            exists[Integer.parseInt(bf.readLine())] = true;
+            exists[Integer.parseInt(br.readLine())] = true;
         }
 
         // output
