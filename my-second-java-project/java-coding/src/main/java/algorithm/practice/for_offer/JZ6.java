@@ -1,6 +1,6 @@
-package algorithm.practice.offer;
+package algorithm.practice.for_offer;
 
-import algorithm.practice.offer.utils.ListNode;
+import algorithm.practice.for_offer.utils.ListNode;
 
 import java.util.ArrayList;
 

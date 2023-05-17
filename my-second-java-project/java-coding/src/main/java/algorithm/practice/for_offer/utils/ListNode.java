@@ -1,4 +1,4 @@
-package algorithm.practice.offer.utils;
+package algorithm.practice.for_offer.utils;
 
 /**
  * @author TomAndersen
