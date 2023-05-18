@@ -5,7 +5,7 @@ import libraries.Utils;
 /**
  * @author TomAndersen
  */
-public class ObjectDataType {
+public class ObjectType {
     public static void main(String[] args) {
         // NOTE: In Java, all variables except for primitive types are of the Object type.
 

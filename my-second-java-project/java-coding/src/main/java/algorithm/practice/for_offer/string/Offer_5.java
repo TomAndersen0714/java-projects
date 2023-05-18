@@ -1,4 +1,4 @@
-package algorithm.practice.for_offer;
+package algorithm.practice.for_offer.string;
 
 /**
  * https://leetcode.cn/problems/ti-huan-kong-ge-lcof/

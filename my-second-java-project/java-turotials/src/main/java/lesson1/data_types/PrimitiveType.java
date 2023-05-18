@@ -6,7 +6,7 @@ import libraries.Utils;
 /**
  * https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
  */
-public class PrimitiveDataType {
+public class PrimitiveType {
 
     static void integerDemo() {
         // integer type
