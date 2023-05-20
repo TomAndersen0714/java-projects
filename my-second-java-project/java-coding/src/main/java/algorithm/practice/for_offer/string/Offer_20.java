@@ -14,11 +14,16 @@ public class Offer_20 {
 
         // handle
         String foo = s.trim().toUpperCase();
-        boolean res = true;
+        int len = foo.length();
+        int idx = foo.indexOf('E');
+        boolean res;
 
-        int idx = foo.indexOf('E'), len = foo.length();
+        if (len == 0) {
+            return false;
+        }
+
         if (idx >= 0) {
-            res = (isInt(foo, 0, idx) || isFloat(foo, 0, idx))
+            res = (isInt(foo, 0, idx - 1) || isFloat(foo, 0, idx - 1))
                 && isInt(foo, idx + 1, len - 1);
         }
         else {
@@ -31,7 +36,7 @@ public class Offer_20 {
 
 
     private static boolean isNums(String nums, int start, int end) {
-        if (start <= end) {
+        if (start > end) {
             return false;
         }
 
@@ -44,19 +49,23 @@ public class Offer_20 {
     }
 
     private static boolean isInt(String nums, int start, int end) {
+        if (start > end) {
+            return false;
+        }
+
         char leading = nums.charAt(start);
         if (leading == '-' || leading == '+') {
             start += 1;
-        }
-
-        if (start == end) {
-            return false;
         }
 
         return isNums(nums, start, end);
     }
 
     private static boolean isFloat(String nums, int start, int end) {
+        if (start > end) {
+            return false;
+        }
+
         char leading = nums.charAt(start);
         if (leading == '-' || leading == '+') {
             start += 1;
@@ -64,21 +73,27 @@ public class Offer_20 {
 
         String foo = nums.substring(start, end + 1);
         int idx = foo.indexOf('.'), len = foo.length();
-        if (idx <= 0) {
+        if (idx < 0) {
             return false;
         }
         else if (idx == 0) {
             return isNums(foo, 1, len - 1);
         }
         else if (idx == len - 1) {
-            // TODO
-            return isNums(foo, 0, idx - 1);
+            return isNums(foo, 0, len - 2);
         }
-
-        return true;
+        else {
+            return isNums(foo, 0, idx - 1)
+                && isNums(foo, idx + 1, len - 1);
+        }
     }
 
     public static void main(String[] args) {
-
+        // System.out.println(new Offer_20().isNumber("0"));
+        // System.out.println(new Offer_20().isNumber("e"));
+        // System.out.println(new Offer_20().isNumber("."));
+        // System.out.println(new Offer_20().isNumber("    .1  "));
+        // System.out.println(new Offer_20().isNumber("2e0"));
+        System.out.println(new Offer_20().isNumber("0e"));
     }
 }

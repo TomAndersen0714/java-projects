@@ -10,7 +10,12 @@ import java.util.Map;
  */
 public interface MapAPI {
     public static void main(String[] args) {
-        Map<String, Integer> wordCount = new HashMap<>(4);
+        Map<String, Integer> wordCount = new HashMap<>(4) {
+            {
+                put("TomAndersen", 1);
+                put("Alise", 2);
+            }
+        };
 
         // NOTE: class method
         // Map.of()
