@@ -8,7 +8,7 @@ package algorithm.practice.leetcode;
  *
  * @author TomAndersen
  */
-public class _695 {
+public class LeetCode695 {
     public int maxAreaOfIsland(int[][] grid) {
         // boundary conditions
         if (grid == null || grid.length == 0) {

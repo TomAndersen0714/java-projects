@@ -8,7 +8,7 @@ package algorithm.practice.leetcode;
  *
  * @author TomAndersen
  */
-public class _2348_1 {
+public class LeetCode2348_1 {
     public long zeroFilledSubarray(int[] nums) {
         // declare assistant variables
         long count = 0;

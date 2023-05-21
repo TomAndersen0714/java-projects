@@ -8,7 +8,7 @@ package algorithm.practice.leetcode;
  *
  * @author TomAndersen
  */
-public class _983 {
+public class LeetCode983 {
     public int mincostTickets(int[] days, int[] costs) {
         return 0;
     }

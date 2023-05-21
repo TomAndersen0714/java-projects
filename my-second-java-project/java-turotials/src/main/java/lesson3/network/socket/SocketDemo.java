@@ -1,6 +1,12 @@
 package lesson3.network.socket;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -14,8 +20,7 @@ public class SocketDemo {
         // using try-with-resource statement to handle the connection automatically
         try (
             // create a socket server
-            ServerSocket serverSocket = new ServerSocket(port);
-        ) {
+            ServerSocket serverSocket = new ServerSocket(port);) {
 
             System.out.println("Waiting for the connection...");
 

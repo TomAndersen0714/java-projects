@@ -5,7 +5,7 @@ package algorithm.practice.leetcode;
  *
  * @author TomAndersen
  */
-public class _6_2 {
+public class LeetCode6_2 {
     public String convert(String s, int numRows) {
         // boundary
         if (s == null || s.length() == 0 || numRows == 0) {
@@ -48,9 +48,9 @@ public class _6_2 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new _6_2().convert("PAYPALISHIRING", 4));
-        System.out.println("PAHNAPLSIIGYIR".equals(new _6_2().convert("PAYPALISHIRING", 3)));
-        System.out.println("PINALSIGYAHRPI".equals(new _6_2().convert("PAYPALISHIRING", 4)));
-        System.out.println("A".equals(new _6_2().convert("A", 1)));
+        System.out.println(new LeetCode6_2().convert("PAYPALISHIRING", 4));
+        System.out.println("PAHNAPLSIIGYIR".equals(new LeetCode6_2().convert("PAYPALISHIRING", 3)));
+        System.out.println("PINALSIGYAHRPI".equals(new LeetCode6_2().convert("PAYPALISHIRING", 4)));
+        System.out.println("A".equals(new LeetCode6_2().convert("A", 1)));
     }
 }

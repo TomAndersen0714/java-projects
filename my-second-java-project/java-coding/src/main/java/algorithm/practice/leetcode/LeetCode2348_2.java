@@ -3,7 +3,7 @@ package algorithm.practice.leetcode;
 /**
  * @author TomAndersen
  */
-class _2348_2 {
+class LeetCode2348_2 {
     /**
      * using recursion formula
      *
