@@ -63,7 +63,7 @@ public class LeetCode10 {
         for (int i = 0; i < len; i++) {
             char c = s.charAt(i);
             if (c >= 'a' && c <= 'z') {
-                
+
             }
         }
 
