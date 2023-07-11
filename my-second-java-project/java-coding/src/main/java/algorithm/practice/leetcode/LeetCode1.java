@@ -51,6 +51,7 @@ class LeetCode1_2 {
         }
 
         // handle
+        int[] res = new int[]{-1, -1};
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int least = target - nums[i];
@@ -58,12 +59,14 @@ class LeetCode1_2 {
                 map.put(nums[i], i);
             }
             else {
-                return new int[]{map.get(least), i};
+                res[0] = map.get(least);
+                res[1] = i;
+                break;
             }
         }
 
-        // handle exception
-        return new int[]{-1, -1};
+        // return value
+        return res;
     }
 
     public static void main(String[] args) {
