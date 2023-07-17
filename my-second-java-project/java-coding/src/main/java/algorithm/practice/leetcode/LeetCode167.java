@@ -9,6 +9,7 @@ import java.util.Arrays;
  * tags: medium, array, two pointers
  *
  * @author TomAndersen
+ * @see LeetCode1
  */
 public class LeetCode167 {
     public int[] twoSum(int[] numbers, int target) {

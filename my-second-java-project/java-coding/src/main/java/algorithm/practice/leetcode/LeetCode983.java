@@ -1,7 +1,7 @@
 package algorithm.practice.leetcode;
 
 /**
- * 983. Minimum Cost For Tickets
+ * 983. Minimum Cost For Tickets:
  * https://leetcode.com/problems/minimum-cost-for-tickets/
  * <p>
  * tags: Shortest Path

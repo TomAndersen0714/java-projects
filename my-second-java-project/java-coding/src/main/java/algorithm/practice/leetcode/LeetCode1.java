@@ -15,8 +15,11 @@ import java.util.Map;
 public class LeetCode1 {
 }
 
+/**
+ * brute force
+ * TC: O(n*n), SC: O(1)
+ */
 class LeetCode1_1 {
-    // brute force
     public int[] twoSum(int[] nums, int target) {
         // exclude boundary condition
         if (nums == null || nums.length == 0) {
@@ -42,8 +45,11 @@ class LeetCode1_1 {
     }
 }
 
+/**
+ * hashMap
+ * TC: O(n), SC: O(n)
+ */
 class LeetCode1_2 {
-    // hashMap
     public int[] twoSum(int[] nums, int target) {
         // exclude boundary condition
         if (nums == null || nums.length == 0) {
