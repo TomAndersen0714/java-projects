@@ -6,7 +6,7 @@ package algorithm.lesson1.sequence.sort;
 // 都是有序的, 针对这些序列使用插入排序实现局部有序, 而插入排序对于局部有序的序列效率性能与数量近乎线性.
 // 当h不断减小到值为1时, 则实现了整体有序. 希尔排序适合局部有序的任意长度序列.
 // --算法(第4版)
-// TC: O(n*log(n)), SC: O(1), unstable
+// TC: O(n*log_n), SC: O(1), unstable
 public class ShellSort {
 }
 

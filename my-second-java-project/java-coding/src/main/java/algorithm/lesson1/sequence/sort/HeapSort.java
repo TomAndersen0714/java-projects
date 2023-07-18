@@ -21,7 +21,7 @@ package algorithm.lesson1.sequence.sort;
  * 在不使用数组首个元素表示的堆中, 节点a[p] 的左右子节点为 a[p*2] 和 a[p*2+1],
  * 其父母节点为 a[p/2].
  * <p>
- * TC: O(nlog(n)), SC: O(1), unstable
+ * TC: O(nlog_n), SC: O(1), unstable
  *
  * @author TomAndersen
  */

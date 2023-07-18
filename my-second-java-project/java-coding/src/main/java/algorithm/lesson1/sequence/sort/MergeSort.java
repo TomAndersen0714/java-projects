@@ -4,8 +4,8 @@ package algorithm.lesson1.sequence.sort;
  * 归并排序(Merge Sort):
  * 归并排序是分治(Divide and Conquer, DC)思想的一个典型例子之一, 其主要思路是
  * 将一个数组递归地分成两半分别排序, 然后将结果归并起来.
- * 特点是最好, 最坏和平均的时间开销都相同, 且与nlog(n)成正比, 缺陷在于额外空间占用与n成正比.
- * TC: O(nlog(n)), SC: O(n), stable
+ * 特点是最好, 最坏和平均的时间开销都相同, 且与nlog_n成正比, 缺陷在于额外空间占用与n成正比.
+ * TC: O(nlog_n), SC: O(n), stable
  *
  * @author TomAndersen
  */

@@ -7,7 +7,7 @@ package algorithm.lesson1.sequence.sort;
 // 归并排序的数组被等分后处理, 而快速排序中, 切分的位置无法事先确定, 取决于数组的内容.
 // -- 算法(第4版)
 
-// TC: O(n*log(n)) , SC: O(log(n)), unstable
+// TC: O(n*log_n) , SC: O(log_n), unstable
 public class QuickSort {
 }
 
