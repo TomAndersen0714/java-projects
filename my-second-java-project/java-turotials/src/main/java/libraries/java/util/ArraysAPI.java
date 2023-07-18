@@ -70,8 +70,8 @@ public class ArraysAPI {
         Object[] newNames = Arrays.copyOf(names, 2, newArrayType);
         System.out.println("Arrays.copyOf(names, 2, Object[].class) = " + Arrays.toString(newNames));
 
-        // Arrays.search()
-        System.out.println("Arrays.search(): ");
+        // Arrays.binarySearch()
+        System.out.println("Arrays.binarySearch(): ");
         System.out.println(Arrays.binarySearch(new int[]{1, 2, 3, 4}, 3));
 
         // Arrays.fill()

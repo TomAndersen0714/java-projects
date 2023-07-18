@@ -3,8 +3,7 @@ package algorithm.practice.leetcode;
 import java.util.Arrays;
 
 /**
- * 16. 3Sum Closest:
- * https://leetcode.com/problems/3sum-closest/
+ * 16. 3Sum Closest: https://leetcode.com/problems/3sum-closest/
  * <p>
  * tags: medium, array, two pointers
  *
