@@ -1,4 +1,4 @@
-package algorithm.practice.huawei;
+package algorithm.practice.hw;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

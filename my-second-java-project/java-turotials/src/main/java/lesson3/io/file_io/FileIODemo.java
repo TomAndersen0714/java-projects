@@ -1,4 +1,4 @@
-package lesson3.io;
+package lesson3.io.file_io;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @author TomAndersen
  */
 public class FileIODemo {
-    static void fileOutputWriterDemo() throws IOException {
+    static void fileOutWriterDemo() throws IOException {
         // 打印用户路径, 默认是 Java MyClass 命令的执行路径
         String userDir = System.getProperty("user.dir");
         System.out.println("user.dir = " + userDir);
@@ -35,7 +35,7 @@ public class FileIODemo {
 
     }
 
-    static void fileInputScannerDemo() throws IOException {
+    static void fileInScannerDemo() throws IOException {
         // 打印用户路径, 默认是 Java MyClass 命令的执行路径
         String userDir = System.getProperty("user.dir");
         System.out.println("user.dir = " + userDir);
@@ -59,8 +59,8 @@ public class FileIODemo {
     }
 
     static void fileIODemo() throws IOException {
-        fileOutputWriterDemo();
-        fileInputScannerDemo();
+        fileOutWriterDemo();
+        fileInScannerDemo();
     }
 
     public static void main(String[] args) throws IOException {

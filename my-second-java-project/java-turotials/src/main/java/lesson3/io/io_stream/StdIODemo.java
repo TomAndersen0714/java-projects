@@ -1,4 +1,4 @@
-package lesson3.io;
+package lesson3.io.io_stream;
 
 import java.io.BufferedReader;
 import java.io.Console;
@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 public class StdIODemo {
 
-    static void stdInputReaderDemo() {
+    static void stdinReaderDemo() {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         // read a line from stdin
@@ -23,7 +23,7 @@ public class StdIODemo {
         }
     }
 
-    static void stdInputScannerDemo() {
+    static void stdinScannerDemo() {
         Scanner input = new Scanner(System.in);
 
         // get first input
@@ -51,7 +51,7 @@ public class StdIODemo {
         }
     }
 
-    static void consoleInputDemo() {
+    static void stdinConsoleDemo() {
         // 能否调用成功, 取决于对应的系统是否支持控制台窗口, 如果不支持, 则会抛出异常
         Console cons = System.console();
         String username = cons.readLine("Please input your username: ");
@@ -59,13 +59,13 @@ public class StdIODemo {
         System.out.println("username: " + username + "password: " + password);
     }
 
-    static void stdinInputDemo() {
-        stdInputReaderDemo();
-        stdInputScannerDemo();
-        consoleInputDemo();
+    static void stdinDemo() {
+        stdinReaderDemo();
+        stdinScannerDemo();
+        stdinConsoleDemo();
     }
 
-    static void stdoutOutputDemo() {
+    static void stdoutDemo() {
         String name = "TomAndersen";
         int age = 25;
         System.out.printf("Hello, %s. Next year, you'll be %d\n", name, age);
@@ -85,8 +85,8 @@ public class StdIODemo {
 
 
     public static void main(String[] args) {
-        stdinInputDemo();
-        stdoutOutputDemo();
+        stdinDemo();
+        stdoutDemo();
     }
 }
 

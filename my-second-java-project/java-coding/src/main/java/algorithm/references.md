@@ -16,6 +16,13 @@
 
 
 常用API:
+
+```
+BufferedReader(Reader)
+BufferedReader.readLine()
+InputStreamReader(InputStream)
+StringBuilder
+
 String.charAt
 String.format(): 
     "%,d"表示使用逗号分隔符分组小数点左侧数字
@@ -24,18 +31,26 @@ String.format():
 String.valueOf
 String.valueOf(char data[])
 String.valueOf(char data[], int offset, int count)
-Character.isAlphabetic
-Double.compare()
+String.split(String)
+
+Character.isAlphabetic(int)
+Integer.parseInt(String)
+Double.compare(double, double)
+
 Arrays.sort()
 Arrays.sort(Comparator)
 Arrays.sort(fromIndex, toIndex, Comparator)
+Arrays.binarySearch(array, fromIndex, toIndex, key)
+List.asList()
+```
 
 注意事项:
-1. 注意边界条件, 多使用注释来标明循环跳出时的变量值
-2. 注意ASCII表, 需要记住数字类字符, 和大小写字母类字符的相对位置
-3. 注意多写注释, 避免逻辑死循环, 或者遗忘
-4. 读题时, 要用符号做笔记, 避免后续反复读题, 如排序条件 sort (a+b DESC, a DESC, num ASC)等
-5. 大道至简, 编程竞赛就是仅解决当前问题, 不要求程序的扩展性和鲁棒性
-
-编程原则:
-1. 输入参数不变原则, 统一不改变输入参数, 若要将其修改后使用, 需先进行拷贝
+1. 代码一般都是分为三个部分，处理输入和边界条件、处理逻辑、返回结果变量。
+2. 输入处理，使用统一的 API 处理模式。
+3. 边界条件，可以使用注释来标明循环跳出时的变量值。
+4. 代码执行过程中，尽量不修改输入变量，若要将其修改则需先进行拷贝。
+5. 代码出口数量需要严格限制，尽量保持代码出口唯一。
+6. 注意多写注释，避免逻辑死循环，或者遗忘。
+7. 注意 ASCII 表，需要记住数字类字符，和大小写字母类字符的相对位置。
+8. 读题时，要摘录关键条件，避免后续反复读题，如“返回结果要求排序”、“题目有且仅有唯一解”、“输入数组有序”等等。
+9. 大道至简，编程竞赛就是仅解决当前问题，禁止追求程序的扩展性和鲁棒性。

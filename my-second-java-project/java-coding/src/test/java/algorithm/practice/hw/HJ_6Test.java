@@ -1,8 +1,6 @@
-package algorithm.practice.huawei;
+package algorithm.practice.hw;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;

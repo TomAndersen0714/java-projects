@@ -1,12 +1,10 @@
-package algorithm.practice.huawei;
+package algorithm.practice.hw;
 
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author TomAndersen
