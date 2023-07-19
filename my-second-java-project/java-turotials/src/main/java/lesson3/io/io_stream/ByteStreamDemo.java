@@ -9,7 +9,7 @@ import static libraries.Utils.getCurrentClassName;
  * @see java.io.InputStream
  * @see java.io.OutputStream
  */
-public class ByteStream {
+public class ByteStreamDemo {
     public static void main(String[] args) throws IOException {
         System.out.println("getCurrentClassName() = " + getCurrentClassName());
     }

@@ -32,7 +32,7 @@ class LeetCode1099_1 {
         int left = 0, right = A.length - 1;
 
         while (left < right) {
-            
+
         }
 
 
