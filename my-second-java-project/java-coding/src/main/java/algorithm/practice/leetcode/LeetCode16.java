@@ -19,17 +19,21 @@ public class LeetCode16 {
  */
 class LeetCode16_1 {
     public int threeSumClosest(int[] nums, int target) {
-        // boundary condition
+        // exclude boundary condition
         if (nums == null || nums.length < 3) {
             return 0;
         }
 
-        // divide and conquer: 将其拆解为多个子问题, 求解每个子问题的答案作为备选答案, 最后筛选备选答案选出最终答案
+        // sort
         Arrays.sort(nums);
-        // initialize the closest sum with any three element of array
+        // must initialize the closest sum with any three element of array
         int closestSum = nums[0] + nums[1] + nums[2];
 
+        // iterate all alternative elements in first position
+        // and divide into multiple two pointers sub-problem
         for (int i = 0; i < nums.length - 2; i++) {
+
+            // two pointers
             int left = i + 1, right = nums.length - 1;
 
             while (left < right) {
