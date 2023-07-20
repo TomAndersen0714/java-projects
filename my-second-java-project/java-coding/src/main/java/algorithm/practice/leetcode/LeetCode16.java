@@ -28,25 +28,32 @@ class LeetCode16_1 {
         Arrays.sort(nums);
         // must initialize the closest sum with any three element of array
         int closestSum = nums[0] + nums[1] + nums[2];
+        int diff = Math.abs(closestSum - target);
 
         // iterate all alternative elements in first position
-        // and divide into multiple two pointers sub-problem
+        // and divide into multiple two pointers sub-problems
         for (int i = 0; i < nums.length - 2; i++) {
 
-            // two pointers
+            // two pointers, and left pointer is the cursor
             int left = i + 1, right = nums.length - 1;
 
             while (left < right) {
                 int curSum = nums[i] + nums[left] + nums[right];
-                if (Math.abs(curSum - target) < Math.abs(closestSum - target)) {
+                int curDiff = Math.abs(curSum - target);
+
+                // update the closet sum
+                if (curDiff < diff) {
                     closestSum = curSum;
+                    diff = curDiff;
                 }
 
-                if (curSum > target) {
-                    right -= 1;
-                }
-                else if (curSum < target) {
+                // when the sum is less than the target, moving the right pointer will
+                // decrease the sum. therefore, the left pointer should be moved.
+                if (curSum < target) {
                     left += 1;
+                }
+                else if (curSum > target) {
+                    right -= 1;
                 }
                 else {
                     return target;
@@ -68,10 +75,3 @@ class LeetCode16_1 {
     }
 }
 
-/**
- * Sort + HashMap
- * TC: O(n), SC: O(n)
- */
-class LeetCode16_2 {
-
-}
