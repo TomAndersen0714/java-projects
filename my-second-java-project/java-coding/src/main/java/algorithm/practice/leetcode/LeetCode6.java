@@ -133,3 +133,56 @@ class LeetCode6_3 {
         System.out.println("A".equals(new LeetCode6_3().convert("A", 1)));
     }
 }
+
+/**
+ * Line by line, step by step.
+ */
+class LeetCode6_4 {
+    public String convert(String s, int numRows) {
+        // exclude boundary condition
+        if (s == null || s.length() == 0 || numRows == 0) {
+            return null;
+        }
+        if (numRows == 1) {
+            return s;
+        }
+
+        // handler
+        StringBuilder sb = new StringBuilder();
+        int len = s.length();
+
+        // the first line
+        int step = numRows * 2 - 2;
+        for (int i = 0; i < len; i += step) {
+            sb.append(s.charAt(i));
+        }
+
+        // the middle lines
+        for (int n = 1; n < numRows - 1; n += 1) {
+            // each middle line consist of multi cycles
+            for (int i = n; i < len; i += step) {
+                // each cycle may consist of two characters
+                sb.append(s.charAt(i));
+
+                int interval = (numRows - n - 1) * 2;
+                if (i + interval < len) {
+                    sb.append(s.charAt(i + interval));
+                }
+            }
+        }
+
+        // the last line
+        for (int i = numRows - 1; i < len; i += step) {
+            sb.append(s.charAt(i));
+        }
+
+        // return
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println("PAHNAPLSIIGYIR".equals(new LeetCode6_4().convert("PAYPALISHIRING", 3)));
+        System.out.println("PINALSIGYAHRPI".equals(new LeetCode6_4().convert("PAYPALISHIRING", 4)));
+        System.out.println("A".equals(new LeetCode6_4().convert("A", 1)));
+    }
+}

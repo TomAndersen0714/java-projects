@@ -15,7 +15,7 @@ public class LeetCode16 {
 
 /**
  * Sort + two pointers
- * TC: O(n), SC: O(1)
+ * TC: O(n*log_n), SC: O(1)
  */
 class LeetCode16_1 {
     public int threeSumClosest(int[] nums, int target) {
