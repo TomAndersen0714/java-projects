@@ -13,6 +13,10 @@ import java.util.Arrays;
 public class LeetCode344 {
 }
 
+/**
+ * Two pointers
+ * TC:O(n), SC:O(1)
+ */
 class LeetCode344_1 {
     public void reverseString(char[] s) {
         // exclude boundary condition

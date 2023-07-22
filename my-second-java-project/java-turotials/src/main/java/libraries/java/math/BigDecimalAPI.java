@@ -22,7 +22,11 @@ public class BigDecimalAPI {
         System.out.println(a.divide(b, RoundingMode.CEILING)); // divide, with cell round mode, 即向上取整
         System.out.println(a.divide(b, RoundingMode.HALF_UP)); // divide, with half up round mode, 即四舍五入
 
-        // arithmetic operation methods will return a new object and not change the caller
+        // arithmetic operation methods will return a new object
+        // and do not change the caller
         System.out.println(a);
+
+        // compareTo
+        System.out.println("a.compareTo(b) = " + a.compareTo(b));
     }
 }
