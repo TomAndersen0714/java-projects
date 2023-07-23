@@ -26,7 +26,13 @@ public class PrimitiveType {
         System.out.println(long_a);
         // System.out.println(long_b);
 
+        System.out.println("(8 % 3) = " + (8 % 3));
         System.out.println("(-8 % 3) = " + (-8 % 3));
+        System.out.println("(8 % -3) = " + (8 % -3));
+
+        System.out.println("1.3 % 2 = " + 1.3 % 2);
+        System.out.println("-1.3 % 2 = " + -1.3 % 2);
+        System.out.println("1.3 % -2 = " + 1.3 % -2);
 
         // short, 2 bytes
         short short_a = 1_000; // 整型字面量中没有 short 类型字面量
@@ -123,10 +129,10 @@ public class PrimitiveType {
     // 转义序列可以在字符或字符串字面量之外使用, 也是可以通过编译的, 但IDE无法识别语法
     // public static void main(String\u005B\u005D args){}
     public static void main(String[] args) {
-       integerDemo();
-       // floatDemo();
-       // charDemo();
-       // booleanDemo();
+        integerDemo();
+        // floatDemo();
+        // charDemo();
+        // booleanDemo();
         // basicTypeCastDemo();
     }
 }
