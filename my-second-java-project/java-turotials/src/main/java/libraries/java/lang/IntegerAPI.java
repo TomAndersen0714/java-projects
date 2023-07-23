@@ -21,6 +21,7 @@ public class IntegerAPI {
         // NOTE: class constant
         System.out.println("Integer.MAX_VALUE = " + Integer.MAX_VALUE);
         System.out.println("Integer.MIN_VALUE = " + Integer.MIN_VALUE);
+        System.out.println("1000000*1000000 < Integer.MIN_VALUE = " + (1000000 * 1000000 < Integer.MIN_VALUE));
 
 
         // NOTE: class method

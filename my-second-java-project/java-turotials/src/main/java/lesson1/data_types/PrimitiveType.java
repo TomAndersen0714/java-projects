@@ -26,13 +26,23 @@ public class PrimitiveType {
         System.out.println(long_a);
         // System.out.println(long_b);
 
+        // integer remainder
         System.out.println("(8 % 3) = " + (8 % 3));
         System.out.println("(-8 % 3) = " + (-8 % 3));
         System.out.println("(8 % -3) = " + (8 % -3));
 
+        // float remainder
         System.out.println("1.3 % 2 = " + 1.3 % 2);
         System.out.println("-1.3 % 2 = " + -1.3 % 2);
         System.out.println("1.3 % -2 = " + 1.3 % -2);
+
+        System.out.println("2.3 % 2 = " + 2.3 % 2);
+        System.out.println("-2.3 % 2 = " + -2.3 % 2);
+        System.out.println("2.3 % -2 = " + 2.3 % -2);
+
+        System.out.println("2.3 % 2.1 = " + 2.3 % 2.1);
+        System.out.println("-2.3 % 2.1 = " + -2.3 % 2.1);
+        System.out.println("2.3 % -2.1 = " + 2.3 % -2.1);
 
         // short, 2 bytes
         short short_a = 1_000; // 整型字面量中没有 short 类型字面量
