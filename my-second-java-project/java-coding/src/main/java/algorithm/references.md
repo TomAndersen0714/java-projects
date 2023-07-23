@@ -32,6 +32,8 @@ String.valueOf
 String.valueOf(char data[])
 String.valueOf(char data[], int offset, int count)
 String.split(String)
+String.substring(beginIndex, endIndex): 
+    在很多编程语言中，包含范围时通常是左闭右开的, 这是一种特定风格, 谨记!
 
 Character.isAlphabetic(int)
 Integer.parseInt(String)

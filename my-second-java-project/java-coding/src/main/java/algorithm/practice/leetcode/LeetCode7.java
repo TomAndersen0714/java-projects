@@ -139,14 +139,43 @@ class LeetCode7_3 {
         }
 
         // handle
-        int reversedValue = 0;
+        // reserve the sign bit to simplify situations
+        int sign = x >= 0 ? 1 : -1;
+        int reversedValue = 0, value = x >= 0 ? x : -x;
+
+        while (value != 0) {
+            int remainder = value % 10;
+            value /= 10;
+
+            // shift number in 10-radix, and check precision overflow
+            if (reversedValue <= Integer.MAX_VALUE / 10) {
+                reversedValue *= 10;
+            }
+            else {
+                reversedValue = 0;
+                break;
+            }
+
+            // set the lowest digit, and check precision overflow
+            if (reversedValue <= Integer.MAX_VALUE - remainder) {
+                reversedValue += remainder;
+            }
+            else {
+                reversedValue = 0;
+                break;
+            }
+        }
 
 
         // return
-        return reversedValue;
+        return reversedValue * sign;
     }
 
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(new LeetCode7_3().reverse(123) == 321);
+        System.out.println(new LeetCode7_3().reverse(-123) == -321);
+        System.out.println(new LeetCode7_3().reverse(120) == 21);
+        System.out.println(new LeetCode7_2().reverse(0) == 0);
+        System.out.println(new LeetCode7_2().reverse(-2147483648) == 0);
     }
 }
