@@ -70,6 +70,10 @@ class LeetCode5_1 {
     }
 }
 
+/**
+ * Dynamic Programming
+ * TC:O(n*n), SC:O(n)
+ */
 class LeetCode5_2 {
     public static void main(String[] args) {
 
