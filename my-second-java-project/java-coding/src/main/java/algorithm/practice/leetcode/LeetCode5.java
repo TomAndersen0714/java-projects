@@ -12,7 +12,7 @@ public class LeetCode5 {
 }
 
 /**
- * Brute Force
+ * Brute Force: expand from centers
  * TC:O(n*n), SC:O(1)
  */
 class LeetCode5_1 {
@@ -72,6 +72,6 @@ class LeetCode5_1 {
 
 class LeetCode5_2 {
     public static void main(String[] args) {
-        
+
     }
 }
