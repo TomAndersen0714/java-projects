@@ -69,8 +69,48 @@ class LeetCode214_1 {
 }
 
 /**
- * Reverse the string, and compare to origin
+ * find the longest palindromic substring in the header
+ * 120 / 123 testcases passed
+ * TC: O(n*n), SC: O(1)
  */
 class LeetCode214_2 {
+    public String shortestPalindrome(String s) {
+        // exclude boundary condition
+        if (s == null || s.length() <= 1) {
+            return s;
+        }
+
+        // find the longest palindromic substring in the header
+        int len = s.length();
+        int maxPalindromicHeaderLen = 1;
+
+        for (int i = 0; i < len; i++) {
+            int left = 0, right = i;
+
+            // whether it is a palindromic string
+            while (left < right && s.charAt(left) == s.charAt(right)) {
+                left += 1;
+                right -= 1;
+            }
+            if (left >= right) {
+                maxPalindromicHeaderLen = i + 1;
+            }
+        }
+
+        // expand the string to palindromic and return
+        StringBuilder sb = new StringBuilder();
+        for (int i = len - 1; i > maxPalindromicHeaderLen - 1; i -= 1) {
+            sb.append(s.charAt(i));
+        }
+        sb.append(s);
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new LeetCode214_2().shortestPalindrome("aacecaaa").equals("aaacecaaa"));
+        System.out.println(new LeetCode214_2().shortestPalindrome("abcd").equals("dcbabcd"));
+        System.out.println(new LeetCode214_2().shortestPalindrome("a").equals("a"));
+        System.out.println(new LeetCode214_2().shortestPalindrome("aabba").equals("abbaabba"));
+    }
 
 }
