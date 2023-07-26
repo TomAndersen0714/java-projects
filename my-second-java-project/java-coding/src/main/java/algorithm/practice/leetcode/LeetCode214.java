@@ -12,7 +12,7 @@ public class LeetCode214 {
 
 /**
  * Brute Force: expanding from center
- *
+ * <p>
  * Time Limit Exceeded, 120 / 123 testcases passed
  */
 class LeetCode214_1 {
@@ -66,4 +66,11 @@ class LeetCode214_1 {
         System.out.println(new LeetCode214_1().shortestPalindrome("a").equals("a"));
         System.out.println(new LeetCode214_1().shortestPalindrome("aabba").equals("abbaabba"));
     }
+}
+
+/**
+ * Reverse the string, and compare to origin
+ */
+class LeetCode214_2 {
+
 }
