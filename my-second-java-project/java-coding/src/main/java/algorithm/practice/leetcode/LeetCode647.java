@@ -58,3 +58,11 @@ class LeetCode647_1 {
         System.out.println(new LeetCode647_1().countSubstrings("aaa") == 6);
     }
 }
+
+/**
+ * Expanding from center
+ * TC:O(n*n), SC:O(1)
+ */
+class LeetCode647_2 {
+
+}
