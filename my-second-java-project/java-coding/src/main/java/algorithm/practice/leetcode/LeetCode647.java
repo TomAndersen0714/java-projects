@@ -2,7 +2,7 @@ package algorithm.practice.leetcode;
 
 /**
  * 647. https://leetcode.com/problems/palindromic-substrings/
- * tags: medium, string
+ * tags: medium, string, dynamic programming
  *
  * @author TomAndersen
  */
@@ -60,9 +60,43 @@ class LeetCode647_1 {
 }
 
 /**
- * Expanding from center
+ * Iterate all palindromic substring by expanding from center
  * TC:O(n*n), SC:O(1)
  */
 class LeetCode647_2 {
+    public int countSubstrings(String s) {
+        // exclude boundary condition
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
 
+        // iterate all palindromic substring
+        int res = 0, length = s.length();
+        for (int i = 0; i < length; i++) {
+            // one element as center
+            int left = i, right = i;
+            while (left >= 0 && right < length && s.charAt(left) == s.charAt(right)) {
+                res += 1;
+                left -= 1;
+                right += 1;
+            }
+
+            // two element as center
+            left = i;
+            right = i + 1;
+            while (left >= 0 && right < length && s.charAt(left) == s.charAt(right)) {
+                res += 1;
+                left -= 1;
+                right += 1;
+            }
+        }
+
+        // return
+        return res;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new LeetCode647_2().countSubstrings("abc") == 3);
+        System.out.println(new LeetCode647_2().countSubstrings("aaa") == 6);
+    }
 }
