@@ -11,7 +11,7 @@ public interface ListAPI {
     public static void main(String[] args) {
         // NOTE: class method
         // List.of()
-        // create and return an unmodifiable list containing specific elements
+        // create and return an 'immutable list' containing specific elements
         System.out.println("List.of(1,2,3) = " + List.of(1, 2, 3));
 
         // List.copyOf()

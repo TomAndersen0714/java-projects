@@ -44,10 +44,12 @@ Arrays.sort(fromIndex, toIndex, Comparator)
 Arrays.binarySearch(array, fromIndex, toIndex, key)
 Arrays.fill(array, value)
 
+Arrays.asList(): return a immutable list
+
 Arrays.equals()
 Arrays.deepEquals()
 
-List.asList()
+List.asList(): return a immutable list
 
 ```
 

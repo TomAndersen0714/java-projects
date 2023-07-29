@@ -106,7 +106,7 @@ public class ArraysAPI {
         System.out.println("Arrays.hashCode(): ");
         System.out.println(Arrays.hashCode(new int[]{1, 2, 3}));
 
-        // Arrays.asList()
+        // Arrays.asList(): return a immutable list
         // NOTE: Arrays.asList() 返回的数据类型是 java.util.Arrays.ArrayList,
         //  而非属于Collection的 java.util.ArrayList.
         // NOTE: Arrays.asList() 返回的List无法增删, 只能查改, 否则会抛出 UnsupportedOperationException

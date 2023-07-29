@@ -147,7 +147,7 @@ class LeetCode7_3 {
             int remainder = value % 10;
             value /= 10;
 
-            // shift number in 10-radix, and check precision overflow
+            // shift number in 10-radix, and check integer overflow
             if (reversedValue <= Integer.MAX_VALUE / 10) {
                 reversedValue *= 10;
             }
@@ -156,7 +156,7 @@ class LeetCode7_3 {
                 break;
             }
 
-            // set the lowest digit, and check precision overflow
+            // set the lowest digit, and check integer overflow
             if (reversedValue <= Integer.MAX_VALUE - remainder) {
                 reversedValue += remainder;
             }
