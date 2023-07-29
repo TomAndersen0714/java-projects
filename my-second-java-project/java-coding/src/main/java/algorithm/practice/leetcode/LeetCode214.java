@@ -17,7 +17,7 @@ public class LeetCode214 {
  */
 class LeetCode214_1 {
     public String shortestPalindrome(String s) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (s == null || s.length() <= 1) {
             return s;
         }
@@ -75,7 +75,7 @@ class LeetCode214_1 {
  */
 class LeetCode214_2 {
     public String shortestPalindrome(String s) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (s == null || s.length() <= 1) {
             return s;
         }

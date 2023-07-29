@@ -18,7 +18,7 @@ public class LeetCode7 {
  */
 class LeetCode7_1 {
     public int reverse(int x) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (x == 0) {
             return x;
         }
@@ -82,7 +82,7 @@ class LeetCode7_1 {
  */
 class LeetCode7_2 {
     public int reverse(int x) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (x == 0) {
             return x;
         }
@@ -133,7 +133,7 @@ class LeetCode7_2 {
  */
 class LeetCode7_3 {
     public int reverse(int x) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (x == 0) {
             return x;
         }

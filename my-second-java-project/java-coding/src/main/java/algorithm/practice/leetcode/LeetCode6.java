@@ -11,7 +11,7 @@ public class LeetCode6 {
 
 class LeetCode6_1 {
     public String convert(String s, int numRows) {
-        // boundary condition
+        // boundary situation
         if (s == null || s.length() == 0 || numRows < 0) {
             return null;
         }
@@ -51,7 +51,7 @@ class LeetCode6_1 {
 
 class LeetCode6_2 {
     public String convert(String s, int numRows) {
-        // boundary condition
+        // boundary situation
         if (s == null || s.length() == 0 || numRows == 0) {
             return null;
         }
@@ -139,7 +139,7 @@ class LeetCode6_3 {
  */
 class LeetCode6_4 {
     public String convert(String s, int numRows) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (s == null || s.length() == 0 || numRows == 0) {
             return null;
         }

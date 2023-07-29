@@ -15,7 +15,7 @@ public class LeetCode704 {
  */
 class LeetCode704_1 {
     public int search(int[] nums, int target) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (nums == null || nums.length == 0) {
             return -1;
         }

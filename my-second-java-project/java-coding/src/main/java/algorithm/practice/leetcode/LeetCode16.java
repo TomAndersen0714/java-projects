@@ -19,7 +19,7 @@ public class LeetCode16 {
  */
 class LeetCode16_1 {
     public int threeSumClosest(int[] nums, int target) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (nums == null || nums.length < 3) {
             return 0;
         }

@@ -8,7 +8,7 @@ package algorithm.practice.for_offer.string;
  */
 public class Offer_5 {
     public String replaceSpace(String s) {
-        // boundary condition
+        // boundary situation
         if (s == null || s.length() == 0) {
             return s;
         }

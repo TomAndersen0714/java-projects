@@ -17,7 +17,7 @@ public class LeetCode5 {
  */
 class LeetCode5_1 {
     public String longestPalindrome(String s) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (s == null || s.length() <= 1) {
             return s;
         }
@@ -76,7 +76,7 @@ class LeetCode5_1 {
  */
 class LeetCode5_2 {
     public String longestPalindrome(String s) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (s == null || s.length() <= 1) {
             return s;
         }
@@ -88,7 +88,7 @@ class LeetCode5_2 {
         boolean[][] dp = new boolean[length][length];
         int left = 0, right = 0;
 
-        // set the boundary condition for equation
+        // set the boundary situation for equation
         // interval = 0
         for (int i = 0; i < length; i++) {
             dp[i][i] = true;

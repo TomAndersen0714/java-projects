@@ -21,7 +21,7 @@ public class LeetCode1 {
  */
 class LeetCode1_1 {
     public int[] twoSum(int[] nums, int target) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (nums == null || nums.length == 0) {
             return new int[]{-1, -1};
         }
@@ -51,7 +51,7 @@ class LeetCode1_1 {
  */
 class LeetCode1_2 {
     public int[] twoSum(int[] nums, int target) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (nums == null || nums.length == 0) {
             return new int[]{-1, -1};
         }

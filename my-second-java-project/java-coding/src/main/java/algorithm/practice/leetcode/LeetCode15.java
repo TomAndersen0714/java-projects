@@ -21,7 +21,7 @@ public class LeetCode15 {
  */
 class LeetCode15_1 {
     public List<List<Integer>> threeSum(int[] nums) {
-        // exclude boundary condition
+        // exclude boundary situation
         List<List<Integer>> res = new ArrayList<>();
         if (nums == null || nums.length < 3) {
             return res;
@@ -71,7 +71,7 @@ class LeetCode15_1 {
  */
 class LeetCode15_2 {
     public List<List<Integer>> threeSum(int[] nums) {
-        // exclude boundary condition
+        // exclude boundary situation
         List<List<Integer>> res = new ArrayList<>();
         if (nums == null || nums.length < 3) {
             return res;

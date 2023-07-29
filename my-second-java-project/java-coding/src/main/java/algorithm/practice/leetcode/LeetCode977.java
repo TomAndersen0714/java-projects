@@ -18,7 +18,7 @@ public class LeetCode977 {
  */
 class LeetCode977_1 {
     public int[] sortedSquares(int[] nums) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (nums == null || nums.length == 0) {
             return new int[]{};
         }

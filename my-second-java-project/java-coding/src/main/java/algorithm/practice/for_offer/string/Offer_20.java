@@ -7,7 +7,7 @@ package algorithm.practice.for_offer.string;
  */
 public class Offer_20 {
     public boolean isNumber(String s) {
-        // boundary condition
+        // boundary situation
         if (s == null || s.length() == 0) {
             return false;
         }

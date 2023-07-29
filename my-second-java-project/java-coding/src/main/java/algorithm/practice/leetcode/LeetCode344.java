@@ -19,7 +19,7 @@ public class LeetCode344 {
  */
 class LeetCode344_1 {
     public void reverseString(char[] s) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (s == null || s.length <= 1) {
             return;
         }

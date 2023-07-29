@@ -12,7 +12,7 @@ import java.util.Arrays;
  */
 public class LeetCode34 {
     public int[] searchRange(int[] nums, int target) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (nums == null || nums.length == 0) {
             return new int[]{-1, -1};
         }

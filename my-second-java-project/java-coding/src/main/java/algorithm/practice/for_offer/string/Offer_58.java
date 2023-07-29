@@ -7,7 +7,7 @@ package algorithm.practice.for_offer.string;
  */
 public class Offer_58 {
     public String reverseLeftWords(String s, int n) {
-        // boundary condition
+        // boundary situation
         if (s == null || s.length() == 0 || n <= 0) {
             return "";
         }

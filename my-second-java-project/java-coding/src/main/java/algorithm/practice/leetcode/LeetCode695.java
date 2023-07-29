@@ -10,7 +10,7 @@ package algorithm.practice.leetcode;
  */
 public class LeetCode695 {
     public int maxAreaOfIsland(int[][] grid) {
-        // boundary conditions
+        // boundary situations
         if (grid == null || grid.length == 0) {
             return 0;
         }
@@ -38,7 +38,7 @@ public class LeetCode695 {
      * @return
      */
     private int dfs(int[][] access, int x, int y) {
-        // boundary conditions
+        // boundary situations
         if (x < 0 || y < 0 || x >= access.length || y >= access[x].length || access[x][y] == 0) {
             return 0;
         }

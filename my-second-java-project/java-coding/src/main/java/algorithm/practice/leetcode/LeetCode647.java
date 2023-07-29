@@ -15,7 +15,7 @@ public class LeetCode647 {
  */
 class LeetCode647_1 {
     public int countSubstrings(String s) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (s == null || s.length() == 0) {
             return 0;
         }
@@ -65,7 +65,7 @@ class LeetCode647_1 {
  */
 class LeetCode647_2 {
     public int countSubstrings(String s) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (s == null || s.length() == 0) {
             return 0;
         }

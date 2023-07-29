@@ -20,7 +20,7 @@ public class LeetCode54 {
  */
 class LeetCode54_1 {
     public List<Integer> spiralOrder(int[][] matrix) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (matrix == null || matrix.length == 0) {
             return new ArrayList<Integer>();
         }

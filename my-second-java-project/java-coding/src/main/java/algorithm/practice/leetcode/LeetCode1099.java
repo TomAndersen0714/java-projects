@@ -43,7 +43,7 @@ public class LeetCode1099 {
  */
 class LeetCode1099_1 {
     public int twoSumLessThanK(int[] A, int K) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (A == null || A.length <= 1) {
             return -1;
         }

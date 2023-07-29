@@ -16,7 +16,7 @@ public class LeetCode209 {
  */
 class LeetCode209_1 {
     public int minSubArrayLen(int target, int[] nums) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (nums == null || nums.length == 0) {
             return 0;
         }
@@ -62,7 +62,7 @@ class LeetCode209_1 {
  */
 class LeetCode209_2 {
     public int minSubArrayLen(int target, int[] nums) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (nums == null || nums.length == 0) {
             return 0;
         }
@@ -110,7 +110,7 @@ class LeetCode209_2 {
  */
 class LeetCode209_3 {
     public int minSubArrayLen(int target, int[] nums) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (nums == null || nums.length == 0) {
             return 0;
         }
