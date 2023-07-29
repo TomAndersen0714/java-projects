@@ -15,7 +15,7 @@ public class LeetCode54 {
 }
 
 /**
- * brute force + direction array + state cache
+ * brute force + direction array + state cache + counter
  * TC: O(n), SC: O(n)
  */
 class LeetCode54_1 {

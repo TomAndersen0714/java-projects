@@ -18,9 +18,10 @@
 常用API:
 
 ```
-BufferedReader(Reader)
-BufferedReader.readLine()
-InputStreamReader(InputStream)
+java.io.BufferedReader(Reader)
+java.io.BufferedReader.readLine()
+java.io.InputStreamReader(InputStream)
+
 StringBuilder
 
 String.charAt
@@ -32,8 +33,6 @@ String.valueOf
 String.valueOf(char data[])
 String.valueOf(char data[], int offset, int count)
 String.split(String)
-String.substring(beginIndex, endIndex): 
-    在很多编程语言中，包含范围时通常是左闭右开的, 这是一种特定风格, 谨记!
 
 Character.isAlphabetic(int)
 Integer.parseInt(String)
@@ -43,7 +42,13 @@ Arrays.sort()
 Arrays.sort(Comparator)
 Arrays.sort(fromIndex, toIndex, Comparator)
 Arrays.binarySearch(array, fromIndex, toIndex, key)
+Arrays.fill(array, value)
+
+Arrays.equals()
+Arrays.deepEquals()
+
 List.asList()
+
 ```
 
 注意事项:
