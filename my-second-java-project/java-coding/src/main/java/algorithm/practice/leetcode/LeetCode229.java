@@ -80,11 +80,19 @@ class LeetCode229_3 {
 
         // Boyer-Moore vote algorithm
         List<Integer> candidates = new ArrayList<>();
-        int candidate1 = nums[0], candidate2 = nums[1], counter1 = 0, counter2 = 0;
+        int candidate1 = nums[0], candidate2 = nums[0], counter1 = 0, counter2 = 0;
 
         // iterate and vote, find
         for (int num : nums) {
-            if (counter1 == 0) {
+            // try to vote existed candidate first
+            if (num == candidate1) {
+                counter1 += 1;
+            }
+            else if (num == candidate2) {
+                counter2 += 1;
+            }
+            // if no specific candidate, then try to become the candidate or remove
+            else if (counter1 == 0) {
                 candidate1 = num;
                 counter1 = 1;
             }
@@ -92,19 +100,41 @@ class LeetCode229_3 {
                 candidate2 = num;
                 counter2 = 1;
             }
-            else if (num == candidate1) {
-                counter1 += 1;
-            }
-            else if (num == candidate2) {
-                counter2 += 1;
-            }
+            // remove three distinct value
             else {
                 counter1 -= 1;
                 counter2 -= 1;
             }
         }
 
+        // check the remaining elements counter
+        counter1 = 0;
+        counter2 = 0;
+        for (int num : nums) {
+            if (num == candidate1) {
+                counter1 += 1;
+            }
+            else if (num == candidate2) {
+                counter2 += 1;
+            }
+        }
+
+        if (counter1 > nums.length / 3) {
+            candidates.add(candidate1);
+        }
+        if (counter2 > nums.length / 3) {
+            candidates.add(candidate2);
+        }
+
         // return
         return candidates;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.equals(new LeetCode229_3().majorityElement(new int[]{3, 2, 3}).toArray(), new Integer[]{3}));
+        System.out.println(Arrays.equals(new LeetCode229_3().majorityElement(new int[]{1}).toArray(), new Integer[]{1}));
+        System.out.println(Arrays.equals(new LeetCode229_3().majorityElement(new int[]{1, 2}).toArray(), new Integer[]{1, 2}));
+        System.out.println(Arrays.equals(new LeetCode229_3().majorityElement(new int[]{2, 1, 1, 3, 1, 4, 5, 6}).toArray(), new Integer[]{1}));
+
     }
 }
