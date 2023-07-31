@@ -14,39 +14,39 @@ import java.util.Stack;
 public class LeetCode94 {
 }
 
+
 /**
- * DFS iterating using stack
+ * DFS recursion
  * TC: O(n), SC: O(n)
  */
 class LeetCode94_1 {
-
     public List<Integer> inorderTraversal(TreeNode root) {
-        // exclude boundary situation
+        // exclude boundary condition
         if (root == null) {
             return new ArrayList<>();
         }
 
-        // dfs iterate
-        Stack<TreeNode> stack = new Stack<>();
-        List<Integer> inOrderPath = new ArrayList<>();
-        TreeNode cursor = root;
-        // iterate
-        while (cursor != null || !stack.empty()) {
-            // add all left children nodes into stack
-            while (cursor != null) {
-                stack.push(cursor);
-                cursor = cursor.left;
-            }
-
-            // pop and visit current node
-            cursor = stack.pop();
-            inOrderPath.add(cursor.val);
-            // move to the right
-            cursor = cursor.right;
-        }
+        // recursion
+        List<Integer> inorderPath = new ArrayList<>();
+        inorderRecursionHelper(inorderPath, root);
 
         // return
-        return inOrderPath;
+        return inorderPath;
+    }
+
+    private void inorderRecursionHelper(List<Integer> inorderPath, TreeNode node) {
+        if (node != null) {
+            // visit left subtree
+            if (node.left != null) {
+                inorderRecursionHelper(inorderPath, node.left);
+            }
+            // visit current node
+            inorderPath.add(node.val);
+            // visit right subtree
+            if (node.right != null) {
+                inorderRecursionHelper(inorderPath, node.right);
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -60,9 +60,57 @@ class LeetCode94_1 {
 }
 
 /**
- * DFS recursion
+ * DFS iterating using stack
  * TC: O(n), SC: O(n)
  */
 class LeetCode94_2 {
 
+    public List<Integer> inorderTraversal(TreeNode root) {
+        // exclude boundary situation
+        if (root == null) {
+            return new ArrayList<>();
+        }
+
+
+        // iterate using stack
+        List<Integer> inorderPath = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode cursor = root;
+
+        // initial stack
+        while (cursor != null) {
+            stack.push(cursor);
+            cursor = cursor.left;
+        }
+
+        // process all nodes in stack using same operation
+        while (!stack.empty()) {
+            // pop and visit node
+            cursor = stack.pop();
+            inorderPath.add(cursor.val);
+
+            // move cursor to the right child node of current node
+            if (cursor.right != null) {
+                cursor = cursor.right;
+
+                // push current node and all left child nodes of current node into stack
+                while (cursor != null) {
+                    stack.push(cursor);
+                    cursor = cursor.left;
+                }
+            }
+        }
+
+        // return
+        return inorderPath;
+    }
+
+    public static void main(String[] args) {
+        TreeNode node1 = new TreeNode(1);
+        TreeNode node2 = new TreeNode(2);
+        TreeNode node3 = new TreeNode(3);
+        node1.right = node2;
+        node2.left = node3;
+        System.out.println(new LeetCode94_2().inorderTraversal(node1).toString());
+    }
 }

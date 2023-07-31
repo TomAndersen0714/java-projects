@@ -29,6 +29,10 @@ public class CollectionsAPI {
         System.out.println("Collections.sort(list1, (x, y) -> y - x) = " + list1);
 
 
+        // Collections.reverse(List)
+        Collections.reverse(list1);
+        System.out.println("Collections.reverse(list1) = " + list1);
+
         // Collections.reverseOrder
         // 构建并返回针对集合元素类型的降序 Comparator
         System.out.println("Collections.reverseOrder() = " + Collections.reverseOrder());
