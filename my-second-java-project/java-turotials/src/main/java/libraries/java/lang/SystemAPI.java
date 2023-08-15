@@ -75,8 +75,11 @@ public class SystemAPI {
         System.out.println("line separator: " + System.getProperty("line.separator").replace("\n", "\\n").replace("\r", "\\r"));
         System.out.println();
 
+        // 程序执行时候操作系统用户姓名
         System.out.println("user name: " + System.getProperty("user.name"));
+        // 程序执行时候操作系统用户home目录
         System.out.println("user home: " + System.getProperty("user.home"));
+        // 程序执行时候操作系统用户当前工作目录
         System.out.println("user dir(work dir): " + System.getProperty("user.dir"));
         System.out.println();
 
