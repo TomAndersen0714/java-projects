@@ -1,9 +1,6 @@
 package algorithm.practice.leetcode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * 207. Course Schedule: https://leetcode.com/problems/course-schedule/
@@ -51,28 +48,28 @@ class LeetCode207_1 {
         return isPossible;
     }
 
-    private boolean dfsRecursion(int[] adjacencyList, int[] states, int x) {
-        // if current point is not part of edge
-        if (adjacencyList[x] == -1) {
+    private boolean dfsRecursion(Map<Integer, List<Integer>> outEdges, int[] states, int x) {
+
+        // if current point is visited or visiting
+        if (states[x] == 2) {
             return true;
         }
-
-        if (states[x] == 1) {
-            return false;
-        }
-        else if (states[x] == 2) {
+        else if (states[x] == 1) {
             return true;
         }
         else {
-            // access current point
+            // visit current point and all subsequent points by dfs recursion
             states[x] = 1;
-            if (dfsRecursion(adjacencyList, states, adjacencyList[x])) {
-                states[x] = 2;
-                return true;
+
+            List<Integer> subsequentPoints = outEdges.getOrDefault(x, Collections.emptyList());
+            for (int point : subsequentPoints) {
+                if (!dfsRecursion(outEdges, states, point)) {
+                    return false;
+                }
             }
-            else {
-                return false;
-            }
+
+            states[x] = 2;
+            return true;
         }
     }
 
