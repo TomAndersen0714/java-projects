@@ -209,5 +209,8 @@ class LeetCode207_3 {
  */
 class LeetCode207_4 {
 
+    public static void main(String[] args) {
+        
+    }
 
 }
