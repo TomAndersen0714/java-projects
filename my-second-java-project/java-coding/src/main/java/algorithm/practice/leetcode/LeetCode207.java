@@ -13,7 +13,7 @@ public class LeetCode207 {
 }
 
 /**
- * DFS recursion
+ * DFS recursion, adjacency list(map.list) + recursion
  * TC: O(m+n), SC: O(m+n)
  */
 class LeetCode207_1 {
@@ -204,7 +204,7 @@ class LeetCode207_3 {
 }
 
 /**
- * DFS recursion
+ * DFS recursion, adjacency list(list.list) + recursion
  * TC: O(m+n), SC: O(m+n)
  */
 class LeetCode207_4 {
