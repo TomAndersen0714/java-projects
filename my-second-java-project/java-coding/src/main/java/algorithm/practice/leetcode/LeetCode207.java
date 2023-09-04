@@ -208,9 +208,59 @@ class LeetCode207_3 {
  * TC: O(m+n), SC: O(m+n)
  */
 class LeetCode207_4 {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        // exclude boundary situation
+        if (numCourses == 0 || prerequisites == null || prerequisites.length == 0) {
+            return true;
+        }
+
+        // solve problem
+        boolean res = true;
+        List<List<Integer>> adjList = new ArrayList<>();
+        int[] states = new int[numCourses]; // 0-not visited, 1-visiting, 2-visited
+
+        for (int i = 0; i < numCourses; i++) {
+            adjList.add(new ArrayList<>());
+        }
+        for (int[] edge : prerequisites) {
+            adjList.get(edge[1]).add(edge[0]);
+        }
+
+        // iterate all points in the graph by dfs recursion
+        for (int i = 0; i < numCourses; i++) {
+            if (!dfsRecursion(adjList, states, i)) {
+                res = false;
+                break;
+            }
+        }
+
+        // return
+        return res;
+    }
+
+    private boolean dfsRecursion(List<List<Integer>> adjList, int[] states, int point) {
+        if (states[point] == 1) { // visiting
+            return false;
+        }
+        else if (states[point] == 2) { // visited
+            return true;
+        }
+        else {
+            states[point] = 1;
+            for (int next : adjList.get(point)) {
+                if (!dfsRecursion(adjList, states, next)) {
+                    return false;
+                }
+            }
+            states[point] = 2;
+            return true;
+        }
+    }
 
     public static void main(String[] args) {
-        
+        System.out.println(new LeetCode207_4().canFinish(2, new int[][]{{1, 0}}) == true);
+        System.out.println(new LeetCode207_4().canFinish(2, new int[][]{{1, 0}, {0, 1}}) == false);
+        System.out.println(new LeetCode207_4().canFinish(3, new int[][]{{1, 0}, {1, 2}, {0, 1}}) == false);
     }
 
 }
