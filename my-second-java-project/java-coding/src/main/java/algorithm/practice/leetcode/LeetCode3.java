@@ -11,7 +11,7 @@ public class LeetCode3 {
 }
 
 /**
- * Two pointers
+ * Two pointers (sliding window) + HashSet
  * TC: O(n), SC: O(n)
  */
 class LeetCode3_1 {
@@ -45,5 +45,43 @@ class LeetCode3_1 {
         System.out.println(new LeetCode3_1().lengthOfLongestSubstring("abcabcbb"));
         System.out.println(new LeetCode3_1().lengthOfLongestSubstring("bbbbb"));
         System.out.println(new LeetCode3_1().lengthOfLongestSubstring("pwwkew"));
+    }
+}
+
+/**
+ * Two pointers (sliding window) + Array
+ * TC: O(n), SC: O(1)
+ */
+class LeetCode3_2 {
+    public int lengthOfLongestSubstring(String s) {
+        // exclude boundary situation
+        if (s == null || s.isEmpty()) {
+            return 0;
+        }
+
+        // solve problem
+        int maxLen = 1;
+        int length = s.length(), left = 0;
+        boolean[] charCounter = new boolean[256];
+
+        charCounter[s.charAt(left)] = true;
+        for (int right = 1; right < length; right += 1) {
+            char c = s.charAt(right);
+            while (charCounter[c]) {
+                charCounter[s.charAt(left)] = false;
+                left += 1;
+            }
+            charCounter[c] = true;
+            maxLen = Math.max(maxLen, right - left + 1);
+        }
+
+        // return
+        return maxLen;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new LeetCode3_2().lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(new LeetCode3_2().lengthOfLongestSubstring("bbbbb"));
+        System.out.println(new LeetCode3_2().lengthOfLongestSubstring("pwwkew"));
     }
 }
