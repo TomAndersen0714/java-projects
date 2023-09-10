@@ -8,6 +8,7 @@ import java.util.ArrayList;
 /**
  * @author TomAndersen
  * @see java.util.Collections
+ * @see java.util.List
  */
 public class CollectionsAPI {
     public static void main(String[] args) {
@@ -43,5 +44,15 @@ public class CollectionsAPI {
         // shuffle the list into random order
         Collections.shuffle(list1);
         System.out.println("Collections.shuffle(list1) = " + list1);
+
+        // Collections.singleton()
+        // returns an immutable set containing only the specified object
+        System.out.println("Collections.singleton(\"Hello\") = " + Collections.singleton("Hello"));
+        // Collections.singletonList()
+        // returns an immutable list containing only the specified object
+        System.out.println("Collections.singletonList(\"Hello\") = " + Collections.singletonList("Hello"));
+        // Collections.singletonMap()
+        // returns an immutable map, mapping only the specified key to the specified value.
+        System.out.println("Collections.singletonMap(\"Tom\", 100) = " + Collections.singletonMap("Tom", 100));
     }
 }
