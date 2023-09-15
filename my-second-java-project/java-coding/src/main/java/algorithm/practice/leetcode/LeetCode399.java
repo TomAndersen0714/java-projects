@@ -45,12 +45,31 @@ class LeetCode399_1 {
             String x = queries.get(i).get(0), y = queries.get(i).get(1);
             double result = -1.0;
 
-            // if the start vertex is in the graph
-            if (adjacencyListGraph.containsKey(x)) {
-                // if the vertex is visited
-                if (!visitedVertexes.contains(x)) {
+            // if the vertex is in the graph
+            if (adjacencyListGraph.containsKey(y)) {
+                // if the end vertex is not visited
+                if (!visitedVertexes.contains(y)) {
 
-                    // visited the connected component from the vertex by bfs, and update the adjacency list
+                    // visited the connected component from the vertex by bfs, and
+                    // update the weight in adjacency vertex
+                    String toVertex = y;
+                    Queue<String> queue = new LinkedList<>();
+                    for (String vertex : adjacencyListGraph.get(toVertex).keySet()) {
+                        queue.offer(vertex);
+                    }
+                    while (!queue.isEmpty()) {
+                        String fromVertex = queue.poll();
+                        Map<String, Double> edge = adjacencyListGraph.get(fromVertex);
+                        Double parentWeight = edge.get(toVertex);
+
+                        for (String vertex : edge.keySet()) {
+                            if (!vertex.equals(toVertex)) {
+                                adjacencyListGraph.get(vertex).put(toVertex, parentWeight / edge.get(vertex));
+                                queue.offer(vertex);
+                            }
+                        }
+                    }
+                    visitedVertexes.add(toVertex);
 
 
                     // mark visited
@@ -59,6 +78,9 @@ class LeetCode399_1 {
                     Map<String, Double> edge = adjacencyListGraph.get(x);
                     result = edge.getOrDefault(y, -1.0);
                 }
+
+                // get the weight from x to y
+                result = adjacencyListGraph.get(y).getOrDefault(x, result);
             }
 
             // store the value
@@ -67,6 +89,10 @@ class LeetCode399_1 {
 
         // return
         return results;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(1 / -1.0);
     }
 }
 
