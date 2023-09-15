@@ -22,7 +22,7 @@ public class Array {
         System.out.println(aa);
         System.out.println("aa =" + Arrays.deepToString(aa));
 
-        // initiate array using numeric literal
+        // NOTE: initiate array using literal
         // 1. initialize with specific length
         int[] x = new int[20];
         int[] y = {1, 2, 3, 4, 5};
@@ -31,6 +31,12 @@ public class Array {
         int[][] xx = { // double dimension array
             {1, 2, 3}, {4, 5}, {6, 7}
         };
+
+        String[] names = {"b", "c"};
+        String[][] xys = {{"a", "b"}, {"b", "c"}};
+        System.out.println("names = " + Arrays.toString(names));
+        System.out.println("xys = " + Arrays.deepToString(xys));
+
         xx = new int[][]{
             {0, 1}, {0, -1}, {1, 0}, {-1, 0}
         };

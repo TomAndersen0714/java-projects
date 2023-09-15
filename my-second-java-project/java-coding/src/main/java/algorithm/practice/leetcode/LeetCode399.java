@@ -1,6 +1,7 @@
 package algorithm.practice.leetcode;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 399. Evaluate Division: https://leetcode.com/problems/evaluate-division/
@@ -92,7 +93,9 @@ class LeetCode399_1 {
     }
 
     public static void main(String[] args) {
-        List.of()
+        String[][] equationStrings = {{"a","b"},{"b","c"}};
+        List<List<String>> equations = Arrays.stream(equationStrings).map(Arrays::asList).collect(Collectors.toList());
+        System.out.println(equations);
     }
 }
 
