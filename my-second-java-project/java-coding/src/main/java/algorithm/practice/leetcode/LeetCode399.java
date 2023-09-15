@@ -80,7 +80,7 @@ class LeetCode399_1 {
                 }
 
                 // get the weight from x to y
-                result = adjacencyListGraph.get(y).getOrDefault(x, result);
+                result = 1 / adjacencyListGraph.get(y).getOrDefault(x, result);
             }
 
             // store the value
@@ -92,7 +92,7 @@ class LeetCode399_1 {
     }
 
     public static void main(String[] args) {
-        System.out.println(1 / -1.0);
+        List.of()
     }
 }
 
