@@ -16,7 +16,6 @@ public class CollectionsAPI {
         List<Integer> list1 = Arrays.asList(array);
         System.out.println("list1 = " + list1);
 
-
         // Collections.replace
         Collections.replaceAll(list1, 1, 2);
         System.out.println("Collections.replaceAll(list1, 1, 2) = " + list1);
@@ -28,7 +27,6 @@ public class CollectionsAPI {
         // Collections.sort(List<T> list, Comparator<? super T> c)
         Collections.sort(list1, (x, y) -> y - x);
         System.out.println("Collections.sort(list1, (x, y) -> y - x) = " + list1);
-
 
         // Collections.reverse(List)
         Collections.reverse(list1);
@@ -54,5 +52,14 @@ public class CollectionsAPI {
         // Collections.singletonMap()
         // returns an immutable map, mapping only the specified key to the specified value.
         System.out.println("Collections.singletonMap(\"Tom\", 100) = " + Collections.singletonMap("Tom", 100));
+
+
+        // Collections.unmodifiableList()
+        // returns an unmodifiable view of the specified list
+        ArrayList<String> list = new ArrayList<>(List.of("Tom", "Alise", "Jim"));
+        List<String> names = Collections.unmodifiableList(list);
+        System.out.println(names);
+        list.remove("Jim");
+        System.out.println(names);
     }
 }
