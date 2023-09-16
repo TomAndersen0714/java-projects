@@ -1,8 +1,5 @@
 package algorithm.practice.leetcode;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 /**
  * 990. Satisfiability of Equality Equations: https://leetcode.com/problems/satisfiability-of-equality-equations/
  *
@@ -14,7 +11,7 @@ public class LeetCode990 {
 
 /**
  * Union-Find
- * TC: O(n*log(n)), SC: O(n)
+ * TC: O(n), SC: O(n)
  */
 class LeetCode990_1 {
     public boolean equationsPossible(String[] equations) {
@@ -23,35 +20,57 @@ class LeetCode990_1 {
             return true;
         }
 
-        // solve problem
+        // initialize disjoint set
         boolean res = true;
-        int[] roots = new int[256];
-        Arrays.fill(roots, -1);
+        int[] parents = new int[26];
+        for (int i = 0; i < parents.length; i++) {
+            parents[i] = i;
+        }
 
+        // iterate all equations and build disjoint set
         for (String equation : equations) {
-            int a = equation.charAt(0), b = equation.charAt(3);
-            boolean isEqual = equation.charAt(1) != '!';
+            if (equation.charAt(1) == '=') {
+                int a = equation.charAt(0) - 'a', b = equation.charAt(3) - 'a';
+                // find roots
+                while (a != parents[a]) {
+                    a = parents[a];
+                }
+                while (b != parents[b]) {
+                    b = parents[b];
+                }
 
-            if (roots[a] == -1) {
-                roots[a] = a;
-            }
-            if (roots[b] == -1) {
-                roots[b] = b;
-            }
-
-            if (isEqual) {
-                roots[b] = roots[a];
-            }
-            else {
+                // union set by path compression
+                parents[b] = parents[parents[a]];
             }
         }
 
+        // iterate all in-equations
+        for (String equation : equations) {
+            if (equation.charAt(1) == '!') {
+                int a = equation.charAt(0) - 'a', b = equation.charAt(3) - 'a';
+
+                // find roots
+                while (a != parents[a]) {
+                    a = parents[a];
+                }
+                while (b != parents[b]) {
+                    b = parents[b];
+                }
+
+                if (a == b) {
+                    res = false;
+                    break;
+                }
+            }
+        }
 
         // return
         return res;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(new LeetCode990_1().equationsPossible(new String[]{"a==b", "b!=a"}) == false);
+        System.out.println(new LeetCode990_1().equationsPossible(new String[]{"b==a", "a==b"}) == true);
+        System.out.println(new LeetCode990_1().equationsPossible(new String[]{"a==b", "e==c", "b==c", "a!=e"}) == false);
     }
 }
