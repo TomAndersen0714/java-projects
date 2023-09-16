@@ -8,8 +8,14 @@ import java.util.Date;
  */
 public class StringAPI {
 
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
     public static void main(String[] args) {
 
+        // Note: Instance methods
         // String Object
         // Java 中的字符串对象(String)是不可变的(immutable)
         String a = "Java\u2122";
@@ -86,6 +92,13 @@ public class StringAPI {
         // 字符串重复指定次数
         System.out.println(greeting.repeat(3));
 
+        // String.concat
+        // NOTE: Java中针对字符串使用加号"+"来进行联接, 通常要优于concat, 一方面可读性更好,
+        //  另一方面Java编译器针对加号"+"进行了优化, 默认会编译成StringBuilder来执行
+        System.out.println("\"a\".concat(\"b\") = " + "a".concat("b"));
+
+
+        // NOTE: Static Method
         // String.valueOf, 基础数据类型转换为字符串
         System.out.println(String.valueOf(123L));
         System.out.println(String.valueOf(1.2D));
@@ -99,7 +112,6 @@ public class StringAPI {
 
         System.out.println(Arrays.toString("Hello, world".split(" ")));
 
-        // String Class API
         // String.format, 和 printf 功能类似
         // 格式化生成字符串
         double f = 0.9 + 0.1;

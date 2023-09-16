@@ -1,5 +1,6 @@
 package libraries.java.util;
 
+import java.util.Arrays;
 import java.util.Set;
 
 /**
@@ -26,5 +27,10 @@ public interface SetAPI {
         Set<String> stringSet = Set.copyOf(nameSet);
         System.out.println("stringSet = " + stringSet);
 
+        // toArray()
+        System.out.println(Arrays.toString(stringSet.toArray()));
+        // toArray(T[])
+        String[] array = stringSet.toArray(new String[0]);
+        System.out.println(Arrays.toString(array));
     }
 }
