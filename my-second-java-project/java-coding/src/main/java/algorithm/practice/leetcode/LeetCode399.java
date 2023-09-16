@@ -275,13 +275,7 @@ class LeetCode399_2 {
  * Union-find
  */
 class LeetCode399_3 {
-    public static void main(String[] args) {
-        test();
-    }
 
-    private static void test() {
-        int a = 123;
-    }
 }
 
 
