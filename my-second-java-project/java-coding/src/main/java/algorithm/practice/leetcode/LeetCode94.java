@@ -21,7 +21,7 @@ public class LeetCode94 {
  */
 class LeetCode94_1 {
     public List<Integer> inorderTraversal(TreeNode root) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (root == null) {
             return new ArrayList<>();
         }

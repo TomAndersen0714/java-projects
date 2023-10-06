@@ -15,7 +15,7 @@ public class LeetCode990 {
  */
 class LeetCode990_1 {
     public boolean equationsPossible(String[] equations) {
-        // exclude boundary situations
+        // exclude boundary situation
         if (equations == null || equations.length == 0) {
             return true;
         }

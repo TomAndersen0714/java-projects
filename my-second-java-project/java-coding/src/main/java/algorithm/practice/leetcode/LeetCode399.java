@@ -16,7 +16,7 @@ public class LeetCode399 {
  */
 class LeetCode399_1 {
     public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
-        // exclude boundary situations
+        // exclude boundary situation
         if (equations == null || values == null || equations.isEmpty() || values.length == 0 ||
             equations.size() != values.length) {
             double[] res = new double[queries.size()];
@@ -148,7 +148,7 @@ class LeetCode399_1 {
  */
 class LeetCode399_2 {
     public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
-        // exclude boundary situations
+        // exclude boundary situation
         if (equations == null || equations.isEmpty() || values == null || values.length == 0) {
             double[] res = new double[queries.size()];
             Arrays.fill(res, -1.0);

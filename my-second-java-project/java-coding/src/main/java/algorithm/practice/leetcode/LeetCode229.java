@@ -21,7 +21,7 @@ public class LeetCode229 {
  */
 class LeetCode229_1 {
     public List<Integer> majorityElement(int[] nums) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (nums == null || nums.length == 0) {
             return new ArrayList<>();
         }

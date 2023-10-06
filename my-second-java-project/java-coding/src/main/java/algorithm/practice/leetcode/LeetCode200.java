@@ -88,7 +88,7 @@ class LeetCode200_1 {
  */
 class LeetCode200_2 {
     public int numIslands(char[][] grid) {
-        // exclude boundary situations
+        // exclude boundary situation
         if (grid == null || grid.length == 0 || grid[0] == null || grid[0].length == 0) {
             return 0;
         }

@@ -21,7 +21,7 @@ public class LeetCode18 {
  */
 class LeetCode18_1 {
     public List<List<Integer>> fourSum(int[] nums, int target) {
-        // exclude boundary condition
+        // exclude boundary situation
         if (nums == null || nums.length <= 3) {
             return new ArrayList<>();
         }
