@@ -24,6 +24,7 @@ public class HashMapAPI {
 
         // HashMap(int initialCapacity, float loadFactor)
         HashMap<String, Integer> map3 = new HashMap<>(16, 0.25F);
+        map3.put("Tom", 13);
 
         // HashMap(Map<? extends K, ? extends V> m)
         HashMap<String, Integer> wordCount = new HashMap<>(Map.of("Tom", 1, "Alise", 2));
