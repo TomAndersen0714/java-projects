@@ -1,4 +1,4 @@
-package org.tomandersen;
+package org.example;
 
 // import com.example.protos.ExampleMessage;
 import com.google.protobuf.util.JsonFormat;
