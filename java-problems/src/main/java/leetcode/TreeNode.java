@@ -1,4 +1,4 @@
-package algorithm.practice.leetcode;
+package leetcode;
 
 /**
  * @author TomAndersen

@@ -1,4 +1,4 @@
-package algorithm.practice.leetcode;
+package leetcode;
 
 /**
  * 214. Shortest Palindrome: https://leetcode.com/problems/shortest-palindrome/

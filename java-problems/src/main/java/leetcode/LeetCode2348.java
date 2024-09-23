@@ -1,4 +1,4 @@
-package algorithm.practice.leetcode;
+package leetcode;
 
 /**
  * 2348. Number of Zero-Filled Subarrays:

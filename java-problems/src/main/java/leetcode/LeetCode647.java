@@ -1,4 +1,4 @@
-package algorithm.practice.leetcode;
+package leetcode;
 
 /**
  * 647. https://leetcode.com/problems/palindromic-substrings/

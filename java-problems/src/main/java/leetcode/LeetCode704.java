@@ -1,4 +1,4 @@
-package algorithm.practice.leetcode;
+package leetcode;
 
 /**
  * 704. Binary Search: https://leetcode.com/problems/binary-search/
