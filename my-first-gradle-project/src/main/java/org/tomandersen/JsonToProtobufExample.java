@@ -8,8 +8,7 @@ import com.google.protobuf.util.JsonFormat;
  */
 public class JsonToProtobufExample {
     public static void main(String[] args) throws Exception {
-
-        // // 定义一个JSON字符串
+        // // 定义一个 JSON字符串
         // String jsonString = "{\"id\": 1, \"name\": \"John Doe\"}";
         //
         // // 创建一个空的ExampleMessage.Builder对象
