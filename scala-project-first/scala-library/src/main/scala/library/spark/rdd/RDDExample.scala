@@ -9,19 +9,19 @@ import org.apache.spark.sql.{Dataset, Encoders, SparkSession}
  */
 object RDDExample {
     def main(args: Array[String]): Unit = {
-        rddPrimitiveExample()
-        rddCaseClassExample()
+        primitiveToRDDExample()
+        caseClassToRDDExample()
     }
 
-    private def rddPrimitiveExample(): Unit = {
+    private def primitiveToRDDExample(): Unit = {
         withSpark {
             spark: SparkSession => {
-                println("rddPrimitiveExample:")
+                println("primitiveToRDDExample:")
 
                 val data = Seq(1, 2, 3, 4, 5)
                 val rdd = spark.sparkContext.parallelize(data)
 
-                // 导入隐式转换函数
+                // 导入 spark 内置的隐式转换工具, 即 implicits object
                 import spark.implicits._
                 // RDD 通过隐式转换函数转换为 DataSet
                 val dataSet: Dataset[Int] = rdd.toDS()
@@ -44,10 +44,10 @@ object RDDExample {
 
     private case class Item(id: String, name: String, value: Long)
 
-    private def rddCaseClassExample(): Unit = {
+    private def caseClassToRDDExample(): Unit = {
         withSpark {
             spark: SparkSession => {
-                println("rddCaseClassExample:")
+                println("caseClassToRDDExample:")
 
                 // using seq with case class to create RDD
                 val rdd: RDD[Item] = spark.sparkContext.parallelize(Seq(

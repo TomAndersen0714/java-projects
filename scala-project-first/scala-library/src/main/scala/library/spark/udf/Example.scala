@@ -1,15 +1,13 @@
-package library.spark.dataframe
+package library.spark.udf
 
 import library.spark.utils.ExampleUtils.withSpark
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions.expr
 
 /**
  * @author TomAndersen
  */
-object DataFrameExmaple {
+object Example {
     def main(args: Array[String]): Unit = {
-
         withSpark {
             spark => {
                 // 处理输入
