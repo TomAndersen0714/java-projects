@@ -1,6 +1,6 @@
 package lesson3.reflection;
 
-import libraries.java.lang.ClassAPI;
+import library.lang.ClassAPI;
 
 /**
  * https://docs.oracle.com/javase/tutorial/reflect/index.html
@@ -10,7 +10,7 @@ import libraries.java.lang.ClassAPI;
 public class Reflection {
     /**
      * @param args
-     * @see libraries.java.lang.ClassAPI
+     * @see ClassAPI
      */
     public static void main(String[] args) {
 

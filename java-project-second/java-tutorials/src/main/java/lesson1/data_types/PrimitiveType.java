@@ -1,7 +1,7 @@
 package lesson1.data_types;
 
 
-import libraries.Utils;
+import library.Utils;
 
 /**
  * https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
@@ -146,5 +146,3 @@ public class PrimitiveType {
         // basicTypeCastDemo();
     }
 }
-
-

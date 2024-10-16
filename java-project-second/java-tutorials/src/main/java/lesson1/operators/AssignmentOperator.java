@@ -1,7 +1,5 @@
 package lesson1.operators;
 
-import libraries.Utils;
-
 /**
  * @author TomAndersen
  * @link <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html">The Java™ Tutorials</a>

@@ -1,6 +1,6 @@
 package lesson2.syntactic_sugar;
 
-import libraries.Utils;
+import library.Utils;
 
 import java.text.MessageFormat;
 import java.util.Arrays;

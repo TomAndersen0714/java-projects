@@ -2,7 +2,7 @@ package lesson3.io.io_stream;
 
 import java.io.IOException;
 
-import static libraries.Utils.getCurrentClassName;
+import static library.Utils.getCurrentClassName;
 
 /**
  * @author TomAndersen

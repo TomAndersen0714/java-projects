@@ -1,6 +1,6 @@
 package lesson2.object_oriented;
 
-import libraries.Utils;
+import library.Utils;
 
 /**
  * @author TomAndersen

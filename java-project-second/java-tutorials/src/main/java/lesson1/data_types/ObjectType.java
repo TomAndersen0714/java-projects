@@ -1,6 +1,6 @@
 package lesson1.data_types;
 
-import libraries.Utils;
+import library.Utils;
 
 /**
  * @author TomAndersen

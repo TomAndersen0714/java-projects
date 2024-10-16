@@ -1,6 +1,6 @@
 package lesson1.operators;
 
-import libraries.Utils;
+import library.Utils;
 
 /**
  * @author TomAndersen

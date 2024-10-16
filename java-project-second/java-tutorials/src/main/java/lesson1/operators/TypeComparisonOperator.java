@@ -1,6 +1,6 @@
 package lesson1.operators;
 
-import libraries.Utils;
+import library.Utils;
 
 import java.io.BufferedInputStream;
 import java.io.InputStream;
@@ -40,4 +40,3 @@ public class TypeComparisonOperator {
     interface MyInterface {
     }
 }
-
