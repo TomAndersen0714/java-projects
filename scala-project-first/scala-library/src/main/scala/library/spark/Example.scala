@@ -5,5 +5,5 @@ package library.spark
  */
 object Example extends App {
     println("Hello World!")
-    
+
 }
