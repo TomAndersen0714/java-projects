@@ -1,4 +1,4 @@
-package basic
+package basic.concept.variable
 
 /**
  * @author TomAndersen

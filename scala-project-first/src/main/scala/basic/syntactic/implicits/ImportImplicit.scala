@@ -19,14 +19,15 @@ object ImportImplicit {
 
     object ShowSyntax {
         implicit class ShowOps[T](value: T) {
-            def show(implicit s: Show[T]): String = s.show(value)
+            // implicit parameter 隐式参数列表
+            def show()(implicit s: Show[T]): String = s.show(value)
         }
     }
 }
 
 object Example {
-
-    import basic.syntactic.implicits.ImportImplicit.ShowInstances._
+    // import package_name._ 中的下划线_，代表导入对应包/类/对象下的所有成员
+    import basic.syntactic.implicits.ImportImplicit.ShowInstances.{intShow, stringShow}
     import basic.syntactic.implicits.ImportImplicit.ShowSyntax._
 
     def main(args: Array[String]): Unit = {
