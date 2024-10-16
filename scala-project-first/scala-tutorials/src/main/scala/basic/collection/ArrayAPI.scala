@@ -3,7 +3,7 @@ package basic.collection
 /**
  * @author TomAndersen
  */
-object ArrayExample {
+object ArrayAPI {
     def main(args: Array[String]): Unit = {
         // 创建 Array
         val arr = Array(1, 2, 3, 4, 5)
