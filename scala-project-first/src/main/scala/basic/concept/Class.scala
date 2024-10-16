@@ -3,7 +3,7 @@ package basic
 /**
  * @author TomAndersen
  */
-class ClassDemo {
+class Class {
     // scala中类字段field必须要初始化
     var age = 0 // scala中没有public关键字, class field默认是公有的public
     private var value = 0 // 只有private需要显式声明
@@ -24,10 +24,10 @@ class ClassDemo {
     }
 }
 
-object ClassDemo {
+object Class {
     def main(args: Array[String]): Unit = {
         // Class Demo
-        val classDemo = new ClassDemo()
+        val classDemo = new Class()
 
         classDemo.increment()
         println(classDemo.current())

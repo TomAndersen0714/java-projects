@@ -9,4 +9,5 @@ class Example {
 
 object Example extends App {
     println("Hello World!")
+    
 }
