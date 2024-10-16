@@ -8,7 +8,9 @@ object Variable {
     def main(args: Array[String]): Unit = {
         // numeric
         var intVar: Int = 1 // 字面量都是对象
-        var floatVar = 1.1f // 声明变量时, 类型注释type annotation可以不加, 隐式推断
+        var floatVar = 1.1f // 声明变量时, 类型注释type annotation可以不加, Scala会进行隐式推断,
+        // 后续也无法更改变量所能指向数据类型, 如: intVar = 12.1
+
         var res: Double = 0.0 // var是可变变量, 即变量的指向可以修改
         val constantVal: Double = 1.5 // val是不可变变量, 即变量的指向无法修改
 

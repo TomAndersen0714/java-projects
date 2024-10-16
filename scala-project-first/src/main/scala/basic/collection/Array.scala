@@ -1,4 +1,4 @@
-package basic.concept
+package basic.collection
 
 /**
  * @author TomAndersen
