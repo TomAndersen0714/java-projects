@@ -9,5 +9,9 @@ object SeqAPI {
 
     // scala.collection.IterableLike.take
     println(s"numsSeq.take(3) = ${numsSeq.take(3)}")
+
+    // scala.collection.TraversableLike.flatMap
+    val flatMapSeq: Seq[Int] = numsSeq.flatMap((x: Int) => Seq(x, x))
+    println(s"flatMapSeq = ${flatMapSeq}")
   }
 }
