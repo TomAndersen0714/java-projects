@@ -8,6 +8,7 @@ object SeqAPI {
     val numsSeq: Seq[Int] = Seq(1, 2, 3, 4)
 
     // scala.collection.IterableLike.take
+    // Selects first n elements
     println(s"numsSeq.take(3) = ${numsSeq.take(3)}")
 
     // scala.collection.TraversableLike.flatMap

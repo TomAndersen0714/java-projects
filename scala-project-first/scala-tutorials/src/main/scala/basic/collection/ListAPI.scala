@@ -62,5 +62,9 @@ object ListAPI {
       case j: String => j
     }
     println(s"collectList = ${collectList}")
+
+
+    // scala.collection.TraversableLike.partition
+//    mixedList.partition()
   }
 }
