@@ -9,7 +9,7 @@ import java.util.Arrays;
 /**
  * @author TomAndersen
  */
-class UtilTest {
+class UtilsTest {
 
     @BeforeEach
     void setUp() {

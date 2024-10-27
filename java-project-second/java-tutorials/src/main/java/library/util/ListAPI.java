@@ -63,6 +63,7 @@ public interface ListAPI {
         staffs.removeIf((x) -> x.startsWith("A"));
         System.out.println(staffs);
 
-
+        // java.util.List.equals
+        System.out.println("List.of(1, 2, 3).equals(List.of(3, 2, 1)) = " + List.of(1, 2, 3).equals(List.of(3, 2, 1)));
     }
 }
