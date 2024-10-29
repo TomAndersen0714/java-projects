@@ -12,7 +12,14 @@ object ArrayAPI {
 
     // scala.Array.length
     println(s"arr.length = ${arr.length}")
+
+    // read array
     println(s"arr(0) = ${arr(0)}")
     println(s"arr1(0) = ${arr1(0)}")
+
+    // write array
+    arr(0) = 10
+    println(s"arr(0) = ${arr(0)}")
+
   }
 }

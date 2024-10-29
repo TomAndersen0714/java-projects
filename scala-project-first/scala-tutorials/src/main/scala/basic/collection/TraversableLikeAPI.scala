@@ -30,11 +30,17 @@ object TraversableLikeAPI {
     println(s"intToTuples = ${intToTuples}")
 
     // scala.collection.TraversableLike.scanLeft
-    // scanLeft方法的作用是从最左边的元素开始遍历, 并计算其每次的状态值(如:累加求和), 并返回每次状态值对应的集合
-    // 传入的参数是一个初始状态值, 和当前状态值的计算函数, 返回结果包含初始状态
+    // scanLeft方法的作用是从集合首个元素开始遍历, 并提供一个初始状态, 每次遍历时都会更新其状态, 并保存到返回值中, 遍历结束时会返回一个状态值的集合, 此集合的长度比原集合多1
     val ints: Seq[Int] = tupleSeq.scanLeft(1) {
       case (current, x) => current + x._1
     }
     println(s"ints = ${ints}")
+
+    // scala.collection.TraversableLike.foldLeft
+    // foldLeft 方法的作用是从集合首个元素开始遍历, 并提供一个初始状态(如: tupleSeq.head), 然后计算每个元素, 同时更新状态值, 知道返回单个最终状态值
+    val foldLeft = tupleSeq.foldLeft(tupleSeq.head) {
+      case (current, x) => (current._1 + x._1, current._2 + x._2)
+    }
+    println(s"foldLeft = ${foldLeft}")
   }
 }

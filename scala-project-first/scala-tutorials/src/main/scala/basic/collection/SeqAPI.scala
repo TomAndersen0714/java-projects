@@ -7,6 +7,7 @@ object SeqAPI {
   def main(args: Array[String]): Unit = {
     val numsSeq: Seq[Int] = Seq(1, 2, 3, 4)
     val tupleSeq: Seq[(Int, Int)] = Seq((1, 2), (3, 4), (5, 6))
+    println(s"numsSeq = ${numsSeq}")
 
     // scala.collection.IterableLike.take
     // Selects first n elements

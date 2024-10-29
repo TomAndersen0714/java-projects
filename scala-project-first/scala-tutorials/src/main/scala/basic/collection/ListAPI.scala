@@ -2,9 +2,12 @@ package basic.collection
 
 /**
  * @author TomAndersen
+ * @see [[scala.collection.immutable.List]]
  */
 object ListAPI {
   def main(args: Array[String]): Unit = {
+    // scala.collection.immutable.List
+    // scala 中的 List 是一个不可变的集合, 它的元素是有序的, 可以重复, 但是不能修改, 并且都是链表结构 head + tail
     val numsList: List[Int] = List(1, 2, 3, 4)
     val mixedList: List[Any] = List(1, "two", 3, "four", 5)
 
