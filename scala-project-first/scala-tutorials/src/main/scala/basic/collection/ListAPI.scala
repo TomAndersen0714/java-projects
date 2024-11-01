@@ -29,7 +29,7 @@ object ListAPI {
 
     // scala.collection.generic.GenericTraversableTemplate.flatten
     // flatten方法适用于自身同类型嵌套的集合类型，如 List[List[T]]、Seq[Seq[T]]、Array[Array[T]]等。
-    // 它会将嵌套集合中的元素提取出来并连接成一个新的集合。
+    // 它会将嵌套集合中的元素提取出来并通过 ++ 连接成一个新的集合。
     val listOfList: List[List[Int]] = List(List(1, 2, 3), List(4, 5, 6))
     val flattenList: List[Int] = listOfList.flatten
     println(s"listOfList = ${listOfList}")

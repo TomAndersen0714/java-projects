@@ -19,5 +19,7 @@ object MapAPI {
     map(0) = "zero"
     map.update(1, "ONE")
     println(s"map = ${map}")
+
+
   }
 }
