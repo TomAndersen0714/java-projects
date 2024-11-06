@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import static leetcode.common.Util.compareList;
+import static leetcode.common.Util.strToListList;
+
 /**
  * 15. 3Sum: https://leetcode.com/problems/3sum/
  * <p>
@@ -14,11 +17,18 @@ import java.util.List;
 public class LeetCode15 {
 
     public static void main(String[] args) {
-        int[] ints = new int[]{-1, 0, 1, 2, -1, -4};
-        System.out.println("new LeetCode15_1().threeSum(ints) = " + new LeetCode15_1().threeSum(ints));
+        int[] input = new int[]{-1, 0, 1, 2, -1, -4};
+        String expect = "[[-1,-1,2],[-1,0,1]]";
 
-        ints = new int[]{-2, 0, 0, 2, 2};
-        System.out.println("new LeetCode15_1().threeSum(ints) = " + new LeetCode15_1().threeSum(ints));
+        System.out.println(compareList(new LeetCode15_1().threeSum(input), strToListList(expect)));
+
+        input = new int[]{0, 1, 1};
+        expect = "[]";
+        System.out.println(compareList(new LeetCode15_1().threeSum(input), strToListList(expect)));
+
+        input = new int[]{0, 0, 0};
+        expect = "[[0,0,0]]";
+        System.out.println(compareList(new LeetCode15_1().threeSum(input), strToListList(expect)));
     }
 }
 
@@ -28,36 +38,29 @@ public class LeetCode15 {
 class LeetCode15_1 {
     public List<List<Integer>> threeSum(int[] nums) {
         // input
+        LinkedList<List<Integer>> res = new LinkedList<>();
         // exclude boundary situation
         if (nums == null || nums.length < 3) {
-            return null;
+            return res;
         }
 
-        // solve
-        List<List<Integer>> res = new LinkedList<>();
-        // reduce dimension
+        // transform
+        // simplify the problems, T: O(log_2_N)
         Arrays.sort(nums);
-        int left, right, target;
-        for (int cursor = 0; cursor < nums.length - 2; cursor++) {
-
+        int cursor = 0, left, right, twoSumTarget;
+        while (cursor < nums.length - 2) {
             left = cursor + 1;
             right = nums.length - 1;
-            target = -nums[cursor];
-
+            twoSumTarget = -nums[cursor];
             while (left < right) {
-                if (nums[left] + nums[right] < target) {
-                    left += 1;
-                }
-                else if (nums[left] + nums[right] > target) {
-                    right -= 1;
-                }
-                else {
-                    // nums[left] + nums[right] == target and left < right
+
+                int twoSum = nums[left] + nums[right];
+                if (twoSum == twoSumTarget) {
                     res.add(List.of(nums[cursor], nums[left], nums[right]));
                     left += 1;
                     right -= 1;
 
-                    // if next value is same as previous, then skip
+                    // skip duplicate combination, i.e. if next value is same with previous, skip it
                     while (left < right && nums[left] == nums[left - 1]) {
                         left += 1;
                     }
@@ -65,10 +68,17 @@ class LeetCode15_1 {
                         right -= 1;
                     }
                 }
+                else if (twoSum < twoSumTarget) {
+                    left += 1;
+                }
+                else {
+                    right -= 1;
+                }
             }
 
-            // skip duplicate elements
-            while (cursor + 1 < nums.length - 2 && nums[cursor + 1] == nums[cursor]) {
+            // skip duplicate combinations
+            cursor += 1;
+            while (cursor < nums.length - 2 && nums[cursor] == nums[cursor - 1]) {
                 cursor += 1;
             }
         }
