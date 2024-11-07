@@ -33,25 +33,25 @@ class LeetCode16_1 {
         // transform
         Arrays.sort(nums);
         int left, right;
-        int res = nums[0] + nums[1] + nums[2], minDist = Math.abs(res - target);
+        int res = nums[0] + nums[1] + nums[nums.length - 1], minDist = Math.abs(res - target);
         for (int i = 0; i < nums.length; i++) {
             left = i + 1;
             right = nums.length - 1;
-            // try to converge by iteration
+            // try to converge by iteration all possible coordinates
             while (left < right) {
                 // update the result when meet closer coordinates
-                int currentSum = nums[i] + nums[left] + nums[right];
-                int currentDist = Math.abs(currentSum - target);
-                if (currentDist < minDist) {
-                    res = currentSum;
-                    minDist = currentDist;
+                int curSum = nums[i] + nums[left] + nums[right];
+                int curtDist = Math.abs(curSum - target);
+                if (curtDist < minDist) {
+                    res = curSum;
+                    minDist = curtDist;
                 }
 
                 // try to find closer coordinates
-                if (res < target) {
+                if (curSum < target) {
                     left += 1;
                 }
-                else if (res > target) {
+                else if (curSum > target) {
                     right -= 1;
                 }
                 else {
