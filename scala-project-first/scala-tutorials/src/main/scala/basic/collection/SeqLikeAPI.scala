@@ -24,5 +24,14 @@ object SeqLikeAPI {
     // scala.collection.SeqLike.intersect
     // 注意: 这里有 implicit 转换
     println("Hello World!".intersect("world"))
+
+
+    // scala.collection.TraversableLike.$plus$plus
+    val concatSeq: Seq[Any] = numsSeq ++ Seq("a", "b", "c")
+    println(s"concatSeq = ${concatSeq}")
+
+    // scala.collection.generic.GenTraversableFactory.concat
+    val concatRes = Seq.concat(numsSeq, concatSeq)
+    println(s"concatRes = ${concatRes}")
   }
 }

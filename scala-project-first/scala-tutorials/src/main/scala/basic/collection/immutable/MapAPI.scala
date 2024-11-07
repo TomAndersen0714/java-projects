@@ -12,5 +12,10 @@ object MapAPI {
       case (k, v) => println(s"key = ${k}, value = ${v}")
     }
 
+
+    // read
+    println(s"map.values.toSeq = ${map.values.toSeq}")
+    println(s"map.keys.toSeq = ${map.keys.toSeq}")
+
   }
 }
