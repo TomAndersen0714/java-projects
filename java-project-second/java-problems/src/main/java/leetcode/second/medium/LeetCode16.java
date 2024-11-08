@@ -5,7 +5,8 @@ import java.util.Arrays;
 import static leetcode.common.Util.strToArray;
 
 /**
- * 16. 3Sum Closest: https://leetcode.com/problems/3sum-closest/description/
+ * 16. 3Sum Closest
+ * https://leetcode.com/problems/3sum-closest/description/
  *
  * @author TomAndersen
  */

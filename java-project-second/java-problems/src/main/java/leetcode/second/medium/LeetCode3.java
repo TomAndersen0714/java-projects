@@ -3,6 +3,9 @@ package leetcode.second.medium;
 import java.util.BitSet;
 
 /**
+ * 3. Longest Substring Without Repeating Characters
+ * https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+ *
  * @author TomAndersen
  */
 public class LeetCode3 {
@@ -45,6 +48,9 @@ public class LeetCode3 {
     }
 }
 
+/**
+ * Two pointers
+ */
 class LeetCode3_1 {
     public int lengthOfLongestSubstring(String s) {
         // input

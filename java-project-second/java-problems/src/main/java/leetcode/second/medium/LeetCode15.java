@@ -8,8 +8,8 @@ import static leetcode.common.Util.compareList;
 import static leetcode.common.Util.strToListList;
 
 /**
- * 15. 3Sum: https://leetcode.com/problems/3sum/
- * <p>
+ * 15. 3Sum
+ * https://leetcode.com/problems/3sum/
  * tags: medium, array, two pointers
  *
  * @author TomAndersen

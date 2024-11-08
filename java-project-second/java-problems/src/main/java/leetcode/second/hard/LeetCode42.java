@@ -3,6 +3,9 @@ package leetcode.second.hard;
 import leetcode.common.Util;
 
 /**
+ * 42. Trapping Rain Water, 接雨水
+ * https://leetcode.com/problems/trapping-rain-water/
+ *
  * @author TomAndersen
  */
 public class LeetCode42 {
