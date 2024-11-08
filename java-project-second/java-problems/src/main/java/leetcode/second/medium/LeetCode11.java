@@ -48,6 +48,22 @@ public class LeetCode11 {
         input = Util.strToArray("[1,8,6,2,5,4,8,3,7]");
         output = 49;
         System.out.println(new LeetCode11_3().maxArea(input) == output);
+
+        input = Util.strToArray("[1,1]");
+        output = 1;
+        System.out.println(new LeetCode11_4().maxArea(input) == output);
+
+        input = Util.strToArray("[1,8,6]");
+        output = 6;
+        System.out.println(new LeetCode11_4().maxArea(input) == output);
+
+        input = Util.strToArray("[1,8,6,2,5,4,8,3,7]");
+        output = 49;
+        System.out.println(new LeetCode11_4().maxArea(input) == output);
+
+        input = Util.strToArray("[1,2,4,3]");
+        output = 4;
+        System.out.println(new LeetCode11_4().maxArea(input) == output);
     }
 }
 
@@ -141,6 +157,46 @@ class LeetCode11_3 {
             }
             else {
                 right -= 1;
+            }
+        }
+
+        // output
+        return max;
+    }
+}
+
+/**
+ * Two pointers
+ */
+class LeetCode11_4 {
+    public int maxArea(int[] height) {
+        // input
+        if (height == null || height.length <= 1) {
+            return 0;
+        }
+
+        // transform
+        int max = 0;
+        int left = 0, right = height.length - 1, cursor;
+
+        while (left < right) {
+            max = Math.max(max, (right - left) * Math.min(height[left], height[right]));
+            // move the smaller pointer every time to find max area
+            if (height[left] <= height[right]) {
+                cursor = left;
+                cursor += 1;
+                while (cursor < right && height[cursor] <= height[left]) {
+                    cursor += 1;
+                }
+                left = cursor;
+            }
+            else {
+                cursor = right;
+                cursor -= 1;
+                while (cursor > left && height[cursor] <= height[right]) {
+                    cursor -= 1;
+                }
+                right = cursor;
             }
         }
 
