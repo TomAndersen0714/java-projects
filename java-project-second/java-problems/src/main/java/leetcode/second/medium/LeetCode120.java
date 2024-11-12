@@ -26,7 +26,7 @@ public class LeetCode120 {
 }
 
 /**
- * Dynamic Process
+ * Dynamic Programming
  */
 class LeetCode120_1 {
     public int minimumTotal(List<List<Integer>> triangle) {

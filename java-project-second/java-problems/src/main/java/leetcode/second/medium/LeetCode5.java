@@ -80,7 +80,7 @@ class LeetCode5_1 {
 }
 
 /**
- * Dynamic Process
+ * Dynamic Programming
  * 当前子问题实际上是不重叠的, 适合用遍历+分治DC算法, 而不适用于动态规划DP算法, 因为后者在计算时缓存的中间结果, 实际上只使用了一次
  */
 class LeetCode5_2 {
