@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
- * 139. Word Break, 单词分割
+ * 139. Word Break, 词典匹配
  * https://leetcode.com/problems/word-break/
  *
  * @author TomAndersen
