@@ -70,7 +70,8 @@ public class ArraysAPI {
 
         // Arrays.binarySearch()
         System.out.println("Arrays.binarySearch(): ");
-        System.out.println(Arrays.binarySearch(new int[]{1, 2, 3, 4}, 3));
+        System.out.println(Arrays.binarySearch(new int[]{1, 2, 3, 5}, 3));
+        System.out.println("Arrays.binarySearch(new int[]{1, 2, 3, 5}, 4) = " + Arrays.binarySearch(new int[]{1, 2, 3, 5}, 4));
 
         // Arrays.fill()
         System.out.println("Arrays.fill(): ");
