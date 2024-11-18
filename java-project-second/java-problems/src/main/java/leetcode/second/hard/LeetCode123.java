@@ -100,10 +100,10 @@ class LeetCode123_2 {
         // initialize state array
         // iterate and fill state array
         for (int i = 1; i < prices.length; i++) {
-            dp[1] = Math.max(dp[1], -prices[i]);
-            dp[2] = Math.max(dp[2], dp[1] + prices[i]);
-            dp[3] = Math.max(dp[3], dp[2] - prices[i]);
             dp[4] = Math.max(dp[4], dp[3] + prices[i]);
+            dp[3] = Math.max(dp[3], dp[2] - prices[i]);
+            dp[2] = Math.max(dp[2], dp[1] + prices[i]);
+            dp[1] = Math.max(dp[1], -prices[i]);
         }
 
         // output
