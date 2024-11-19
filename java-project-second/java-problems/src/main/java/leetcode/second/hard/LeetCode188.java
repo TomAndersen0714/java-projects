@@ -2,12 +2,12 @@ package leetcode.second.hard;
 
 import leetcode.common.Util;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
  * 188. Best Time to Buy and Sell Stock IV, 股票买卖4
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description
+ * !!!
  */
 public class LeetCode188 {
     public static void main(String[] args) {
@@ -45,7 +45,7 @@ class LeetCode188_1 {
         int[][] yes = new int[prices.length][k + 1];
         int[][] no = new int[prices.length][k + 1];
 
-        // initialize dp array, 第0天的所有买入, 利润都为 -prices[0]; 第0次交易，即无交易，利润默认为0
+        // initialize dp array, 第0天的所有买入后持有yes, 利润都为 -prices[0]
         Arrays.fill(yes[0], 1, k + 1, -prices[0]);
 
         // iterate and fill dp array
