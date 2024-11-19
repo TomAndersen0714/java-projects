@@ -1,4 +1,4 @@
-package hw;
+package hw.first;
 
 import java.io.BufferedReader;
 import java.io.IOException;

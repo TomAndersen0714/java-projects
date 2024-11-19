@@ -1,4 +1,4 @@
-package hw;
+package hw.first;
 
 import java.io.*;
 
@@ -36,4 +36,3 @@ class HJ_7_1 {
         }
     }
 }
-
