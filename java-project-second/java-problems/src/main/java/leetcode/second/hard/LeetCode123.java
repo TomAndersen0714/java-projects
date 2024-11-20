@@ -2,6 +2,8 @@ package leetcode.second.hard;
 
 import leetcode.common.Util;
 
+import java.util.Arrays;
+
 /**
  * 123. Best Time to Buy and Sell Stock III, 股票买卖3
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/
@@ -34,6 +36,18 @@ public class LeetCode123 {
         prices = Util.strToArray("[7,6,4,3,1]");
         output = 0;
         System.out.println(new LeetCode123_2().maxProfit(prices) == output);
+
+        prices = Util.strToArray("[3,3,5,0,0,3,1,4]");
+        output = 6;
+        System.out.println(new LeetCode123_3().maxProfit(prices) == output);
+
+        prices = Util.strToArray("[1,2,3,4,5]");
+        output = 4;
+        System.out.println(new LeetCode123_3().maxProfit(prices) == output);
+
+        prices = Util.strToArray("[7,6,4,3,1]");
+        output = 0;
+        System.out.println(new LeetCode123_3().maxProfit(prices) == output);
     }
 }
 
@@ -108,6 +122,37 @@ class LeetCode123_2 {
 
         // output
         maxProfit = dp[4];
+        return maxProfit;
+    }
+}
+
+/**
+ * Dynamic Programming
+ */
+class LeetCode123_3 {
+    public int maxProfit(int[] prices) {
+        // input
+        if (prices == null || prices.length == 0) {
+            return 0;
+        }
+
+        // transform
+        // state equation
+        int maxProfit = 0;
+        // yes[0] 代表第1次交易后持有股票时的最大利润, yes[1]代表第2次交易后持有, no[0]代表第1次交易后未持有股票的最大利润, no[1]代表第2次交易后未持有
+        int[] yes = new int[]{0, 0}, no = new int[]{0, 0};
+        Arrays.fill(yes, -prices[0]);
+
+        for (int price : prices) {
+            // 先更新未持有, 再更新持有
+            no[1] = Math.max(no[1], yes[1] + price);
+            yes[1] = Math.max(yes[1], no[0] - price);
+            no[0] = Math.max(no[0], yes[0] + price);
+            yes[0] = Math.max(yes[0], -price);
+        }
+
+        // output
+        maxProfit = no[1];
         return maxProfit;
     }
 }
