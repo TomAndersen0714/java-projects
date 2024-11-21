@@ -101,6 +101,31 @@ public class Util {
         return result;
     }
 
+    // 字符串转二维 String List
+    public static List<List<String>> strToStrListList(String str) {
+        // 去除外层括号
+        str = str.substring(1, str.length() - 1);
+        List<List<String>> result = new ArrayList<>();
+
+        // 分割子数组
+        String[] arrays = str.split("\\],\\[");
+        for (String array : arrays) {
+            // 清理剩余括号和空格
+            array = array.replaceAll("[\\[\\]]", "").trim();
+            List<String> subList = new ArrayList<>();
+
+            // 处理非空数组
+            if (!array.isEmpty()) {
+                String[] strs = array.split(",");
+                for (String string : strs) {
+                    subList.add(string.trim().replaceAll("[\"']", ""));
+                }
+                result.add(subList);
+            }
+        }
+        return result;
+    }
+
     // 多维数组 Array 转多维 List
     public static List<Object> arrayDeepToList(Object array) {
         if (array == null || !array.getClass().isArray()) {
