@@ -88,6 +88,7 @@ class LeetCode55_2 {
         }
 
         // transform
+        // state array, maxAccess means the max access index from nums[0]
         boolean res = false;
         int maxAccess = nums[0];
         for (int i = 1; i < nums.length; i += 1) {
